@@ -37,9 +37,13 @@
     background-repeat: no-repeat;
     background-position: top left, top right, bottom left, bottom right;
 
-    max-width: 192rem;
+    max-width: 240rem;
     padding: 0 14rem;
     margin: 0 auto;
+
+    @media screen and (max-width: 1024px) {
+      padding: 0;
+    }
 
     @media screen and (max-width: 1600px) {
       background-image: url(/img/blood-png-37992.png),
