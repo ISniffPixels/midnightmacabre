@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="tab icon"
+      href="/img/skull-icon-5249-Windows.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/blogs.js"></script>
+
+    <style type="text/css">
+      body {
+        cursor: url("data:image/x-icon;base64,AAACAAEAICAAAAAAAACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAABgAAAAYAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAVAAAAFQAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAMAAAAHwAAAC8AAAAuAAAAHAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAADAAAAB8AAAA1AAAARQAAAEIAAAApAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAABgAAAAYAAAADAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAfAAAA/wAAAP8AAABOAAAARAAAACkAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAVAAAAFQAAAAwAAAADAAAAAQAAAAMAAAAMAAAAHwAAAP8eHh7/Hh4e/wAAAP8AAAA1AAAAHAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAMAAAAHwAAAC8AAAAvAAAAHwAAAAwAAAAGAAAADAAAAB8AAAD/Hh4e/6CgoP8eHh7/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAADAAAAB8AAAA1AAAARQAAAEUAAAA1AAAAHwAAABUAAAAfAAAA/x4eHv8eHh7/Hh4e/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAfAAAA/wAAAP8AAABRAAAAUQAAAEgAAAA1AAAALwAAAP8eHh7/Hh4e/x4eHv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAAHAAAAP8AM///29vb/wAAAP8AAABUAAAAUQAAAEgAAAD/Hh4e/x4eHv8eHh7/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAABYAAAD/ADP//9vb2//b29v/xsbG/wAAAP8AAABUAAAA/x4eHv8eHh7/Hh4e/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAMAAAA/wAz//8AM///29vb/8bGxv/Gxsb/xsbG/wAAAP8eHh7/Hh4e/x4eHv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAADAAAAP8AM///ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8eHh7/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAcAAAA/wAz///b29v/xsbG/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAFgAAAP8AM///ADP//8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAD/ADP//wAz///b29v/xsbG/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAA/wAz//8AM///29vb/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAABUAAAD/ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAA/wAz//8AM///29vb/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AM///ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAA/wAz///b29v/xsbG/8bGxv/Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AM///ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAz//8AM///xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/ADP//wAz///Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAz//8AM///ADP//8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/ADP//wAz///Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AM///ADP//8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAz///b29v/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/ADP//wAAAP8AAAAPAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAwAAAAMAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///////////////////////////////////8////+H////B////g///nwf//w4P//4EH//8AD//+AB///gA///wAf//4AP//8AH///AD///gB///wA///8Af//+AP///gH///4D///8B////A////wf///8P////H////7////8="),
+          auto;
+      }
+    </style>
+
+    <title>MIDNIGHT HORROR | Blogs</title>
+  </head>
+  <body>
+    <div id="top" class="wrapper--blogs">
+      <div class="container">
+        <header class="header">
+          <button class="menuMobile">
+            <div class="bar"></div>
+          </button>
+
+          <div class="menuModal">
+            <nav class="menuModal__nav">
+              <ul class="ul">
+                <li class="ul__item">
+                  <a href="/html/index.html" class="ul__link">Home</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/moviesmenu.html" class="ul__link">Movies</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/televisionmenu.html" class="ul__link"
+                    >T.V. Shows</a
+                  >
+                </li>
+                <li class="ul__item">
+                  <a href="/html/gamingmenu.html" class="ul__link"
+                    >Midnight Gaming</a
+                  >
+                </li>
+                <li class="ul__item">
+                  <a href="/html/blogmenu.html" class="ul__link">Blog</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/gallerymenu.html" class="ul__link">Gallery</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/about.html" class="ul__link">About Us</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <nav class="header__nav">
+            <ul class="ul">
+              <li class="ul__item">
+                <a href="/html/index.html" class="ul__link">Home</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/moviesmenu.html" class="ul__link">Movies</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/televisionmenu.html" class="ul__link"
+                  >T.V. Shows</a
+                >
+              </li>
+              <li class="ul__item">
+                <a href="/html/midnightgaming.html" class="ul__link"
+                  >Midnight Gaming</a
+                >
+              </li>
+              <li class="ul__item">
+                <a href="/html/blogmenu.html" class="ul__link">Blog</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/gallerymenu.html" class="ul__link">Gallery</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/about.html" class="ul__link">About Us</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="fixedlightSwitch">
+            <span class="switchLabel">DARK</span>
+            <button class="lightSwitch">
+              <div class="lightNip">💀</div>
+            </button>
+          </div>
+        </header>
+
+        <article class="blog__container" id="blog1">
+
+          <h1>Top 10 Scariest Horror Films of All Time</h1>
+
+          <div class="author">By Staff</div>
+
+          <p>
+            Everyone loves a good horror movie. From the '80s slasher craze to
+            today's found-footage films, horror movies are endlessly popular
+            with the general public. Horror films can be an extremely effective
+            way to scare an audience, and they don't have to rely on cheap
+            tricks or jump scares to do it. While there are many films that try
+            and fail miserably at scaring us, there are others that succeed so
+            well that we'll never forget them. Here are some of the scariest
+            films ever made. Some of these creepy films will keep you awake at
+            night - others will give you nightmares for years to come...
+          </p>
+
+          <div class="image__banner--blog">
+            <figure>
+              <img src="/img/theshine-400w.jpg" alt="show banner" />
+              <figcaption>The Shining (1980)</figcaption>
+            </figure>
+          </div>
+
+          <h2 class="bold">1. The Shining</h2>
+
+          <p>
+            First up on our list of the scariest horror films ever is The
+            Shining. This 1980 movie, based on the novel by Stephen King,
+            follows the story of Jack Torrance, a recovering alcoholic who
+            agrees to become the caretaker of a remote hotel in Colorado for the
+            winter months. The hotel's past is a dark one, and Torrance's
+            exploration of the building's history soon begins to affect him. The
+            film is particularly scary because of the way that it plays with the
+            viewer's expectations. The Shining is the kind of movie where you
+            know that something bad is going to happen, but you don't know when
+            or how. The Shining is also scary because of how real it feels in
+            its portrayal of a family that is slowly falling apart. We'd highly
+            recommend this movie to anyone who's looking for a good scare.
+          </p>
+
+          <div class="image__banner--blog">
+            <figure>
+              <img src="/img/theexor-460w.jpg" alt="show banner" />
+              <figcaption>The Exorcist (1973)</figcaption>
+            </figure>
+          </div>
+
+          <h2 class="bold">2. The Exorcist</h2>
+
+          <p>
+            The Exorcist is an iconic horror film that many people have seen,
+            but few have actually finished. This film, first released in 1973,
+            revolves around a young girl who is possessed by a malevolent
+            supernatural entity. The girl's mother seeks the help of two priests
+            to perform an exorcism and save her daughter from this dark force.
+            Throughout the film, the priests fail to drive the evil spirit from
+            the girl, but they also draw on the power of God to try to save
+            themselves from the same fate. This film has a seriously dark and
+            creepy feel to it, and it has been scaring people for close to 50
+            years. The Exorcist is a great real-life example of a horror movie
+            that actually scares people.
+          </p>
+
+          <div class="image__banner--blog">
+            <figure>
+              <img src="/img/elmstreet-450w.jpg" alt="show banner" />
+              <figcaption>A Nightmare on Elm Street (1984)</figcaption>
+            </figure>
+          </div>
+
+          <h2 class="bold">3. A Nightmare on Elm Street</h2>
+
+          <p>
+            A Nightmare on Elm Street is one of the most iconic horror films
+            ever made. It tells the story of a group of high school students who
+            are hunted down and killed by an unknown man while they sleep. The
+            only way to break free of this fate is to stay awake, but the kids
+            soon learn that not everything can be fought while they are
+            conscious. This film is genuinely scary because it manages to be
+            both fantastical and believable at the same time. The fact that it
+            is set in a normal American high school, with normal people, who
+            have no idea that a supernatural killer is hunting them down, makes
+            it feel all the more real. A Nightmare on Elm Street is a great
+            example of how a low budget and unknown actors can still make an
+            iconic horror film.
+          </p>
+
+          <div class="image__banner--blog">
+            <figure>
+              <img src="/img/halloween-450w.jpg" alt="show banner" />
+              <figcaption>Halloween (1978)</figcaption>
+            </figure>
+          </div>
+
+          <h2 class="bold">4. Halloween</h2>
+
+          <p>
+            Halloween is another classic horror movie that is still scaring
+            people decades later. This film, which is actually the original
+            version of a sequel, follows an escaped mental patient who stalks
+            and murders a group of teenagers on Halloween night. Halloween
+            actually started a whole new sub-genre within horror, known as the
+            “slasher” genre. Many other films have followed in its footsteps,
+            but few have done it as well as this original. Halloween is scary
+            because it treats the death of children as normal. While most horror
+            movies are about stopping a serial killer and saving the day, this
+            film is almost like a documentary where the killer gets away.
+            Halloween is the kind of film that will make you think long after
+            the credits have rolled.
+          </p>
+
+          <div class="image__banner--blog">
+            <figure>
+              <img src="/img/itmovie-495w.jpg" alt="show banner" />
+              <figcaption>IT (1990)</figcaption>
+            </figure>
+          </div>
+
+          <h2 class="bold">5. IT</h2>
+
+          <p>
+            IT is an adaptation of the 1986 Stephen King two-part novel of the
+            same name. The setting takes place in Derry, Maine, where every 27
+            years, an ancient entity manifests into existence, and preys on the
+            inner most fears of the town's children. A band of outcast children
+            form The Loser's Club, and are the primary target of the
+            trans-dimensional being, in a nightmarish saga, that takes the
+            children on a mission to figure out what's happening in the town of
+            Derry, Maine, and how it ties into the town's history. This movie is
+            particularly unsettling, because it touches on conquering fear, but
+            not without the risk of dying a terrifying death by the hands of a
+            being, that is able to alter your reality, and leave you not only
+            battling it, but also your own demons.
+          </p>
+
+          <div class="image__banner--blog">
+            <figure>
+              <img src="/img/dawndead-463w.jpeg" alt="show banner" />
+              <figcaption>Dawn of the Dead (1978)</figcaption>
+            </figure>
+          </div>
+
+          <h2 class="bold">6. Dawn of the Dead</h2>
+
+          <p>
+            Dawn of the Dead comes from the zombie brains of director George A.
+            Romero. This film, released in 1978, is actually a sequel to
+            Romero's original “Night of the Living Dead”. This film is set in a
+            world where a virus has turned a large portion of the population
+            into zombie-like creatures, and a group of people have walled
+            themselves up in a suburban shopping mall to survive. The film
+            follows the group of survivors as they try to keep themselves safe
+            both from the zombies outside the building and their own growing
+            problems within. Dawn of the Dead is scary because it offers a grim
+            and dark look at what happens when civilization breaks down. This is
+            a world where the only people who survive are the ones who are
+            strong enough to take what they need by force. It is a frightening
+            look at what could happen to our society if we don't learn how to
+            work together as a group.
+          </p>
+
+          <div class="image__banner--blog">
+            <figure>
+              <img src="/img/txchain-500w.jpg" alt="show banner" />
+              <figcaption>Texas Chainsaw Massacre (1974)</figcaption>
+            </figure>
+          </div>
+
+          <h2 class="bold">7. Texas Chainsaw Massacre</h2>
+
+          <p>
+            The Texas Chainsaw Massacre is a truly iconic horror film that has
+            inspired many other films and series, both on the big screen and on
+            TV. This movie tells the story of a group of young people who drive
+            out to a remote area and get trapped at a house run by a family of
+            cannibals. The film is scary because it portrays the villains as
+            truly beyond help. These are not people who are seeking redemption
+            or who are trying to be good, these are evil people who are doing
+            evil things because they are evil. This movie is less about the
+            blood and gore of the murders and more about the dread that the
+            viewer feels while watching it. The Texas Chainsaw Massacre uses
+            jump scares and disturbing imagery to unsettle its audience, making
+            them feel like they could be the ones sitting in the shoes of the
+            unfortunate victims of the film.
+          </p>
+
+          <div class="image__banner--blog">
+            <figure>
+              <img src="/img/thebabadook-475w.jpg" alt="show banner" />
+              <figcaption>The Babadook (2014)</figcaption>
+            </figure>
+          </div>
+
+          <h2 class="bold">8. The Babadook</h2>
+
+          <p>
+            The Babadook is a film that has gained a lot of popularity over the
+            years, but there are still a lot of people who have missed it. This
+            2014 film follows a single mother and her young son as they try to
+            overcome the strange things happening in their house, such as loud
+            noises, a mysterious written word appearing on walls, and a creepy
+            children's book that appears to have come to life. The Babadook is
+            scary because it doesn't rely on jump scares or gore. Instead, it
+            focuses on the mental stress that a single mother is under and the
+            way that it can break her. This movie is genuinely creepy and
+            unsettling, and it is the kind of film that will stay with you long
+            after the credits have rolled. The Babadook is a great example of
+            how a low budget and a new director can make an effective horror
+            film.
+          </p>
+
+          <div class="image__banner--blog">
+            <figure>
+              <img src="/img/hellraiser-467w.jpg" alt="show banner" />
+              <figcaption>Hellraiser (1987)</figcaption>
+            </figure>
+          </div>
+
+          <h2 class="bold">9. Hellraiser</h2>
+
+          <p>
+            Hellraiser is one of the most popular horror franchises that people
+            have never heard of. This film, released in 1987, tells the story of
+            a man who is given a strange puzzle box that is tied to a mysterious
+            evil force. The puzzle box is actually a doorway to another
+            dimension, and it is tied to the fate of all of the world's sinners.
+            The film is scary because it deals with an ancient evil that has
+            been lurking in the shadows since the beginning of time. Its
+            monstrous villain is motivated by the simple desire to gain more
+            power, and the film is a reminder that even the most normal-looking
+            people could actually be evil. The Hellraiser franchise is a great
+            example of how a seemingly normal premise can be twisted into a
+            nightmare-inducing film.
+          </p>
+
+          <div class="image__banner--blog">
+            <figure>
+              <img src="/img/theorphanage-467w.jpg" alt="show banner" />
+              <figcaption>The Orphanage (2007)</figcaption>
+            </figure>
+          </div>
+
+          <h2 class="bold">10. The Orphanage</h2>
+
+          <p>
+            The Orphanage is a truly chilling film that deserves more attention
+            than it has gotten over the years. This movie is actually a Spanish
+            film that was released in 2007, but it has become more and more
+            popular in the years since. The Orphanage follows the story of a
+            woman who returns to the orphanage where she grew up after the death
+            of her adoptive mother. The film is scary because of its ability to
+            draw on real emotion and mood. This movie makes you feel like
+            something bad is going to happen, even when nothing seems amiss, and
+            it leaves you feeling unsettled long after the credits have rolled.
+            The Orphanage is a great example of how a low budget and a simple
+            premise can be turned into an effective and memorable horror film.
+          </p>
+          <div><a href="/html/blogmenu.html">Back to Blog Menu</a></div>
+        </article>
+
+        <div class="top__button--container">
+          <article class="blog__container" id="blog2">
+
+            <h1>The History of Halloween: A Celebration Of Fear</h1>
+
+            <div class="author">By Staff</div>
+
+            <p>
+              Today, the month of October is more famous as the time for carving
+              jack-o'-lanterns and binge-watching scary movies. But very few
+              people are aware of the fascinating history behind this spooky
+              festival of Halloween. The celebration of this mysterious festival
+              has its roots in ancient cultural traditions and religious
+              practices. However, the modern version of this spooky festival has
+              transformed from a night of fright to a lighthearted holiday where
+              kids go door-to-door trick-or-treating with costumed character
+              such as witches, ghosts and vampires. If you love to read about
+              creepy things and you're looking for some juicy history on the
+              ghoulish day we call Halloween, then you've come to the right
+              place. Here is all you need to know about the history of
+              Halloween:
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/hallowcat-700w.jpg" alt="show banner" />
+                <figcaption>Photo provided by Pixabay</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">What does ‘Halloween' mean?</h2>
+
+            <p>
+              Halloween may sound familiar, but perhaps you never actually knew
+              what it meant. Well, there are two theories regarding the origin
+              of the name. First, the name “Halloween” may have its origins in
+              the Gaelic words “Samhain” (pronounced “sow-inn”) or “Hallows”
+              Eve. In Gaelic, Samhain is the name of the festival that falls on
+              the last day of October, when people would light bonfires, wear
+              costumes, and foretell the future by reading omens in the flames.
+              “Hallows” Eve was the day before Samhain, celebrated by gathering
+              crops, slaughtering livestock, and preparing for winter. The other
+              theory is that the word “Halloween” is a contraction of the words
+              “All Hallows' Eve”, meaning “All Saints' Eve” (Halloween wasn't
+              always celebrated on October 31). “All Hallows' Eve” is the night
+              before November 1, which is also known as “All Hallows' Day”. All
+              Hallows' Day is a Christian religious festival that celebrates
+              saints, who are people believed to have led lives of such
+              religious excellence that they are now in Heaven.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/hallowitch-467w.jpg" alt="show banner" />
+                <figcaption>Photo by Monstera via Pexels</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">Pagan Origins of Halloween</h2>
+
+            <p>
+              For centuries, Halloween has been a time to celebrate the dead.
+              But the original celebrations were quite different from today's
+              popular customs. Halloween's roots lie in Celtic (Irish and
+              Scottish) traditions. In Celtic mythology, Samhain (pronounced
+              “sow-in”) marks the end of the harvest and the beginning of
+              winter. It's believed that during this time, the boundaries
+              between the world of the living and the dead are at their
+              thinnest. On the night of October 31, people celebrated the feast
+              of Samhain by lighting bonfires, wearing costumes, carving turnips
+              into lanterns, and visiting friends and neighbours. They also left
+              offerings of food, drinks, and gifts for the “spirits”. Over time,
+              the “spirits” they were celebrating became connected with several
+              Christian saints' feast days. They are now associated with All
+              Hallows' Eve (October 31) and All Saints' Day (November 1).
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/skullcross-467w.jpg" alt="show banner" />
+                <figcaption>Photo by Gábor Molnár via Unsplash</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">The Dark History of Halloween</h2>
+
+            <p>
+              In addition to its historical roots, Halloween has also been
+              associated with witchcraft and other practices harmful to the
+              health and well-being of the masses. In the early 17th century,
+              the British Parliament passed the Witchcraft Act, making it
+              illegal to celebrate with such rituals. With the onset of the
+              Industrial Revolution in the late 18th century, Halloween's
+              connection to witchcraft and paganism began to fall out of favour.
+              It was during this time that the holiday's focus shifted from
+              celebrating the harvest to children dressing up in costumes to beg
+              for treats like candy from neighbours. Interestingly, Halloween
+              celebrations were also common in the United States during the
+              colonial era, though these were more likely to be associated with
+              harvest-related customs and the children's folk game of
+              trick-or-treating.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/trickpumpkin-700w.jpg" alt="show banner" />
+                <figcaption>Photo by Nick Fewings via Unsplash</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">Trick or Treat: The Tradition of Halloween</h2>
+
+            <p>
+              One of the most popular Halloween traditions is trick-or-treating.
+              Although the exact origins of the ritual are unknown, many
+              historians believe that Halloween was first celebrated in ancient
+              Ireland, where it was customary for people to go door-to-door
+              collecting food and money. In the 12th and 13th centuries, the
+              Church attempted to put an end to the tradition. Then, in the late
+              19th century, the tradition was revived in America by candy
+              companies and advertisers who wanted to create a new holiday
+              focused on the purchase and consumption of sweet treats. Today,
+              the tradition of trick-or-treating among children involves
+              dressing up in spooky costumes, going door-to-door with a bag or
+              bucket, and asking neighbours for candy.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/harvesthallow-700w.jpg" alt="show banner" />
+                <figcaption>Photo by Bee Felten-Leidel via Unsplash</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">Why We Celebrate Halloween?</h2>
+
+            <p>
+              On one hand, Halloween can be seen as a celebration of the
+              harvest. Historically, people collected crops and vegetables
+              during the autumn, which resulted in a plentiful crop for the
+              following year. In the present day, people mark the occasion by
+              decorating their houses with autumnal decorations. Some people
+              also choose to create pumpkin carvings, while others take part in
+              community charity events. In general, Halloween has become a time
+              for people to enjoy themselves, while also celebrating the
+              changing seasons and the harvest. The other reason behind
+              Halloween's popularity is that it marks the beginning of the
+              spooky season. Halloween has become a popular time for horror
+              films and TV shows to be released, and the spooky nature of the
+              event makes it a perfect time for people to enjoy their favourite
+              scary stories.
+            </p>
+
+            <h2 class="bold">Happy, and safe Halloween!</h2>
+
+            <p>
+              Halloween is a celebration of the harvest, but it has also become
+              a popular time for horror films and TV shows to be released. The
+              spooky nature of the event makes it a perfect time for people to
+              enjoy their favourite scary stories, and it's also a great time to
+              decorate your house with all sorts of autumnal decorations. For
+              most people, Halloween is a lighthearted holiday where kids go
+              door-to-door trick-or-treating with costumes such as witches,
+              ghosts, and vampires. But there is also a darker side to the day,
+              with some people choosing to dress up as terrifying zombies or
+              psychopathic killers.
+            </p>
+            <div><a href="/html/blogmenu.html">Back to Blog Menu</a></div>
+          </article>
+
+          <article class="blog__container" id="blog3">
+
+            <h1>The Boogeyman: Folklore, Myths and Legends</h1>
+
+            <div class="author">By Staff</div>
+
+            <p>
+              The Boogeyman is a classic monster that can be found in almost any
+              culture. He's a scary figure that lurks in the shadows and preys
+              on children to frighten them into behaving. Often, The Boogeyman
+              has red or green eyes, long claws, fangs and hair that covers his
+              frightening face. If you would like to know more about The
+              Boogeyman and other monsters of similar nature, read further. This
+              article contains information about the history of the boogeyman
+              and the different variations of this monster across many cultures.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/boogeyman-450w.jpg" alt="show banner" />
+              </figure>
+            </div>
+
+            <h2 class="bold">Who Is The Boogeyman?</h2>
+
+            <p>
+              The Boogeyman is a mythical creature who is meant to scare
+              children into behaving. The word "Boogeyman" or "Boogreman" is a
+              combination of the words “boo” and “ogre” describing it's spooky
+              nature, and monster like attributes. It is a scary story that
+              warns people to behave or suffer terrible consequences. A
+              Boogeyman also refers to a type of creature found in folklore. It
+              is a large, hairy monster that lurks in the darkness. It is often
+              associated with dark, rural areas. The Boogeyman is often used as
+              an explanation for a child's fear or a bad dream.
+            </p>
+
+            <h2 class="bold">Where Did The Boogeyman Come From?</h2>
+
+            <p>
+              The origins of The Boogeyman aren't entirely certain. It's thought
+              that The Boogeyman originated in the United States around the
+              1900s. Likely, The Boogeyman was first used as a joke before it
+              became associated with a scary urban legend. Boogey men are a
+              classic part of American culture and have been since the early
+              1900s. They were first used as a joke, but then became a staple of
+              scary stories. Since then, The Boogeyman has become a cultural
+              icon in North America that has continued to be featured in many
+              different forms of media.
+            </p>
+
+            <h2 class="bold">Boogeyman Variations</h2>
+
+            <p>
+              The Boogeyman has many different variations. These include The
+              Bogle, The Boggin, The Boggart, The Bugbear, The Babalawo, The
+              Budarkhaan, The Boggard, The Baobhan Sith, and The Booh-man. The
+              boggin is a monster that lives in the Hebrides Islands. The Boggin
+              is often described as having bloodstained claws and a hairy body.
+              The boggin is very similar to the boogeyman, except it is only
+              meant to scare children who misbehave. The Bogle is a monster
+              found in Yorkshire, England. It is a tall, hairy creature that is
+              often depicted as a wild man. The boggart is a creature that can
+              take on the form of a person's deepest fear. The boggart is often
+              found in English folklore. The bugbear is a terrifying creature
+              that lives in the Scottish Highlands. The Bugbear was usually used
+              to threaten children who misbehaved. The Babalawo are evil spirits
+              found in African culture that often prey on children. The
+              Budarkhaan is a monster that lives in the desert. It is typically
+              depicted as a hairy creature with long claws. The boggard is a
+              creature that lives in the swamps of England. It is described to
+              have a large, hairy body and long claws. The Baobhan Sith is a
+              vampire that is typically only active at night. It is often used
+              to scare children into behaving and is also found in Scottish
+              folklore. The Booh-man is a monster that is found in the southern
+              United States. The Booh-man is a large creature that has red eyes
+              and long claws.
+            </p>
+
+            <h2 class="bold">Boogeyman Purpose</h2>
+
+            <p>
+              The Boogeyman is used as a cautionary tale that tells children
+              that if they misbehave, something bad will happen to them.
+              Boogeyman folklore has been hugely influential not only around the
+              world, but esepecially in American culture, giving way to the
+              creation of children's books, cartoons, and films to keep
+              children, and adults alike entertained and engaged for
+              generations.
+            </p>
+
+            <h2 class="bold">Why Do We Fear the Boogeyman?</h2>
+
+            <p>
+              The concept of The Boogeyman can also be open to interpretation.
+              We all have deep inner fears we contend with on a daily basis,
+              even people without a conscience and psychopathic tendencies have
+              something that they fear the most. The Boogeyman represents
+              everything that we don't have control over, and that consumes us
+              with fear, and worry. Conqeuring your fears, is conquering your
+              inner Boogeyman and sometimes we never do, leaving us feeling
+              trapped and apprehensive about living life in a healthy way.
+            </p>
+
+            <div><a href="/html/blogmenu.html">Back to Blog Menu</a></div>
+          </article>
+
+          <article class="blog__container" id="blog4">
+
+            <h1>The Story of Lizzie Borden: Inside the Grizzly Truth</h1>
+
+            <div class="author">By Staff</div>
+
+            <p>
+              Lizzie Borden is one of the most infamous figures in American
+              history. Her story has been told and re-told for over a century,
+              with each new version more lurid than the last. In 1892, Lizzie
+              was tried and acquitted for the axe murders of her father and
+              stepmother in Fall River, Massachusetts. She remained in the same
+              house, under the watchful eye of family members, until she moved
+              out at age 42 to live with her friend Emma in another part of
+              town. This article presents facts about Lizzie Borden's life that
+              you probably won't read anywhere else.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/lizzieborden-553w.jpg" alt="show banner" />
+                <figcaption>Lizzie Borden (1860-1927)</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">Who was Lizzie Borden?</h2>
+
+            <p>
+              Lizzie Drew Borden (1860-1927) was a real person and not just a
+              colorful legend. She was born in Fall River, Massachusetts. She
+              was the second of three daughters of Andrew Borden and his second
+              wife, Abby Durfee Gray Borden. Lizzie was a member of the large
+              and socially prominent Borden family of Fall River, Massachusetts.
+              Her grandfather had come from New York City to Massachusetts,
+              where he founded a successful textile business. Lizzie's father,
+              Andrew Borden, inherited the family business and became a wealthy
+              and prominent member of the community. He was a member of the town
+              council and a trustee of the local public library. He was known as
+              an austere and disliked man. Lizzie's mother Abby was a quiet,
+              stay-at-home woman, devoted to her husband and children.
+            </p>
+
+            <h2 class="bold">Lizzie's Life Before the Murders</h2>
+
+            <p>
+              The Borden household was an unhappy one. The parents quarreled
+              frequently, and the father was a harsh and demanding parent. He
+              was quick to find fault with his daughters, particularly Lizzie.
+              Although Lizzie was the oldest child and had been dutiful and
+              obedient as a child, she was a different sort of person as a young
+              adult. Lizzie had many admirers and several romances, but she was
+              not interested in marriage. She was far more interested in being
+              independent and having a career. Lizzie was frustrated by being a
+              woman in that era. She had done very well in high school and even
+              took a special, advanced course of study at the local business
+              college, but she was not allowed to attend college. Lizzie wanted
+              to become a doctor, but that was extremely rare for a woman in
+              that era. Lizzie's father controlled her very closely and was
+              determined that his daughters not marry or have a career. He
+              refused to allow Lizzie to leave the house or even to have a
+              friend come to visit, even though Lizzie's two older sisters were
+              allowed more freedom. Lizzie did not get along with her
+              stepmother, and the two quarreled frequently.
+            </p>
+
+            <h2 class="bold">What Happened on the Day of the Murders?</h2>
+
+            <p>
+              On the morning of August 4, 1892, Lizzie's friend Nance O'Neill
+              dropped by the Borden house to visit her. She noticed that
+              Lizzie's car was not in the garage, which was unusual because
+              Lizzie's father always expected his daughters to drive him to his
+              various business appointments. Lizzie's stepmother was also absent
+              from the house, but Lizzie herself was inside, washing the
+              windows. Nance and Lizzie chatted for a while, and Nance noticed
+              that Lizzie was particularly cheerful. "Something has happened,"
+              thought Nance. Nance left the house and went to visit a friend.
+              Meanwhile, Lizzie's older sister Emma came home for lunch and
+              found Lizzie washing the windows again. This struck Emma as odd
+              because Lizzie had been doing this chore for weeks and was behind
+              in her other household duties. Emma also noticed that Lizzie's
+              shoes were covered with freshly fallen red ashes from the
+              fireplace.
+            </p>
+
+            <h2 class="bold">The Trial of Lizzie Borden</h2>
+
+            <p>
+              After the murders, the police arrested Lizzie and Emma on
+              suspicion of the crime. Due to a lack of evidence, the police soon
+              released Emma and focused their attention on Lizzie. Lizzie was a
+              very calm and collected person. She was a devout Christian and
+              went to church every Sunday. She told the police that she had
+              stayed home alone on the day of the murders while Emma was at a
+              birthday party at her uncle's house. Lizzie's calm demeanor and
+              her pious and reserved lifestyle made her an unlikely suspect, but
+              the police went ahead with the case anyway. Lizzie's lawyers had
+              no choice but to base the case on an alibi: Emma was not with her
+              uncle on the day of the murders and the two of them were in the
+              same place at the same time. Lizzie's trial was a sensation, with
+              huge crowds gathering to root for or against her.
+            </p>
+
+            <h2 class="bold">The Aftermath of the Trial</h2>
+
+            <p>
+              The jury returned a verdict of Not Guilty. Lizzie was not a very
+              popular person, but the crowds outside her house were not angry
+              mobs bent on revenge, as Lizzie had feared they would be. Lizzie
+              and Emma went to visit friends in New York City, and the press
+              followed them there. Although the newspapers were critical of
+              Lizzie, they were much more vicious to Emma, who was portrayed as
+              a cheap and common woman who had snared a wealthy man. Lizzie was
+              not able to return to her hometown because of the notoriety of the
+              trial and the anger of her neighbors. She went to live with her
+              sister in Massachusetts and later moved to New York City to work
+              as a nurse. Lizzie never married and lived a quiet life, devoting
+              herself to charitable causes.
+            </p>
+
+            <h2 class="bold">Was it justice or a miscarriage of justice?</h2>
+
+            <p>
+              We'll never know for sure whether Lizzie Borden murdered her
+              father and stepmother, or if she was just an innocent woman who
+              got caught up in a frenzy of hatred and hysteria. Lizzie was an
+              interesting and complex person. She was a dutiful, obedient
+              daughter and a good friend to those who knew her well. She was
+              also a very pious and religious person who spent much of her life
+              helping others. She was also a very controlling, self-centered,
+              and greedy person who was devoted to her interests. Lizzie's story
+              is a cautionary tale about the dangers of jumping to conclusions
+              based on rumor, gossip, and circumstantial evidence. It is also a
+              reminder that a person's true nature is not always evident in a
+              moment of excitement or challenge.
+            </p>
+
+            <div><a href="/html/blogmenu.html">Back to Blog Menu</a></div>
+          </article>
+
+          <article class="blog__container" id="blog5">
+
+            <h1>
+              The Phantom Serial Killer: Jack the Ripper
+            </h1>
+
+            <div class="author">By Staff</div>
+
+            <p>
+              In the 19th century, Whitechapel was a poor and crime-ridden
+              district in London. Its inhabitants were mostly immigrants,
+              especially from Eastern Europe and Scotland. Also known as “the
+              conspiracy theorists' paradise”, it has also been labeled by some
+              as the home of the most notorious serial killer in history: Jack
+              the Ripper. Since then, many books have been written about this
+              mysterious figure and his crimes. So let's take a closer look at
+              the case of Jack the Ripper: who he really is and if he ever
+              existed or not.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/jackripper-600w.jpg" alt="show banner" />
+                <figcaption>Jack the Ripper</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">Who was Jack the Ripper?</h2>
+
+            <p>
+              The term “Jack the Ripper” was a journalistic invention, used to
+              describe this unknown killer. It is believed that he was the
+              culprit behind the murders of five prostitutes in the Whitechapel
+              area of London, between August and November 1888. Although his
+              real name is unknown, the killer's modus operandi and some
+              characteristics attributed to him are enough to classify him as a
+              serial killer. His first victim was Mary Ann “Polly” Nichols, who
+              was murdered in the early hours of August 31, 1888. Her throat was
+              cut and abdominal mutilations were performed. Annie Chapman was
+              killed just two days later. Her body was found by police in the
+              backyard of 29 Hanbury Street. Mutilations were made on her
+              abdomen, her uterus was removed and her abdominal organs were cut
+              and arranged around the abdominal cavity. The third victim,
+              Elizabeth Stride, was killed on the 30th of September. No
+              mutilations were found on her body, but her throat was cut so
+              deeply that her head was almost severed from her torso. Finally,
+              on the 9th of October, the body of Catherine Eddowes was found in
+              Mitford's Yard, in the Western Metropolitan City and on the same
+              day, the last victim, Mary Jane Rivett, was found dead in the room
+              of one of her employers, Frances Coles. Her throat was also cut
+              and, like the other three women, her abdomen was also sliced and
+              her uterus removed.
+            </p>
+
+            <h2 class="bold">Facts and Evidence</h2>
+
+            <p>
+              The main points that have led historians to suggest that there was
+              possibly only one murderer and that he was not identified are as
+              follows: 
+              
+              <p>- All five murders occurred in the Whitechapel district
+              of London, within the space of three months and all during the
+              night (between August 31st and November 9th), and at intervals of
+              about two weeks, the first and the last being on a Sunday.</p> 
+              
+              <p>- All
+              the women were prostitutes who were murdered in the same manner, by the removal of portions of the abdominal organs and with
+              the same or a similar instrument.</p> 
+              
+              <p>- The mutilations were of a
+              nature unusual in the case of such persons, and were performed
+              with skill and in a way that was not designed as a means of
+              removing the victim's life, but, as if for the gratification of
+              blood lust, the selection of the particular parts removed being
+              almost ludicrously remote from any purpose of utility from a
+              surgical point of view.</p> 
+              
+              <p>- The discovery of the bodies was left to
+              chance, the police being called only after the fact, and in two
+              cases not for two days after. The portions of the bodies removed
+              were removed with skill as if done by one used to working in a trade that requires surgical precision.</p>
+
+              <p>- The fact that the first and last murders were on Sundays, while
+              the intermediate murders took place on Saturday, Wednesday and
+              Friday.</p> 
+              
+              <p>- The fact that the murders occurred in the same locality,
+              that the bodies were found in the same place, and that they were
+              found in a state of decomposition.</p> 
+              
+              <p>- The fact that the murders
+              were never reported to the police by passerby.</p> 
+              
+              <p>- The fact that in four cases
+              the persons murdered left the homes of their own accord and in the
+              fifth case a woman was murdered in the room of her employer.</p> 
+              
+              <p>- The
+              fact that no weapons were found at the scenes of the murder, nor
+              were any blood-stained garments discovered, and that no one was
+              seen entering or leaving the premises.</p> 
+              
+              <p>- The fact that no traces
+              were found of anyone having been drawn to the place by the cries
+              of the victims.</p> 
+
+            </p>
+
+            <h2 class="bold">In the end...</h2>
+
+            <p>
+              All these points indicate that these murders were the work of one
+              person. The murderer's modus operandi was always the same and the
+              murders were always carried out in the same fashion and with the
+              same instrument. The murderer was always careful not to leave any
+              evidence that could lead to his arrest. What is more, nothing
+              links these murders to one another. All the victims were different
+              and there were no apparent connections between them. In addition,
+              the murderer was not seen by anyone and no traces were found of
+              his presence at the crime scenes.
+            </p>
+
+            <div><a href="/html/blogmenu.html">Back to Blog Menu</a></div>
+          </article>
+
+          
+          <article class="blog__container" id="blog6">
+
+            <h1>
+              The Top 10 Creepiest Places on Earth
+            </h1>
+
+            <div class="author">By Staff</div>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/jameskemp-700w.jpg" alt="show banner" />
+                <figcaption>Photo by James Kemp</figcaption>
+              </figure>
+            </div>
+
+            <p>
+              Imagine a small village with cobbled streets and gothic architecture, tucked away in remote mountains. It's old, quiet... and completely abandoned. There are no signs of struggle. Nothing has been stolen or damaged as if the residents simply packed up their belongings one day and left without explanation. The creepiest places on Earth have these elements, and so much more. From hotels to prisons, there are plenty of hidden locations that seem to be teeming with paranormal activity. Why else would they be closed off to visitors? These are the creepiest places on Earth because they have everything we love about ghost stories: history, mystery, and plenty of unanswered questions.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/caldwellasyl-488w.jpg" alt="show banner" />
+                <figcaption>Photo by TheAmericanWannabe via reddit</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">Cardwell Asylum</h2>
+
+            <p>
+              This haunted asylum in Queensland, Australia, was built in 1896 and closed in 1978. It's now a tourist attraction, but it's not for the faint of heart. The hospital was nicknamed the “lunatic asylum” because it was the first mental health facility in the state. In the early days of its operation, it housed hundreds of patients in squalid conditions. There are claims that patients died from cholera, typhoid, and an outbreak of influenza. The building was used as a military hospital during both world wars. It's reported that during World War II, Japanese prisoners were treated at the building. The ghost of a Japanese soldier has been spotted at the asylum. Visitors have reported hearing screams and cries, as well as feeling a sense of dread. They've seen apparitions of bloodstains, as well as a weeping woman who was a patient at the asylum.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/bhangarhfort-433w.webp" alt="show banner" />
+                <figcaption>Photo via oyorooms.com</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">Bhangarh Fort</h2>
+
+            <p>
+              This 17th-century fort in India is the site of macabre tales of murder and magic. It's believed that a magician cursed the land of Bhangarh, and the locals killed him for his dark spells. Since then, Bhangarh has been plagued by paranormal activity. Visitors have reported hearing a woman wailing and a man shouting. The most famous Bhangarh story is that of the “doomed prince.” When a boy was born to the royal family, the king and his advisers heard a disembodied voice cry, “This child will die when he reaches the age of 18!” The king was undeterred and made the baby his heir. The boy was raised inside the walls of Bhangarh, but on his 18th birthday, a strange man appeared and informed him that he was the king's son. The prince decided to go live with his biological family and left Bhangarh. On his way out, he was struck by lightning. The town has been abandoned ever since.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/borleyasyl-533w.jpg" alt="show banner" />
+                <figcaption>Photo via Pinterest</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">Borley Asylum</h2>
+
+            <p>
+              Built-in 1898, this asylum was shut down in 1938 after being deemed “unfit for the reception of patients.” Four years later, it was demolished. A new building was constructed on the site, but that was torn down in 2009, leaving the grounds eerily empty. The Borley Haunted Asylum has long been considered one of the most haunted places in the world. The building was believed to be so haunted that the government paid a medium to exorcise it. Visitors have reported hearing the sounds of a woman crying, a baby crying, or a woman screaming. The spirits of two people are believed to have stayed behind. A visitor reported being grabbed and shoved, as well as being slapped in the face. The ghost of an inmate believed to have been murdered by his fellow patients has been spotted.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/changiprison-433w.webp" alt="show banner" />
+                <figcaption>Photo by Singapore Prison Service</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">Changi Prison</h2>
+
+            <p>
+              Built by the Japanese during World War II, this prison held more than 100,000 Allied soldiers. The conditions were horrid, and many prisoners died from starvation and disease. Once the war was over, the Allies took control of the prison. Today, Changi Prison is a tourist attraction. Visitors can take tours of this infamous building. Those who take the tour have reported feeling a heavy and depressing atmosphere. They've also reported feeling as if they were being watched. Some have even claimed to have seen apparitions in the form of disembodied heads. Others have reported feeling a chilling sensation as if someone had walked over their grave.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/templeofmawh-433w.jpg" alt="show banner" />
+                <figcaption>Photo by grayomm via Unsplash</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">Dom hall of Mawhrunkwah</h2>
+
+            <p>
+              This Balinese temple was once home to a priest and his family. One day, the priest discovered that his wife had been having an affair. Outraged, he killed both his wife and her lover. When he realized what he'd done, he committed suicide by drinking poison. The family's spirits are said to haunt the temple. Visitors have reported seeing figures walking around. Some have reported hearing a woman screaming and a baby crying. People have reported being scratched and having their hair pulled by the spirits of the priest and his wife. Others have reported smelling the stench of rotting flesh.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/okinoshima-435w.jpg" alt="show banner" />
+                <figcaption>Photo by USA_KK/Photo-ACMunakata Taisha Okitsu-miya Yohaijo</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">Ghost Island of Okinoshima</h2>
+
+            <p>
+              This Japanese island has been abandoned for centuries. It's believed that an ancient civilization lived on the island. They're thought to have vanished into thin air, leaving behind artifacts such as pottery and buildings. Modern-day explorers have reported seeing strange lights and hearing voices. They've also reported finding bloodstains, which may have been left there by a samurai who was killed by his clan. Many people have chosen to leave the island, claiming that it's haunted. Visitors have reported seeing a ghostly figure on the island. Some have even claimed to have seen a woman floating in the air. Others have reported feeling a chill as if someone had walked over their grave. They've also reported smelling a foul odor, which some belief to be the scent of death.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/hauntedhotel-433w.jpg" alt="show banner" />
+                <figcaption>Photo by CM via Unsplash</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">Shivers Hotel</h2>
+
+            <p>
+              This hotel in Virginia was built in the 1960s. It was intended to be a luxurious retreat for visitors. It was an incredibly popular spot until it closed in 2001. The building is now abandoned. Visitors have reported seeing the ghost of a woman near the swimming pool. The woman is believed to have been pushed into the water and drowned by her husband, a well-known senator. Others have reported seeing figures in the windows of the hotel. People visiting the hotel have reported being slapped and pushed, as well as being scratched. The building has been investigated by paranormal experts, who've reported hearing strange noises and seeing objects move by themselves.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/mentallyillasyl-433w.jpg" alt="show banner" />
+                <figcaption>Photo by Yener Ozturk via Unsplash</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">Spanish Asylum for the Mentally Ill, or El Reposo</h2>
+
+            <p>
+              This sanatorium in Spain was built during the 19th century, and it treated patients who suffered from a variety of diseases, including tuberculosis. The building was torn down in the 1950s. Many people claim that El Reposo is one of the most haunted places on Earth. Visitors have reported feeling as if someone is watching them. They've also reported hearing screams and feeling a heavy, oppressive atmosphere. Some have reported being slapped by invisible hands and seeing the apparitions of former patients. People have reported seeing lights flickering, hearing strange noises, and feeling a heightened sense of fear.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/ruinsaug-520w.jpg" alt="show banner" />
+                <figcaption>Photo by Christopher Austin via Unsplash</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">St. Augustine's Ruins</h2>
+
+            <p>
+              St. Augustine is the oldest city in the United States. It was founded in 1565 by Spanish explorers. The city was captured in 1683 by the English, who held it until 1763. After the Battle of St. Augustine, the Spanish regained control of the city and rebuilt it. It remained populated until the early 20th century when it was abandoned. The old city is now a ghost town. It's believed that the spirits of the Spanish soldiers killed during the Battle of St. Augustine have remained behind. Visitors have reported hearing disembodied voices and seeing ghostly figures in the ruins. The spirits have been known to slap and push people and even drag them by the hair.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/sumidahaunt-433w.jpg" alt="show banner" />
+                <figcaption>Photo by Gregory Lane</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">Sumida River Culture Park Ruins</h2>
+
+            <p>
+              This park in Tokyo is a popular spot for photographers and tourists. It also happens to be incredibly haunted. Visitors have reported seeing apparitions in the form of a woman and a man. They've also reported feeling a foreboding atmosphere. Some have reported feeling their hair being pulled. This could be the work of a young woman who was raped and murdered in the park. She has been known to pull people's hair, hoping to get the attention she needs to get justice. People have also reported seeing figures standing in the water in the park. These could be the spirits of people who have taken their own lives by jumping.
+            </p>
+
+            <div><a href="/html/blogmenu.html">Back to Blog Menu</a></div>
+          </article>
+
+          <article class="blog__container" id="blog7">
+
+            <h1>
+              History of the Ouija Board: The Mystifying History of One Of America's Most Beloved Toys
+            </h1>
+
+            <div class="author">By Staff</div>
+
+            <p>
+              The Ouija board is one of the world's most well-known, and most widely feared talking boards. It's been a source of both fear and fascination for over 150 years. The idea that someone could be contacted after death using just the power of their mind is a concept that has fascinated people for centuries. There are even records from ancient Rome which indicate that similar practices were performed as far back as 50 AD. Even today, many people remain deeply suspicious of the Ouija board believing it to be some kind of backdoor for evil spirits to communicate with humans. However, there are plenty of other people who think the Ouija board is just an innocent parlor game nothing more than a fun way to spend an evening with friends.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/ouija-700w.jpg" alt="show banner" />
+                <figcaption>Photo by James Frid</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">Who Invented the Ouija Board?</h2>
+
+            <p>
+              Nobody knows for certain who invented the Ouija board. We do know that it was being used as early as 1890, but we don't know who first had the idea to combine letters on a board with the power of the human mind to create an occult device. It may have been two sisters named Dorothea and Alice Curtiss who first used a board to try to contact spirits but we can't be sure of this. There are many different stories about who invented the Ouija board but nobody knows for sure which are true. The story of a young boy named Arthur Conan Doyle (the author of Sherlock Holmes) may have some truth to it. One day, 12-year-old Conan Doyle was playing with a friend and a strange device called a “planchette”. A planchette is a pencil with a little piece of wood nailed to one end. It looks a bit like a miniature skateboard. Conan Doyle's friend placed the planchette on a piece of paper and the two boys asked it a question. They both wrote down whatever was dispensed on the paper by the planchette. It was only after they had played with the device for a while that they became aware that the planchette moved of its own accord.
+            </p>
+
+            <h2 class="bold">When Was the Ouija Board Invented?</h2>
+
+            <p>
+              The exact date of the Ouija board's invention is unknown, but it appears that the original device that young Arthur Conan Doyle played with was a precursor to the Ouija board. The planchette device used by Conan Doyle and his friend was popular at the beginning of the 20th century. These devices were often referred to as “talking boards” or “mystic boards”, and they were very similar to the Ouija board. The Ouija board first appeared in the 1890s. By the 1920s, the Ouija board had become incredibly popular especially in the United States. The Ouija board was the best-selling toy of the decade and remained one of the most popular toys for decades to come.
+            </p>
+
+            <h2 class="bold">The History of the Ouija Board</h2>
+
+            <p>
+              The Ouija board's history is incredibly long and rich. Even though it's only been in common use for a little over 100 years, the Ouija board is steeped in both mystery and controversy. It's been the subject of wild speculation, both in the media and in academic circles, for many years. Some people believe that the Ouija board is nothing more than a parlor game while others believe it to be a form of genuine occultism. The Ouija board has been blamed for many different tragedies. There are many stories of Ouija boards being used by people who were driven to suicide. Others believe that Ouija boards were used to contact evil spirits who then used the people who were playing with the board to commit murder. These stories have led many people to believe that the Ouija board is a dangerous occult device that must be avoided at all costs. Others believe that the Ouija board is nothing more than a parlor game designed to entertain people.
+            </p>
+
+            <h2 class="bold">The Name “Ouija”</h2>
+
+            <p>
+              The word “ouija” has several different meanings. Originally, it was the surname of a French woman who was trying to find investors for her invention in 1890. Ouija was the name of her board-and-planchette combination. The name quickly became associated with the board itself. Another meaning of the word “ouija” is a whole different kind of device. This device is an “automatic writing table”. Automatic writing tables are tables that are designed for people to write messages to spirits. They can sometimes be used in conjunction with a planchette. Finally, “ouija” is also the name of a type of board game called “gooses”. This game is very similar to “scrabble”, except that you use letters from two different word sources. You use letters from a regular Scrabble set, and you also use letters from a set of smaller letter tiles in different colors. These tiles have Chinese symbols on them.
+            </p>
+
+            <h2 class="bold">Why Is the Ouija Board so Popular?</h2>
+
+            <p>
+              During the 1920s, the Ouija board became extremely popular in the United States. It was the best-selling toy of the decade outselling even the iconic Mickey Mouse. There are many different reasons why the Ouija board became so popular in the 1920s. It may have been the novelty of the new board but it's also likely that the First World War also played a role in its popularity. The First World War had been raging for many years when the Ouija board first came to prominence. People may have been looking for ways to pass the time without thinking about the war. It's also possible that the Ouija board became so popular in the 1920s because it was a social activity. Many people have been using the Ouija board in groups ever since it became popular. The fact that it's a social activity may have played a significant role in its popularity.
+            </p>
+
+            <h2 class="bold">The Negative Reputation of the Ouija Board</h2>
+
+            <p>
+              The Ouija board has developed an incredibly negative reputation over the years. Many people believe it to be a highly dangerous occult device and there are plenty of reports of people being driven to suicide after using an Ouija board. There are also many stories of Ouija boards being used to contact evil spirits who then used the people who were playing with the board to commit murder. However, these stories are extremely difficult to verify. Many believe that the Ouija board is dangerous, and many believe that it must be avoided at all costs. However, there is also a large group of people who believe that the Ouija board is nothing more than a parlor game. They believe that the Ouija board is simply a fun way to spend an evening with friends.
+            </p>
+
+            <h2 class="bold">Is There Any Truth to the Rumours About Ouija Boards?</h2>
+
+            <p>
+              Many rumors are floating around about the dangers of using an Ouija board. Some of these rumors are likely to be true while others may be nothing more than fanciful tales designed to scare people away from using talking boards. Using an Ouija board can likely be dangerous. There are many stories of people being driven to suicide after using an Ouija board and there are also many stories of people using an Ouija board to contact an evil spirit and then having the spirit use them to commit murder. These stories are difficult to verify and should be treated with caution. However, there are many other stories about people who abused the Ouija board and were punished for their actions. For example, there are many stories of people getting injured while using an Ouija board. Often, they cut their hands on the planchette while moving it around the Ouija board. This is not surprising when you consider that the planchette is a miniature skateboard.
+            </p>
+
+            <h2 class="bold">Should You Use a Talking Board?</h2>
+
+            <p>
+              The Ouija board has been the subject of controversy for many years. There are many stories about the dangers of using an Ouija board but there are also many stories of people using one and having a great time. It's difficult to know which rumors are true, and which ones are false. There are many stories about people being injured while using an Ouija board, and there are also many stories of people being driven to suicide after using an Ouija
+            </p>
+
+            <div><a href="/html/blogmenu.html">Back to Blog Menu</a></div>
+          </article>
+
+          <article class="blog__container" id="blog8">
+
+            <h1>
+              The Science of Nightmares
+            </h1>
+
+            <div class="author">By Staff</div>
+
+            <p>
+              Nightmares are vivid, disturbing dreams that usually have a plot or theme. They often involve threats and danger to the dreamer. Some people experience them occasionally, while others suffer from frequent nightmares. Nightmares can be frightening and upsetting, but they are not abnormal. They are natural experiences that most people will have from time to time. It is believed that nightmares are caused by some stressor or stressors in the waking life you haven't dealt with yet. As a result, your subconscious mind creates nightmare scenarios to help you process how you're feeling about something in your real life. But what exactly causes nightmares? What are the different types of nightmares? And most importantly, how can we stop them? Keep reading to discover more about the science of nightmares and how you can stop them once and for all.
+            </p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/nightmare-700w.jpg" alt="show banner" />
+                <figcaption>Photo by Pelly Benassi</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">What is a nightmare?</h2>
+
+            <p>
+             Nightmares are much more vivid and disturbing than regular dreams, so they often cause us to wake up feeling anxious, afraid, or even panicked. Nightmares can occur in children and adults. Some people experience them occasionally, while others suffer from frequent nightmares. While nightmares are common in adults and children, they are rare in infants. Nightmares often happen during periods of high stress and are associated with the release of stress hormones. They can be caused by low levels of serotonin in the brain. Some people experience nightmares as an occasional side effect of certain medications. Nightmares may also be a symptom of certain psychological disorders.
+            </p>
+
+            <h2 class="bold">The Science of Nightmares</h2>
+
+            <p>
+              When we go to sleep, our bodies enter a state of relaxation, and our minds enter a state of unconsciousness. During this time, our brains are supposed to be completely inactive, which is why we can't remember our dreams when we wake up. But occasionally, our brains become semi-active while we're sleeping, causing us to have vivid dreams that we can remember while we're awake. This is what causes nightmares. But why do our brains become semi-active while we're sleeping? Well, while your brain is resting, it needs to be able to process and release all of the thoughts, feelings, and experiences you had during your day. But if you don't process these things, they could build up and become toxic, which is why we experience things like anxiety and stress. So your brain is programmed to activate while you're sleeping to help you process these emotions and thoughts. This is what causes dreams, including nightmares.
+            </p>
+
+            <h2 class="bold">Types of Nightmares</h2>
+
+            <p>
+              Nightmares often involve threat and dangers to the dreamer. There are different types of nightmares, including anxiety, blood, injury, childhood trauma, falling, flying, health, and sexual. Some of the reasons behind these nightmares include high stress, depression, or anxiety. Nightmares are common in children and adults. They can be caused by a low level of serotonin in the brain or a certain psychological disorder. 
+              
+              <p><strong>Anxiety Nightmares -</strong> Anxiety nightmares are dreams that you feel trapped in or that you can't get out of. They are often related to being chased, being in danger, or a situation that you feel you can't get out of. In these nightmares, you may be running from something or someone, you may feel trapped, or you may feel like you can't escape.
+              </p> 
+              
+              <p><strong>Blood/Injury Nightmares -</strong> Blood/injury nightmares are dreams that involve blood, injury, or some other type of gore. These nightmares are often related to feeling like you have to clean or bandage something or that you have to escape from an injury.
+              </p>
+              
+              <p><strong>Childhood Trauma Nightmares -</strong> Childhood trauma nightmares are dreams that are related to something that happened in your childhood. Often, these nightmares are related to feeling abandoned, abused, or neglected. 
+              </p>
+              
+              <p><strong>Flying Nightmares -</strong> Flying nightmares are dreams that involve flying. These nightmares are often related to feeling like you have no control or that you are falling. 
+              </p>
+              
+              <p><strong>Health Nightmares -</strong> Health nightmares are dreams that are related to health issues, diseases, or medical procedures.
+              </p> 
+              
+              <p><strong>Sexual Nightmares -</strong> Sexual nightmares are dreams that are related to sex or something sexual.
+              </p>
+            </p>
+
+            <h2 class="bold">Stress as a Cause</h2>
+
+            <p>
+              Stress can cause nightmares by activating parts of your brain that process information related to danger and threats. This is why stress is one of the most common causes of nightmares. If you're feeling stressed out, your brain may be over-processing and over-analyzing your experience and surroundings. If you're experiencing a lot of stress in your life, you may experience nightmares more often. Because stress can cause nightmares, managing and relieving stress in your life can help prevent nightmares.
+            </p>
+
+            <h2 class="bold">Depression as a Cause</h2>
+
+            <p>
+              Depression is a mood disorder that causes feelings of sadness, loneliness, and hopelessness. It is also associated with low energy, low motivation, and low self-esteem. While everyone experiences these feelings from time to time, individuals who struggle with depression have them regularly and intensely. Most people who experience depression also have trouble sleeping. This is because the part of the brain that controls your sleep and relaxation gets over-activated when you're depressed, which can cause you to have more vivid thoughts and feelings. This can lead to nightmares, especially for people who already experience nightmares because of high stress. If you're depressed, reducing your stress can help you sleep better and reduce the likelihood of nightmares.
+            </p>
+
+            <h2 class="bold">Anxiety as a Cause</h2>
+
+            <p>
+              Anxiety is a feeling of nervousness, restlessness, and unease that can occur for no obvious reason. It can be related to a certain situation or feeling out of control. People who struggle with anxiety often have a lot of negative thoughts and feelings that they can't get rid of. Because of this, they often experience nightmares. Anxiety nightmares usually involve being chased, escaping, or having to deal with something dangerous or out of control. Reducing your anxiety in your waking life can help prevent these nightmares.
+            </p>
+
+            <h2 class="bold">Bipolar Disorder as a Cause</h2>
+
+            <p>
+              Bipolar disorder is a mental health condition that causes extreme mood swings. People who suffer from bipolar disorder experience high energy, extreme happiness, and high productivity in a short burst followed by low energy, extreme sadness, and low productivity in a long, drawn-out period. Bipolar disorder can cause a lot of stress, which can lead to nightmares. But it can also cause insomnia, which can also lead to nightmares. Getting treatment for bipolar disorder can help reduce the amount of stress you experience and the likelihood of nightmares.
+            </p>
+
+            <h2 class="bold">Conclusion</h2>
+
+            <p>
+              Some people experience Nightmares occasionally, while others suffer from frequent nightmares. Nightmares can be frightening and upsetting, but they are not abnormal. They are natural experiences that most people will have from time to time. Dream science shows that nightmares are caused by stress in waking life that you haven't dealt with yet. As a result, your subconscious mind creates nightmare scenarios to help you process how you're feeling about something in your real life. Nightmares can be prevented by addressing the source of the stress in your life and taking steps to reduce the amount of stress you experience.
+            </p>
+
+            <div><a href="/html/blogmenu.html">Back to Blog Menu</a></div>
+          </article>
+
+          <article class="blog__container" id="blog9">
+
+            <h1>
+              Demonic Possession: What it is, Signs and What to Do If You Think You're Possessed
+            </h1>
+
+            <div class="author">By Staff</div>
+
+            <p>
+              What would you do if you were convinced that the devil had taken up residence in your body? Would you seek help or shun others for fear they’d think you were crazy? In many cultures, demonic possession is seen as a real phenomenon. Though not all cultures believe that it can be transmitted through objects or curses. There are numerous cases of people who claim to be possessed by demons and go on to display supernatural abilities. Here we take a look at demonic possession, what it is and how to cope with being possessed by the devil.</p>
+
+            <div class="image__banner--blog">
+              <figure>
+                <img src="/img/demonpossess-467w.jpg" alt="show banner" />
+                <figcaption>Photo by Alessio Zaccaria</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="bold">What is Demonic Possession?</h2>
+
+            <p>When a person becomes the host of an evil spirit, this is known as demonic possession. Possession is a process in which an evil spirit takes up residence in a person’s body and either control or distorts their actions. Possession is often accompanied by symptoms that are both physical and mental. Those who are said to be possessed may exhibit strange and erratic behavior, along with strange bodily movements, speech and language that is not in keeping with the person’s background. Possession can happen to anyone, in any belief system. It can be transmitted by direct or indirect contact with an evil spirit, or it can occur spontaneously.</p>
+
+            <h2 class="bold">Signs of Demonic Possession</h2>
+
+            <p>
+              <p><strong>Speaking in Tongues -</strong> Speaking in tongues is when the person begins speaking in an unknown language that they do not know of. While this could be a form of mental illness, it is a sign of demonic possession.</p> 
+            
+              <p><strong>Controlling Others -</strong> People who are possessed may try to control the people around them and coerce them to do what they want. They have no regard for the needs or desires of others and they may even try to injure them.</p> 
+          
+              <p><strong>Increased Strength -</strong> A possessed person may exhibit increased strength which they have no control over. They may be able to break things that are normally difficult to break or lift things that are normally difficult to lift.</p> 
+        
+              <p><strong>Self-harm -</strong> Some people who are possessed will harm themselves in a variety of ways, such as cutting or punching themselves.</p> 
+      
+              <p><strong>Changes in Personality -</strong> A person’s personality may change completely when they are possessed.</p>
+            </p>
+
+            <h2 class="bold">How to tell if you are possessed?</h2>
+
+            <p>There are no sure-fire ways to know that you are possessed, but there are some indicators to look out for. If you believe that you’re possessed, the first thing you should do is seek help from a professional. There are trained psychologists and psychiatrists who can help you determine whether or not you’re possessed by the devil. - Do you hear voices inside your head? Do you hear sounds that other people can’t hear? Voices and sounds are common signs of mental illness, but they can also be a sign of demonic possession. - Does your behavior change completely from what it used to be? When you were younger, how did you behave? If your behavior changes drastically, this can be a sign that something is wrong. - Are you experiencing any pain or unusual sensations within your body? Have you been feeling any tingling or numbness within your limbs? If so, this could be a sign that there is an evil spirit within you.</p>
+
+            <h2 class="bold">How to handle being possessed by the devil</h2>
+
+            <p>If you are certain that you are possessed by the devil, you should seek help from a mental health professional. They can help you devise a plan to push out the evil spirit inside you. There are some things you can do to deal with being possessed by the devil. You can use prayer to ask God to help you with your situation. You can also contact others you trust to help lift the burden of the evil spirits off your back. If you find that these things aren’t working, you should seek help from a mental health professional. They can help you devise a plan to push out the evil spirit inside you. They can also help you to deal with the feelings and emotions you’re experiencing.</p>
+
+            <h2 class="bold">How to deal with demonic possession and realization</h2>
+
+            <p>
+              <p>- First and foremost, you need to seek help. You cannot deal with this alone; you will only make things worse. You must talk to someone about what you’re experiencing and let them help you.</p> 
+              
+              <p>- Find a therapist who specializes in helping people deal with mental illnesses and other psychological issues. You will be able to talk to them in confidence and they can help you deal with whatever it is that you’re going through.</p> 
+              
+              <p>- When dealing with mental illnesses, you need to take a holistic approach. You will have to take care of your body, mind, and spirit if you want to get better.</p>
+            </p>
+
+            <h2 class="bold">Final Words</h2>
+
+            <p>Being possessed by the devil can be terrifying, both for the person who is experiencing it and their loved ones. If you think you are possessed, seek help. You are not alone and you can get better. There are many ways to deal with mental illnesses and demonic possession, such as therapy, medication, or religion. No matter what you do, there is help out there for you. You can talk to a therapist, and they may recommend medication. You can also try to re-balance your diet, go for walks outside, and keep yourself hydrated. Being possessed by the devil is a frightening experience, and unfortunately, there is no known cure. But there are ways to manage and minimize the effects of being possessed by the devil, such as through therapy, medication, or religion.</p>
+
+            <div><a href="/html/blogmenu.html">Back to Blog Menu</a></div>
+          </article>
+
+          <footer class="footer">
+            <div class="footer__container">
+              <!-- <div class="footer__container__linkbox">
+                <a class="footer__container__linkbox__links" href="/html/about.html">About Us</a>
+                <a class="footer__container__linkbox__links" href="#"
+                  >Contact</a
+                >
+                <a class="footer__container__linkbox__links" href="#"
+                  >Advertise</a
+                >
+              </div> -->
+
+              <div class="copyright__container">
+                <p>
+                  <span class="disclaimer">DISCLAIMER: </span>All materials in
+                  this website are used for entertainment and informative purposes
+                  and fall within the guidelines of fair use law. No copyright
+                  infringement intended. If you are, or represent, the copyright
+                  owner of materials used in this website, and have an issue with
+                  the use of said material, please refer to the contact link in
+                  the "About Us" section, and you will get a prompt response.
+                </p>
+                <div class="copyright">
+                  Copyright &copy; 2022 MIDNIGHT HORROR. All rights reserved.
+                </div>
+              </div>
+              <a href="#top">
+                <div class="top__button">
+                  <p>R.I.P</p>
+                </div>
+              </a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

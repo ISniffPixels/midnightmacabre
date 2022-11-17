@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="tab icon"
+      href="/img/skull-icon-5249-Windows.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/movies.js"></script>
+
+    <style type="text/css">
+      body {
+        cursor: url("data:image/x-icon;base64,AAACAAEAICAAAAAAAACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAABgAAAAYAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAVAAAAFQAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAMAAAAHwAAAC8AAAAuAAAAHAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAADAAAAB8AAAA1AAAARQAAAEIAAAApAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAABgAAAAYAAAADAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAfAAAA/wAAAP8AAABOAAAARAAAACkAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAVAAAAFQAAAAwAAAADAAAAAQAAAAMAAAAMAAAAHwAAAP8eHh7/Hh4e/wAAAP8AAAA1AAAAHAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAMAAAAHwAAAC8AAAAvAAAAHwAAAAwAAAAGAAAADAAAAB8AAAD/Hh4e/6CgoP8eHh7/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAADAAAAB8AAAA1AAAARQAAAEUAAAA1AAAAHwAAABUAAAAfAAAA/x4eHv8eHh7/Hh4e/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAfAAAA/wAAAP8AAABRAAAAUQAAAEgAAAA1AAAALwAAAP8eHh7/Hh4e/x4eHv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAAHAAAAP8AM///29vb/wAAAP8AAABUAAAAUQAAAEgAAAD/Hh4e/x4eHv8eHh7/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAABYAAAD/ADP//9vb2//b29v/xsbG/wAAAP8AAABUAAAA/x4eHv8eHh7/Hh4e/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAMAAAA/wAz//8AM///29vb/8bGxv/Gxsb/xsbG/wAAAP8eHh7/Hh4e/x4eHv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAADAAAAP8AM///ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8eHh7/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAcAAAA/wAz///b29v/xsbG/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAFgAAAP8AM///ADP//8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAD/ADP//wAz///b29v/xsbG/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAA/wAz//8AM///29vb/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAABUAAAD/ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAA/wAz//8AM///29vb/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AM///ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAA/wAz///b29v/xsbG/8bGxv/Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AM///ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAz//8AM///xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/ADP//wAz///Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAz//8AM///ADP//8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/ADP//wAz///Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AM///ADP//8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAz///b29v/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/ADP//wAAAP8AAAAPAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAwAAAAMAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///////////////////////////////////8////+H////B////g///nwf//w4P//4EH//8AD//+AB///gA///wAf//4AP//8AH///AD///gB///wA///8Af//+AP///gH///4D///8B////A////wf///8P////H////7////8="),
+          auto;
+      }
+    </style>
+
+    <title>MIDNIGHT HORROR | Movie Reviews</title>
+    
+  </head>
+  <body>
+    <div id="top" class="wrapper--movies">
+      <div class="container">
+        <header class="header">
+          <button class="menuMobile">
+            <div class="bar"></div>
+          </button>
+    
+          <div class="menuModal">
+            <nav class="menuModal__nav">
+              <ul class="ul">
+                <li class="ul__item">
+                  <a href="/html/index.html" class="ul__link">Home</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/moviesmenu.html" class="ul__link">Movies</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/televisionmenu.html" class="ul__link"
+                    >T.V. Shows</a
+                  >
+                </li>
+                <li class="ul__item">
+                  <a href="/html/gamingmenu.html" class="ul__link"
+                    >Midnight Gaming</a
+                  >
+                </li>
+                <li class="ul__item">
+                  <a href="/html/blogmenu.html" class="ul__link">Blog</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/gallerymenu.html" class="ul__link">Gallery</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/about.html" class="ul__link">About Us</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <nav class="header__nav">
+            <ul class="ul">
+              <li class="ul__item">
+                <a href="/html/index.html" class="ul__link">Home</a>
+              </li>
+              <li class="ul__item"><a href="/html/moviesmenu.html" class="ul__link">Movies</a></li>
+              <li class="ul__item">
+                <a href="/html/televisionmenu.html" class="ul__link">T.V. Shows</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/gamingmenu.html" class="ul__link">Midnight Gaming</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/blogmenu.html" class="ul__link">Blog</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/gallerymenu.html" class="ul__link">Gallery</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/about.html" class="ul__link">About Us</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="fixedlightSwitch">
+            <span class="switchLabel">DARK</span>
+            <button class="lightSwitch">
+              <div class="lightNip">💀</div>
+            </button>
+          </div>
+        </header>
+
+        <article class="movie__container" id="crimpeak">
+          <div class="image__banner--movie">
+            <figure>
+                <img
+                  src="/img/cp-700w.jpg"
+                  alt="movie banner"
+                />
+                <figcaption>Crimson Peak (2015)</figcaption>
+            </figure>
+         </div>
+
+            <h1 class="movie__container__title">Crimson Peak</h1>
+            <div class="movie__container__author">By Staff</div>
+  
+            <h2 class="bold">Crimson Peak Review: A Gothic Romance with a Pleasant Twist</h2>
+            
+            <p>It's been a while since we've had a good gothic romance with all the trappings; bats, creepy houses, and an old-fashioned setting to boot. But that's what director and screenwriter Guillermo del Toro has given us with Crimson Peak, a film that he has described as “a love letter to monster movies.” Crimson Peak is the perfect blend of gothic romance and ghost story, set in a 19th century New England mansion where secrets lurk in every shadow. The story follows young socialite Edith Cushing (played by Mia Wasikowska), who falls madly in love with mysterious young stranger Thomas (played by Tom Hiddleston) after only having met him once before. He proposes marriage to her not long after they meet again, but there's something sinister beneath his surface...</p>
+
+            <h2 class="bold">The Art-Deco Visuals of Guillermo del Toro</h2>
+
+            <p>Del Toro is one of the few filmmakers who can make a romance look truly unique. His use of colors and light is reminiscent of the early 20th century, a period known for its Art Deco movement, and many of his films have been influenced by this era. Del Toro has often used his films to channel the aesthetics and sensibilities of the past, representing art deco in a unique way that many people will easily recognize. He does this in Crimson Peak by using bold colors, geometric patterns, and warm tones. The film is beautifully lit, and the visual aesthetics of the film draw the viewer into the world of Crimson Peak. Del Toro doesn't just set the film in an era; he brings the whole environment to life. The set of Crimson Peak is also a large part of the film's art deco design. The filmmakers used an old Victorian mansion that was built in 1901 and had been abandoned since the 1960's. They wanted to use a real architectural space with high ceilings, wood floors, and columns in order to bring the scale of the house to life.</p>
+            
+            <h2 class="bold">Crimson Peak is a Tim Burton Film</h2>
+
+            <p>Crimson Peak is a gothic romance that has all the makings of a Tim Burton film. First of all, it was produced by Burton's company, which is also responsible for del Toro's previous films Pacific Rim (2013) and Pans Labyrinth (2006). Secondly, there are strong similarities in the way the romance is presented in both films. The protagonists of both Crimson Peak and Big Fish (2003) are socially awkward women who are easily misled by the men that they fall in love with. The visual style of the film also has a lot in common with Burton's work. Not only is the set heavily influenced by the architecture of the Victorian era, but it also features Burton's signature style: a dark, eerie, and somewhat ominous visual tone.</p>
+            
+            <h2 class="bold">Guillermo del Toro's Signature Style</h2>
+
+            <p>Del Toro has always loved the gothic genre, and in many of his films, one can find elements of the 19th century gothic romance. Films like the Devil's Backbone (2001) and Crimson Peak draw inspiration from the gothic romance novels of 19th century England, which typically feature a young woman falling in love with a mysterious and often wealthy man. The Devil's Backbone and the other gothic inspired films of del Toro are excellent examples of the gothic romance; they feature dark and eerie settings, a mysterious male character, and a young woman who has been emotionally scarred by her past. Del Toro's work is extremely visual, and many of his films are very much about the way that they are shot.</p>
+            
+            <h2 class="bold">A Romance with a Nice Twist</h2>
+
+            <p>Although Crimson Peak is a gothic romance, it still features a nice twist. Rather than the young woman being the one who is haunted by her past, it is the man who has a dark secret that he is trying to keep hidden. The film explores themes of betrayal and the dangers of falling in love with a person who you barely know. The protagonist, Edith, meets a mysterious young man named Thomas and falls madly in love with him. Little does she know that he is actually married and that he has come to her home to try and get her to sign away her fortune. Del Toro is an expert at crafting ominous visuals, and his films often feature an ominous tone. His films often have an impending sense of doom, and the viewer can almost feel the darkness and anxiety of the characters.</p>
+            
+            <h2 class="bold">The Verdict</h2>
+
+            <p>Crimson Peak is a film that will appeal to lovers of the gothic romance, as well as fans of ghost stories and haunted houses. The film features a strong female protagonist who is smart and independent, but it also has all of the visual elements that make the gothic romance such an enjoyable genre: a mysterious male protagonist, a creepy house, and a sense of impending doom. If you're looking for something a bit different, give Crimson Peak a chance.</p>
+            
+            <p class="rating">Rating: 3.5 / 5</p>
+            <div><a href="/html/moviesmenu.html">Back to Movie Reviews</a></div>
+          </article>
+          
+          <article class="movie__container" id="twentytwo">
+            <div class="image__banner--movie">
+              <div class="overlay">
+                <div class="overlay__center">
+                  <p class="overlay__text">Featured Review</p>
+                </div>
+              </div> 
+
+              <figure>
+                  <img
+                    src="/img/1922-467w.jpg"
+                    alt="movie poster"
+                  />
+                  <figcaption>1922 (2017)</figcaption>
+              </figure>
+            </div>
+
+            <h1 class="movie__container__title">1922</h1>
+            <div class="movie__container__author">By Staff</div>
+  
+            <h2 class="bold">1922 Movie Review: It's a Stephen King Classic!</h2>
+            
+            <p>Maybe it's the time of year, maybe we've just been watching too many scary movies, but lately, there's been a lot of talk about Stephen King. There have been different adaptations of King's books and short stories popping up left and right. Perhaps this is because he is one of the best writers when it comes to creating a sense of creepiness and putting his characters in horrifying situations. That being said, most people are unfamiliar with just how many times Stephen King has had his work adapted into other mediums. Movies based on his novels or screenplays that he wrote directly for productions such as Netflix or Hulu are becoming more prevalent than ever before. One such production is 1922, a movie based on one of King's novellas. Here is our review of the movie</p>
+
+            <h2 class="bold">What's 1922 About?</h2>
+
+            <p>1922 is based on a short story by Stephen King. It tells the story of a farmer who decides to murder his wife with the help of their manipulated teenage son, Henry, in order to keep her from selling her farmland to a pig farm and slaughterhouse company to start a business, and begin a new life in the city. The farmer, Wilfred, and his son must deal with the guilt of their actions as they try to cope day to day and try to resume their lives, while trying to deceive the law that is relentlessly investigating and looking into their horrific transgressions. The plot of the film closely follows that of the short story. The plot summary above says a lot about the main themes of the story, but it doesn't get you into the atmosphere. The plot of the story is, of course, important, but it's not everything. One of the things that make the story work is how it is written. 1922 is a very atmospheric story, and King does a great job of establishing a feeling of tension and unease throughout.</p>
+            
+            <h2 class="bold">The Cast and Crew</h2>
+
+            <p>The cast and crew that worked on the movie are an impressive group of people. Although it is not the most well-known movie, this production boasts some notable names. Actors like Thomas Jane (who starred in the Punisher movie and the show The Expanse) and Virginia Madsen (who starred in Sideways, among other films) are featured in the movie. Thomas Hunsberger directed the movie, and he has not worked on any other notable films. This movie is his only directing credit. Hunsberger also worked as a producer on the movie, so he had a hand in almost every aspect of the production process.</p>
+            
+            <h2 class="bold">Why You Should Watch</h2>
+
+            <p>There are many reasons why you should watch this film. The first is that it is an adaption of a Stephen King work. This alone is enough to pique the interest of many people. Frankly, King's work is always worth reading or watching. He is a fantastic writer and storyteller, and many of his stories are worth exploring. 1922 is a great example of this. Beyond that, the movie is fun to watch. There are some genuinely tense and exciting scenes, and it is a movie that gets the heart racing and blood pumping. The movie also does a good job of exploring some interesting themes. The main theme of the movie is the idea of getting what we wish for and then dealing with the consequences. This story explores the idea that greed can lead to terrible and irreversible things. Finally, the cast and crew of this movie make it worth watching. This is a fairly low-budget movie, but the production value is not lacking in any way. With an impressive cast and a great director at the helm, 1922 is well worth the time.</p>
+            
+            <h2 class="bold">Is it worth watching?</h2>
+
+            <p>Absolutely. This movie is a great addition to any horror lover's film collection. It is well worth a watch, and it is something that you'll want to add to your list. 1922 is not a movie that you'll want to miss. This is a great example of what a low-budget production can do. It is a tense, scary, and often disturbing watch that will leave you thinking about it long after the credits roll. 1922 is a great adaption of a short story by one of the best authors of our time. It is a must-watch movie. Finally, this is a great opportunity to introduce yourself to the work of Stephen King. If you've never read any of his work, this is a great place to start. If you've read King before and have never seen any of his work in other mediums, this is another great place to start.</p>
+            
+            <h2 class="bold">The Verdict</h2>
+
+            <p>Overall, 1922 is a fantastic movie. It is an adaption of a great piece of literature, and it does the source material justice. It also features a great cast and crew and tells a compelling story. This film is worth watching for any fan of horror or Stephen King. It is also a good introduction to King's work for those who have never read his work before. When it comes to adaptations of King's work, 1922 is definitely worth a watch.</p>
+
+            <p class="rating">Rating: 4.5 / 5</p>
+            <div><a href="/html/moviesmenu.html">Back to Movie Reviews</a></div>
+          </article>
+          
+          <article class="movie__container" id="babadook">
+            <div class="image__banner--movie">
+              <!-- <div class="overlay">
+                <div class="overlay__center">
+                  <p class="overlay__text">Featured Review</p>
+                </div>
+              </div>  -->
+
+              <figure>
+                  <img
+                    src="/img/thebabadook-475w.jpg"
+                    alt="movie poster"
+                  />
+                  <figcaption>The Babadook (2014)</figcaption>
+              </figure>
+            </div>
+
+            <h1 class="movie__container__title">The Babadook</h1>
+            <div class="movie__container__author">By Staff</div>
+  
+            <h2 class="bold">The Babadook Movie Review: Why It's One of the Most Important Films of Our Time
+            </h2>
+            
+            <p>The Babadook is one of the most important films of our time and it comes at a perfect time in society. Released on October 25, 2014, the film tackles mental illness and its stigmas head-on. It's a film that needs to be seen by as many people as possible because it challenges what we think about as a society and how we treat those who are struggling with their mental health. The Babadook is also an Australian horror movie about a creature called The Babadook that haunts a single mother and her young son. It sounds like your run-of-the-mill, jump-scare-filled horror flick but there's so much more to this film than just scares.</p>
+
+            <h2 class="bold">What is the Babadook?</h2>
+
+            <p>The Babadook is a fictional monster that was created as a short story written by Australian author, Daniel John Moran. It tells the story of a monster who appears at the same time as a book that's found on the shelves of books in libraries. Like many fictional entities, this Babadook has become ingrained in pop culture. The film begins with a woman reading the story to her son and him becoming terrified of the image of the Babadook. The monster then comes to life in the boy's mind and begins to torment him. As the film progresses, the son sees the Babadook everywhere and becomes increasingly disturbed by him. The mother then realizes that the Babadook is also in her son's imagination and must find a way to get rid of him.</p>
+            
+            <h2 class="bold">Tackling mental illness in film and society</h2>
+
+            <p>Mental illnesses are sadly still misunderstood by society. However, in recent years, there's been a gradual push to create more representation of the struggles those with mental health face in pop culture. Films like The Babadook have provided a new and interesting way to tackle mental health. Creating a story that's centered around mental health, it's helped to normalize it and make it easier to start talking about. The Babadook follows a single mother who is struggling with depression. She's forced to confront her mental health when her son becomes fixated with The Babadook. The boy's obsession with the creature becomes so overwhelming that it begins to affect his life. His mother must figure out a way to help herself and her son with their mental health before the Babadook becomes too powerful. The mother's struggles with mental health are what drive the film. The film is a journey to find a solution for her mental health. Creating a protagonist who is dealing with mental health, it's helped to normalize the struggles those with mental illnesses face.</p>
+            
+            <h2 class="bold">A mother's struggle with her mental health</h2>
+
+            <p>The mother's mental health is the driving force behind the film. When she reads her son a story about the Babadook, the creature comes to life in her son's imagination. He then begins to see the Babadook everywhere and it quickly spirals out of control. The film doesn't just show her struggle with her son's mental health but also her own. The mother often feels like she's drowning under the pressures of her job and being a single mother. She pushes through her overwhelming feelings and continues to care for her son despite her struggles. She's also a very caring and loving mother who wants nothing but the best for her son. The mother is also portrayed as a flawed human being who makes mistakes. She imperfectly reacts to things and is forced to deal with the consequences of her actions. It's a very humanizing portrayal of mental illness and the mother's struggle in the film. It's not about finding an easy solution for her mental health but it's about her finding a solution that works for her.</p>
+            
+            <h2 class="bold">The importance of viewing mental illness as a physical illness</h2>
+
+            <p>Mental illnesses are often treated as if they're not as serious as physical illnesses. People are more likely to say things like “just snap out of it” or they're told they “need to get help”. The Babadook has helped to change the way mental illnesses are viewed by society. It's treated as a serious and physical illness that the protagonist needs help sorting out. At one point, the mother is told by her doctor to get some rest and return when she feels better. She replies that she can't because she's not physically ill. It's an important moment in the film that shows the mother's struggle with her mental health and the lack of attention it's been given.</p>
+            
+            <h2 class="bold">There's no easy fix for mental illness</h2>
+
+            <p>The film doesn't have a happy ending. It doesn't have a quick solution for the mother's mental health. She has to confront her past and find a way to move forward. She has to come to terms with the fact that she can't change what happened in her past. She has to understand and confront the fact that she's not a bad mother. She's been going through something very difficult and she needs help to get through it. The film shows the journey the mother must take to find a solution. It takes time and there's no easy way out. It's not a simple and happy ending. It's an honest depiction of mental health and the struggles that come with it.</p>
+
+            <h2 class="bold">How this film can help change society</h2>
+
+            <p>The Babadook is one of the most important films of our time. It has helped to change the way that mental illness is viewed by society. It has challenged the way that people think about mental health and helped to stop the stigmas surrounding it. It has also helped to normalize the struggles those with mental health face and encourage them to talk about their problems. By depicting mental illnesses as a serious and important issue, it has helped to change society. It has shown that mental health is just as important as physical health. That it can't be ignored and needs to be treated with the same respect as any other medical issue. It's a film that needs to be seen by as many people as possible because it will help change society.</p>
+
+            <h2 class="bold">The Verdict</h2>
+
+            <p>A low budget film that was intelligently done, and is much more than a creep fest boogeyman re-iteration. It's a frightening film that also puts a focus on the human condition, and the struggle a portion of the population deals with in regards to mental illness. Fantastic film, one of the best I've seen in years. This one scores perfectly, five out of five. Highly recommend.</p>
+
+            <p class="rating">Rating: 5 / 5</p>
+            <div><a href="/html/moviesmenu.html">Back to Movie Reviews</a></div>
+          </article>
+          
+          <article class="movie__container" id="themist">
+            <div class="image__banner--movie">
+              <figure>
+                  <img
+                    src="/img/TheMist-475w.jpg"
+                    alt="movie banner"
+                  />
+                  <figcaption>The Mist (2007)</figcaption>
+              </figure>
+           </div>
+  
+              <h1 class="movie__container__title">The Mist</h1>
+              <div class="movie__container__author">By Staff</div>
+    
+              <h2 class="bold">The Mist Movie Review: Another Terrifyingly Good Adaptation</h2>
+              
+              <p>It's been almost 42 years since the Stephen King novella The Mist was first published. Here we have the 2007 film-based project based on the original story and not the 1985 revised edition from Stephen King's horror story anthology Skeleton Crew, thanks to producer and director Frank Darabont and also star veteran actors like Thomas Jane (from Fargo), Morgan Spector (from Ozark), Frances Conroy (from American Horror Story) and Nathan Gamble. But does this modern take on The Mist lives up to its potential? Or does it fall short of being a horror classic? Let's break it down...</p>
+  
+              <h2 class="bold">What is The Mist?</h2>
+  
+              <p>The Mist is a novella written by Stephen King that was originally published in the 1980s. It was published as part of the collection Skeleton Crew and is a story about a mist that rolls into a small town in Maine, USA and brings with it death and madness. It's a classic “survival horror” story and many fans consider it to be one of King's best works. The novella was adapted into a 2007 film directed by Frank Darabont (who also directed The Green Mile and The Shawshank Redemption). It starred Thomas Jane (as the protagonist), Marcia Gay Harden and the late great 89-year-old veteran actor Andre Braugher. The film is a classic among fans of the horror genre and often appears in “best of” lists. It has also been adapted into a comic book series by Marvel.</p>
+              
+              <h2 class="bold">Is The Mist Good?</h2>
+  
+              <p>The short answer is yes, the film The Mist is a fantastic horror film. The long answer is that it's one of the best horror films of the 2007 era. You rarely get an adaptation that is not only faithful to the source material but also improves upon it in many ways. The creators of the latest version of The Mist did an excellent job of adapting the novella and making it their own while also keeping faithful to the original story. It's rare to see a film that is so faithful to its source material and at the same time so different. Visually, the film is stunning and terrifying. The computer-generated effects are amazing for 2007. The attention to detail in the creature designs as well as the world that is created is breathtaking and dream-like at the same time. The sound editing and sound direction are also very well done and add to the tension of the film.</p>
+              
+              <h2 class="bold">What Doesn't Work?</h2>
+  
+              <p>The film does a great job of building up the world and setting you up for a terrifying experience. Unfortunately, it doesn't quite deliver on the promise it sets up for itself. The main issue with the film is that it takes way too long to get going and when it does, it doesn't deliver on the promises it set up for itself. The first hour of the film is, to put it mildly, a bit of a slog. It's not that it's bad, it's just slow and it takes a long time before you know what the story is actually about. This is all before the mist shows up and it takes a very long time for the mist to show up, something that is frustrating for the audience as well as for the characters in the film. The other thing is that the film gets a bit hopeless and loses some of the momentum gained from the first two acts. There's a moment of hopelessness towards the end that feels a bit out of place and it slows down the momentum of the story before it can go out with a bang.</p>
+              
+              <h2 class="bold">The Verdict</h2>
+  
+              <p>All in all, The Mist is a thrilling and terrifying experience that will stick with you long after the credits roll. This is a classic that horror fans will love and non-horror fans will also enjoy. If you're looking for a new film to watch this Halloween season, this is the film to go with. The film is beautifully made, has an amazing cast and is faithful to the source material while still feeling like its own unique thing. If you're a horror fan, you need to see this film. If you're not a horror fan, this is the perfect film to introduce you to the genre.</p>
+              
+              <p class="rating">Rating: 4 / 5</p>
+              <div><a href="/html/moviesmenu.html">Back to Movie Reviews</a></div>
+            </article>
+
+            <article class="movie__container" id="elmstreet">
+              <div class="image__banner--movie">
+
+                <div class="overlay">
+                  <div class="overlay__center">
+                    <p class="overlay__text">Retro Review</p>
+                  </div>
+                </div> 
+
+                <figure>
+                    <img
+                      src="/img/elmstreet-450w.jpg"
+                      alt="movie banner"
+                    />
+                    <figcaption>A Nightmare on Elm Street (1984)</figcaption>
+                </figure>
+             </div>
+    
+                <h1 class="movie__container__title">A Nightmare on Elm Street (1984)</h1>
+                <div class="movie__container__author">By Staff</div>
+      
+                <h2 class="bold">A Nightmare on Elm Street (1984): A Frightening Retrospective</h2>
+                
+                <p>The 1980s was a decade of excess, rebellion and neon colors. It was also the time when horror movies experienced a resurgence that has yet to be matched again in the genre. As a result, many iconic films came out of this period such as Psycho, The Shining, Friday the 13th and Child's Play. However, it is arguably Wes Craven's A Nightmare on Elm Street that remains one of the most influential entries in the subgenre of slasher films. The film's premise may seem like something you have seen before – a group of teenagers making bad decisions while being hunted by a masked serial killer - but it is how this particular film executes its ideas that makes it so effective and chilling. Released in 1984 and directed by Wes Craven, A Nightmare on Elm Street continues to be an inspiration for other filmmakers and writers today. In recognition of its importance, here is our review of everyone's favorite fictional place where everyone knows your name...</p>
+    
+                <h2 class="bold">A Nightmare on Elm Street: Why It Works</h2>
+    
+                <p>A Nightmare on Elm Street was directed by Wes Craven. Craven is one of the most prolific and influential horror filmmakers of all time. He was responsible for writing and directing many iconic films such as The Hills Have Eyes, The Last House on the Left and (of course) A Nightmare on Elm Street. Wes Craven's success was also because he wrote the screenplay for this film. The script for A Nightmare on Elm Street is arguably his best. For one thing, the script is genuinely scary. Unlike many modern horror films, this one does not rely on excessive gore or jump scares for cheap scares. Instead, it uses the classic horror tropes of mystery, shadows, and an overarching sense of dread to create a richly atmospheric film. The reason why A Nightmare on Elm Street works so well is because of the issues behind the film. What do we mean by this? Well, A Nightmare on Elm Street deals with some very real problems that teenagers face. One of these is the pressure to have sex. Another is the pressure to succeed. It is these issues that make the film so relatable to viewers, regardless of age.</p>
+                
+                <h2 class="bold">Cast and Plot</h2>
+    
+                <p>The film's main characters are Tina (Amanda Wyss), Rod (John Philbin), Nancy (Heather Langenkamp), Chuck ( Corey Feldman), and Glen (Robert Englund). The film follows their attempt to survive the attacks of a man wearing a fedora and a red-and-green sweater who kills his victims in their dreams. The film takes place in Springwood where a series of child murders by a person wearing a distinct red-and-green sweater occurred. In the present day, the child murderer has grown up to become a child-killing adult and is targeting the youth of the city.</p>
+                
+                <h2 class="bold">A Nightmare on Elm Street Synopsis</h2>
+    
+                <p>The film opens with an introduction to Nancy Thompson, an intelligent and confident high school student. She is in her room with her friends discussing their love lives. Nancy is dating her boyfriend, Glen. They are very much in love. The others are Chuck, the school jock, who is obsessed with scoring with Tina, the school slut. And last, but not least, is Rod, a school nerd. Nancy and Glen are preparing for a date, but Nancy is concerned about her friend Tina, who has been acting strangely. The group then goes to the local diner where they meet up with some of their other friends. There, Nancy meets with a friend of hers, Dr. Gordon, who is a doctor, and a friend of her father's. The two are talking about the child killings that happened in their town, Springwood, many years ago. The children were all killed in their sleep (hence, the title). The group goes back to Glen's house where they drink and play spin the bottle. Nancy and Glen then go upstairs and have sex. Nancy dreams that she and Glen are in a school hallway. Suddenly, they hear noises and a student walks toward them. The student then turns into the familiar killer, Freddy Krueger. When Nancy tells Glen to stay put, he suddenly turns into a small child. Nancy and Glen run away from Freddy, who catches up with them. Nancy then wakes up screaming and sweating.</p>
+                
+                <h2 class="bold">Freddy Krueger: Serial Killer, Child Molester and Hella-Scary Shower Guy</h2>
+    
+                <p>Freddy Krueger is the antagonist in A Nightmare on Elm Street. He is an undead serial killer who is targeting teens, primarily those who are having sexual intercourse. In the original film, Freddy was a child molester who murdered children in their sleep. The parents of Springwood were so outraged by this that they burned him alive in the boiler room where he worked. Freddy can enter people's dreams and kill them by slashing them on the inside. Because he kills his victims in their dreams, they do not know they are dying. This is why he targets teens because they are more likely to be having nightmares and, therefore, easy pickings.</p>
+                
+                <h2 class="bold">The Verdict</h2>
+    
+                <p>A Nightmare on Elm Street is a classic piece of American cinema. It is a masterfully crafted film that is both terrifying and insightful. The film explores real issues that teenagers face and does so in a way that makes the viewer uncomfortable and contemplative. That being said, there is no denying that the film is a thrill ride from start to finish. It is a film that is sure to keep you up at night and afraid to go to sleep. If you are a horror aficionado, then there is no better film to watch than A Nightmare on Elm Street.</p>
+                
+                <p class="rating">Rating: 4 / 5</p>
+                <div><a href="/html/moviesmenu.html">Back to Movie Reviews</a></div>
+              </article>
+
+              <article class="movie__container" id="txchain">
+                <div class="image__banner--movie">
+  
+                  <div class="overlay">
+                    <div class="overlay__center">
+                      <p class="overlay__text">Retro Review</p>
+                    </div>
+                  </div> 
+  
+                  <figure>
+                      <img
+                        src="/img/txchain-500w.jpg"
+                        alt="movie banner"
+                      />
+                      <figcaption>Texas Chainsaw Massacre (1974)</figcaption>
+                  </figure>
+               </div>
+      
+                  <h1 class="movie__container__title">Texas Chainsaw Massacre (1974)</h1>
+
+                  <div class="movie__container__author">By Staff</div>
+        
+                  <h2 class="bold">Texas Chainsaw Massacre (1974): Oodles and Noodles of Blood</h2>
+                  
+                  <p>The Texas Chainsaw Massacre is a classic horror movie that has spawned a number of sequels, prequels, and other spinoffs. It has also been parodied and referenced in other movies so many times that it's difficult to keep track. The original movie was released in 1974, but it feels much older than that. The characters are mostly wooden and one-dimensional, the acting is subpar, and the cinematography is nothing special. However, the movie features some genuinely creepy scenes and moments that linger long after viewing it. There's also a pretty heavy implication of cannibalism that goes beyond an easy joke about people loving barbecue sauce or falling on the floor in agony if they see green peas.</p>
+      
+                  <h2 class="bold">What's the Story?</h2>
+      
+                  <p>The Texas Chainsaw Massacre features a group of teens visiting an old house in the country. They meet one of the most iconic horror movie characters of all time, Leatherface. He and his family live in the house and, as you might guess from the title, they are all violent killers. The teens are lured into the house and then chased by the chainsaw-wielding Leatherface. As in, he's literally wielding a chainsaw. The teens are captured by the family and then murdered in various ways that involve copious amounts of blood. The movie ends with the sole surviving teen being chased by the entire family driving a truck with a giant chainsaw on the front.</p>
+                  
+                  <h2 class="bold">Who Is Texas Chainsaw Massacre For?</h2>
+      
+                  <p>This movie is definitely for gore and horror fans. If you're looking for deep and engaging characters, this is not the film for you. The movie isn't for everyone; if you're averse to blood, strong language, and creepy images, you should definitely skip this one. It's also not a good choice if you're looking for a fun movie to watch with your kids. There's no lesson to be learned from this one, no redeeming social value. While it's not quite a snuff film, it's definitely a gore-fest.</p>
+                  
+                  <h2 class="bold">Is It Good?</h2>
+      
+                  <p>The Texas Chainsaw Massacre is a classic that has withstood the test of time. While it isn't an excellent film by any stretch of the imagination, it's still fun to watch as a piece of horror history. It may be best to watch this on a streaming service where you can choose to watch only the scenes you enjoy, especially if you're squeamish. There are plenty of scenes with blood and buckets of it. This is a gorefest that's not for everyone. This movie is definitely one of the best examples of the “slasher” genre of horror movies. It has a simple premise of a group of people being hunted by a killer and then dying gruesomely as the killer dispatches them one by one. If you enjoy slasher films full of blood and don't mind a couple of uninteresting characters and wooden dialogue, then you'll probably love The Texas Chainsaw Massacre. If you're hoping for some deep and meaningful insights into the human condition, then you'll probably be disappointed by this one.</p>
+                  
+                  <h2 class="bold">The Verdict</h2>
+      
+                  <p>The Texas Chainsaw Massacre is a classic horror movie with a simple premise. It also has a legendary cinematic villain in the form of the chainsaw-wielding Leatherface. If you love gore and want to see where it all began, watch Texas Chainsaw Massacre. If you want something more, you may want to look elsewhere.</p>
+                  
+                  <p class="rating">Rating: 2.5 / 5</p>
+                  <div><a href="/html/moviesmenu.html">Back to Movie Reviews</a></div>
+                </article>
+
+          <footer class="footer">
+            <div class="footer__container">
+            
+                <!-- <div class="footer__container__linkbox">
+                <a class="footer__container__linkbox__links" href="/html/about.html">About Us</a>
+                <a class="footer__container__linkbox__links" href="#"
+                  >Contact</a
+                >
+                <a class="footer__container__linkbox__links" href="#"
+                  >Advertise</a
+                >
+              </div> -->
+
+              <div class="copyright__container">
+                <p>
+                  <span class="disclaimer">DISCLAIMER: </span>All materials in
+                  this website are used for entertainment and informative purposes
+                  and fall within the guidelines of fair use law. No copyright
+                  infringement intended. If you are, or represent, the copyright
+                  owner of materials used in this website, and have an issue with
+                  the use of said material, please refer to the contact link in
+                  the "About Us" section, and you will get a prompt response.
+                </p>
+                <div class="copyright">
+                  Copyright &copy; 2022 MIDNIGHT HORROR. All rights reserved.
+                </div>
+              </div>
+              <a href="#top">
+                <div class="top__button">
+                  <p>R.I.P</p>
+                </div>
+              </a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

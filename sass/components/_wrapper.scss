@@ -1,0 +1,58 @@
+.wrapper {
+  position: relative;
+  background-image: url(/img/blood-png-37992.png), url(/img/blood-png-7164.png),
+    url(/img/blood-png-7146-flip-385w.png), url(/img/blood-png-7146-350w.png),
+    url(/img/blood-png-7164.png), url(/img/blood-png-7146-flip-385w.png),
+    url(/img/blood-png-7164.png);
+  background-repeat: no-repeat;
+  background-position: top left, -25% 30%, top right, left, 125% 25%, 100% 75%,
+    -25% 85%;
+
+  max-width: 240rem;
+  padding: 0 14rem;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1024px) {
+    padding: 0;
+  }
+
+  @media screen and (max-width: 1800px) {
+    background-image: url(/img/blood-png-37992.png),
+      url(/img/blood-png-7146-flip-385w.png), url(/img/blood-png-7146-350w.png),
+      url(/img/blood-png-7146-flip-385w.png), url(/img/blood-png-7164.png);
+
+    background-position: top left, top right, left, 100% 75%, -25% 85%;
+  }
+
+  &--blogs,
+  &--midnightgaming,
+  &--television,
+  &--movies,
+  &--about {
+    position: relative;
+
+    background-image: url(/img/blood-png-37992.png),
+      url(/img/blood-png-7146-flip-385w.png), url(/img/blood-png-7146-350w.png),
+      url(/img/blood-png-7146-flip-385w.png);
+    background-repeat: no-repeat;
+    background-position: top left, top right, bottom left, bottom right;
+
+    max-width: 192rem;
+    padding: 0 14rem;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1600px) {
+      background-image: url(/img/blood-png-37992.png),
+        url(/img/blood-png-7146-flip-385w.png);
+      background-repeat: no-repeat;
+      background-position: top left, top right;
+    }
+
+    @media screen and (max-width: 800px) {
+      background-image: url(/img/blood-png-37992-100w.png),
+        url(/img/blood-png-7146-flip-100w.png);
+      background-repeat: no-repeat;
+      background-position: top left, top right;
+    }
+  }
+}

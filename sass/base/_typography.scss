@@ -1,0 +1,173 @@
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 56.25%;
+  }
+}
+
+body {
+  background-color: var(--bg-color-primary);
+  font-weight: 500;
+  line-height: 1.6;
+  min-height: 100vh;
+
+  transition: all 350ms ease-in;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body {
+    background-color: var(--bg-color-primary);
+    color: var(--color-tertiary);
+  }
+
+  body.dark-theme {
+    background-color: var(--bg-color-primary);
+    color: var(--color-tertiary);
+  }
+
+  body.light-theme {
+    background-color: var(--bg-color-tertiary);
+    color: var(--color-generic);
+
+    p {
+      color: var(--color-generic);
+    }
+
+    figcaption {
+      color: var(--color-generic);
+    }
+
+    .switchLabel {
+      color: var(--color-generic);
+    }
+
+    .slider__container {
+      box-shadow: 0.1rem 0.1rem 2.6rem var(--box-shadow-primary);
+    }
+
+    .image__banner--movie {
+      figure {
+        img {
+          box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary);
+        }
+      }
+    }
+
+    .television__container__author {
+      color: var(--color-generic);
+    }
+
+    .image__banner--television {
+      figure {
+        img {
+          box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary);
+        }
+      }
+    }
+
+    .midnightgaming__container__author {
+      color: var(--color-generic);
+    }
+
+    .image__banner--midnightgaming {
+      figure {
+        img {
+          box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary);
+        }
+      }
+    }
+
+    .blog__container__author {
+      color: var(--color-generic);
+    }
+
+    .image__banner--blog {
+      figure {
+        img {
+          box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary);
+        }
+      }
+    }
+
+    .author {
+      color: var(--color-generic);
+    }
+
+    .fig-container {
+      .img--1,
+      .img--2,
+      .img--3 {
+        box-shadow: 0.01rem 0.01rem 1.2rem 0.1rem var(--box-shadow-primary);
+      }
+    }
+
+    .top__button {
+      background-color: var(--bg-color-tertiary);
+
+      p {
+        color: var(--color-primary);
+      }
+    }
+
+    .artist-info {
+      p {
+        color: var(--color-tertiary);
+      }
+    }
+
+    .author-info {
+      p {
+        color: var(--color-tertiary);
+      }
+    }
+
+    .about {
+      p {
+        color: var(--color-generic);
+      }
+    }
+  }
+}
+
+h1 {
+  font-family: var(--font-family-primary);
+  font-variant: small-caps;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--font-family-primary);
+  font-variant: small-caps;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-family: var(--font-family-primary);
+  font-variant: small-caps;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-family: var(--font-family-secondary);
+  color: var(--color-tertiary);
+  padding: 1rem;
+}
+
+figcaption {
+  color: var(--color-tertiary);
+  font-variant: small-caps;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1.5rem;
+}

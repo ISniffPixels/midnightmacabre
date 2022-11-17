@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="tab icon"
+      href="/img/skull-icon-5249-Windows.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/television.js"></script>
+
+    <style type="text/css">
+      body {
+        cursor: url("data:image/x-icon;base64,AAACAAEAICAAAAAAAACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAABgAAAAYAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAVAAAAFQAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAMAAAAHwAAAC8AAAAuAAAAHAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAADAAAAB8AAAA1AAAARQAAAEIAAAApAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAABgAAAAYAAAADAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAfAAAA/wAAAP8AAABOAAAARAAAACkAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAVAAAAFQAAAAwAAAADAAAAAQAAAAMAAAAMAAAAHwAAAP8eHh7/Hh4e/wAAAP8AAAA1AAAAHAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAMAAAAHwAAAC8AAAAvAAAAHwAAAAwAAAAGAAAADAAAAB8AAAD/Hh4e/6CgoP8eHh7/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAADAAAAB8AAAA1AAAARQAAAEUAAAA1AAAAHwAAABUAAAAfAAAA/x4eHv8eHh7/Hh4e/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAfAAAA/wAAAP8AAABRAAAAUQAAAEgAAAA1AAAALwAAAP8eHh7/Hh4e/x4eHv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAAHAAAAP8AM///29vb/wAAAP8AAABUAAAAUQAAAEgAAAD/Hh4e/x4eHv8eHh7/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAABYAAAD/ADP//9vb2//b29v/xsbG/wAAAP8AAABUAAAA/x4eHv8eHh7/Hh4e/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAMAAAA/wAz//8AM///29vb/8bGxv/Gxsb/xsbG/wAAAP8eHh7/Hh4e/x4eHv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAADAAAAP8AM///ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8eHh7/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAcAAAA/wAz///b29v/xsbG/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAFgAAAP8AM///ADP//8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAD/ADP//wAz///b29v/xsbG/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAA/wAz//8AM///29vb/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAABUAAAD/ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAA/wAz//8AM///29vb/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AM///ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAA/wAz///b29v/xsbG/8bGxv/Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AM///ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAz//8AM///xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/ADP//wAz///Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAz//8AM///ADP//8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/ADP//wAz///Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AM///ADP//8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAz///b29v/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/ADP//wAAAP8AAAAPAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAwAAAAMAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///////////////////////////////////8////+H////B////g///nwf//w4P//4EH//8AD//+AB///gA///wAf//4AP//8AH///AD///gB///wA///8Af//+AP///gH///4D///8B////A////wf///8P////H////7////8="),
+          auto;
+      }
+    </style>
+
+    <title>MIDNIGHT HORROR | T.V. Show Reviews</title>
+    
+  </head>
+  <body>
+    <div id="top" class="wrapper--television">
+      <div class="container">
+        <header class="header">
+
+          <button class="menuMobile">
+            <div class="bar"></div>
+          </button>
+    
+          <div class="menuModal">
+            <nav class="menuModal__nav">
+              <ul class="ul">
+                <li class="ul__item">
+                  <a href="/html/index.html" class="ul__link">Home</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/moviesmenu.html" class="ul__link">Movies</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/televisionmenu.html" class="ul__link"
+                    >T.V. Shows</a
+                  >
+                </li>
+                <li class="ul__item">
+                  <a href="/html/gamingmenu.html" class="ul__link"
+                    >Midnight Gaming</a
+                  >
+                </li>
+                <li class="ul__item">
+                  <a href="/html/blogmenu.html" class="ul__link">Blog</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/gallerymenu.html" class="ul__link">Gallery</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/about.html" class="ul__link">About Us</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <nav class="header__nav">
+            <ul class="ul">
+              <li class="ul__item">
+                <a href="/html/index.html" class="ul__link">Home</a>
+              </li>
+              <li class="ul__item"><a href="/html/moviesmenu.html" class="ul__link">Movies</a></li>
+              <li class="ul__item">
+                <a href="/html/televisionmenu.html" class="ul__link">T.V. Shows</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/gamingmenu.html" class="ul__link">Midnight Gaming</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/blogmenu.html" class="ul__link">Blog</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/gallerymenu.html" class="ul__link">Gallery</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/about.html" class="ul__link">About Us</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="fixedlightSwitch">
+            <span class="switchLabel">DARK</span>
+            <button class="lightSwitch">
+              <div class="lightNip">💀</div>
+            </button>
+          </div>
+        </header>
+
+        <article class="television__container" id="thesandman">
+          <div class="image__banner--television">
+            <div class="overlay">
+              <div class="overlay__center">
+                <p class="overlay__text">Featured Review</p>
+              </div>
+            </div> 
+
+            <figure>
+                <img
+                  src="/img/sandman-467w.jpg"
+                  alt="show banner"
+                />
+                <figcaption>The Sandman (2022)</figcaption>
+            </figure>
+         </div>
+
+            <h1 class="television__container__title">The Sandman</h1>
+            <div class="television__container__author">By Staff</div>
+  
+            <h2 class="bold">The Sandman Netflix Show Review: It's Even Better Than the Comic Book Adaptation</h2>
+            
+            <p>The Sandman is one of comics' most acclaimed and beloved properties. Neil Gaiman's series about the King of Dreams has won multiple Eisner Awards, was listed as one of the New York Public Library's Best Books for Teens in 2003, and inspired a popular new subgenre known as “graphic novels.” It is also, unfortunately, an almost impossible property to adapt for TV. The complexity of Gaiman's story, which covers not just the titular character but also his siblings Destiny, Destruction, Despair, and Delight (as well as other personifications such as Time and Memory), their friends from the Dreaming (such as Nightmare) and parallel universes such as Hell, along with its density of literary references, makes it almost impossible to condense into a pilot episode or even a single season without completely losing sight of the plot. So we are thankful that Sam Kieth, who was originally set to write and draw the comic book adaptation before passing creative duties on to Gaiman himself, came up with this brilliant solution instead: Make it an anthology show instead.</p>
+
+            <h2 class="bold">Who's Involved?</h2>
+
+            <p>The Sandman Netflix show is executive produced by Neil Gaiman. It is written and directed by the author as well, with the help of his former assistant Sam Hunt. Gaiman is joined in the creative team by Kieth, who is now credited as visual consultant, as well as the Weta workshop, which provided the show's elaborate special effects. The show's producers are Michael Eisner's Tornante Company, with the participation of Gaiman's production company, The Blank Corporation. The original comic book's publisher, DC Comics, is also involved, along with the folks at the British network Sky Atlantic, who are producing and distributing the show.</p>
+            
+            <h2 class="bold">What Is “The Sandman” Netflix Show About?</h2>
+
+            <p>The first episode, “The Hour of the Wolf,” opens with a primitive human discovering that he can dream, and thereby escaping from the limitations of his world. As the centuries pass, humanity begins to lose its ability to dream, and all that remains of the Dreaming is Morpheus, the King of Dreams, who has been fighting a loosing battle against the forces of the Endless's enemy: the Drifter, who has been thinning out the Dreaming's borders. Following the death of Morpheus's human caretakers, he is captured by the Drifter, who is preparing to destroy him. The Drifter is temporarily defeated, and Morpheus is rescued by his apprentice and former lover, Death, who travels to our modern world to retrieve him. There, she meets Dan, a young man who is mourning the death of his brother, and whose dreams are the only thing protecting him from the Drifter. Death takes Dan back to the Dreaming, where he is crowned the new Dream King, and sent off to battle the Drifter. Meanwhile, Morpheus, after escaping from imprisonment, heads to the House of Mystery, where he finds an old, abandoned typewriter. As we learn in the episode's final scene, this typewriter is part of an ancient machine that will help Morpheus write a new story with a new hero.</p>
+            
+            <h2 class="bold">Why a TV Show Instead of a Comic Book?</h2>
+
+            <p>The Sandman's large cast, intricate plot, and literary allusions make it virtually impossible to adapt into a single comic book series. It would take dozens of volumes to include all the characters, locations, and subplots that Gaiman put in his epic. The Sandman comic book series began in 1989 and ran for 75 issues, and even then, the story came to an end before Gaiman had to leave out characters such as Lillith, the First Slayer, who was introduced in the comic book's last volume. The same goes for the other Endless, who were left out of the comic book series altogether. In fact, one of the main reasons Gaiman opted to write the comic book in the first place was because DC wouldn't let him publish a 10-issue story about Death. Given that there's no way to translate a comic book into a TV show, it seems that the only solution would be to create an anthology series instead. An anthology series would allow the producers to tell a new story with new characters from The Dreaming nearly every season.</p>
+            
+            <h2 class="bold">The Prologue and Episode One Are Confirming the Producers' Choice</h2>
+
+            <p>The first episode, “The Hour of the Wolf,” begins with a short prologue where we see Morpheus's imprisonment and his death at the hands of the Drifter, interspersed with images of Dan's grief-filled dreams. “With Death” begins with a scene from the end of the prologue: Death's quest to save Morpheus. The first episode is remarkable not just for its complexity, but also for its thematic unity. It shows the relationship between Death and Morpheus and explores the nature of their friendship, which began in the comic book but went much further in the show. It also brings up the idea of what it means to be a hero, and whether it is possible for someone else to step into that role.</p>
+            
+            <h2 class="bold">Episode Two: A Brief Tour of The Dreaming</h2>
+
+            <p>The second episode, “The Sound of Her Wings,” is primarily a tour of The Dreaming, where we see places like the House of Mystery and Destiny's Bridge. In the House of Mystery, Morpheus finds a typewriter hidden in a secret chamber, which he activates using an ancient key. The typewriter's bell rings, and the machine starts writing a new story. The episode follows the story's protagonist, a bartender named Sam whose dreams are much more interesting than reality, as he travels to a mysterious tavern called The Bar with No Doors. Sam meets Lillith, the First Slayer, and learns that she is looking for an enchanted axe called Vorpal. The episode ends with Morpheus telling Sam that the Vorpal Axe is the key to his story, which will lead to a great change in the world of The Dreaming.</p>
+
+            <h2 class="bold">Episodes Three-Six: A Brief Tour of Morpheus' World — Earth</h2>
+
+            <p>The third episode, “Call to Arms,” follows two parallel storylines: The first, in the present, focuses on how Morpheus's friends are reacting to his absence, including his siblings, who are gathering at the House of Secrets to elect a new leader. Meanwhile, the episode's second storyline is about one of Neil Gaiman's characters who was not included in the TV show: The prince of the Elves, whose story is told in “Snow, Glass, and Steel,” which was a story published in the Sandman Special # 1. In that story, we learn that the prince is engaged to be married to Snow, a princess from the Seelie Court of Faerie. The prince and Snow have been invited to a ball hosted by the Empress of the Unseelie Court. However, on their way to the Empress's palace, Snow is kidnapped by the Drifter, who intends to use her as bait to lure out Morpheus. The prince must then save both Snow and Morpheus, who has been drawn to the Unseelie Court in order to rescue Snow.</p>
+
+            <h2 class="bold">Episodes Seven-Nine: An Introduction to Destiny's World — Destiny's Bridge</h2>
+
+            <p>The seventh episode, “A Dream of a Thousand Cats,” focuses on the character of Delight and her relationship with her kind and mischievous animal friends. The episode also includes a brief cameo from a character from the comic book, a cat named Mr. Bubbles, who is a member of Delight's court. In the eighth episode, “The Hunt,” we learn that the members of Morpheus's family are not just residing in the House of Secrets; they're also looking for a person called the Wanderer, who is imprisoned in the house of Destiny. Destiny's home is</p>
+
+            <h2 class="bold">The Verdict</h2>
+
+            <p>The show is whimsical, and exciting. If you like fantasy, you would be missing out on a gem of a show by not watching. I highly recommend.</p>
+            
+            <p class="rating">Rating: 5 / 5</p>
+            <div><a href="/html/televisionmenu.html">Back to T.V. Show Reviews</a></div>
+          </article>
+          
+          <article class="television__container" id="stranger">
+            <div class="image__banner--television">
+              <figure>
+                  <img
+                    src="/img/stranger-467w.jpg"
+                    alt="show banner"
+                  />
+                  <figcaption>Stranger Things (2016)</figcaption>
+              </figure>
+            </div>
+
+            <h1 class="television__container__title">Stranger Things</h1>
+            <div class="television__container__author">By Staff</div>
+  
+            <h2 class="bold">Stranger Things Review: Seasons One - Four</h2>
+            
+            <p>With so many original shows out there, it can be pretty difficult for one to stand out. However, when Stranger Things first came on the scene in the summer of 2016, it was almost immediately clear that this show was something special. Combining all the best elements from classic '80s films and television shows with a unique storyline and some talented young actors, Stranger Things is a show that has managed to capture both critics and audiences in a way few others have been able to. Whether you're just thinking about watching Stranger Things for the first time or are simply looking to dive back into it again, we've got everything you need to know about this awesome show right here. From detailed season recaps to general FAQs, we've got you covered so keep reading to learn more...</p>
+
+            <h2 class="bold">Who's Involved?</h2>
+
+            <p>Stranger Things was created by the Duffer Brothers, who had previously worked on a few episodes of shows like Wayward Pines and The X-Files. The show was initially pitched to networks as a mix between Steven Spielberg and Twin Peaks, although the final product ended up being something a little different. One of the big factors that brought this show to life was the incredible cast of young actors the Duffer Brothers were able to get to star in it. With actors like Finn Wolfhard, Millie Bobby Brown, and Winona Ryder in the mix, Stranger Things had an impressive cast that helped carry the show to great heights. Beyond the core cast, this show also features a lot of recognizable faces in the recurring guest roles including names like Matthew Modine, Sean Astin, and even Paul Reiser. Additionally, several famous musicians also make an appearance in the show including names like David Bowie and The Clash.</p>
+            
+            <h2 class="bold">Stranger Things Season One Recap</h2>
+
+            <p>The first season of Stranger Things takes place in the fictional town of Hawkins, Indiana, where a young boy named Will Byers goes missing. This event kicks off a chain of events that leads to Will's friends finding a mysterious girl who calls herself Eleven. The group quickly realizes that Eleven has special abilities and would be better suited to staying with Chief Hopper, who takes her in as his daughter. Meanwhile, the town becomes increasingly aware that there's something strange happening with a nearby power plant and the experiments taking place there. Throughout the season, Will's friends attempt to figure out where he is while also trying to deal with the new girl in their lives. Meanwhile, Chief Hopper and the local police are trying to get to the bottom of the strange occurrences at the power plant. All of this eventually leads to a climactic confrontation where it's revealed that the power plant is run by a group of scientists from another dimension. This group, known as the “company,” is attempting to open a portal so they can come to Earth and harvest humans to kill and eat.</p>
+            
+            <h2 class="bold">Stranger Things Season Two Review</h2>
+
+            <p>The second season of Stranger Things takes place about a year after the events of the first season. The group of kids who discovered Eleven and saved the town from the “company” are now dealing with the aftermath of that event. Chief Hopper, who has become much more like a father to Eleven since taking her in, is trying to keep her hidden from the rest of the world. Meanwhile, the group of friends who helped save the town from the “company” is dealing with the fame that came with it. Now that the whole world knows about their involvement in the events of the first season, these kids are constantly dealing with the press. They've also become part of a government organization known as “the lab” that is attempting to figure out what happened at the power plant.</p>
+            
+            <h2 class="bold">Stranger Things Season Three Review</h2>
+
+            <p>The third season of Stranger Things picks up several months after the events of the second season. After being unable to find Will, the group has concluded that he may have been taken by the “company.” Meanwhile, the government has been unable to find the “company” members and close the portal to their world. As such, they've concluded that the only way to stop this threat is to kill the remaining scientists. The problem is that the government no longer has any idea where these scientists are located. Meanwhile, a new group of kids also discover Eleven and her powers after she accidentally causes some destruction at their high school. However, unlike the group from the first two seasons, this group is much less interested in helping people and more interested in using their powers to make money and get rich.</p>
+            
+            <h2 class="bold">Stranger Things Season Four Review</h2>
+
+            <p>The fourth and final season of Stranger Things takes place about a year after the events of season three. After failing to locate Will and the other kids who were taken by the “company,” the government shut down the lab and disbanded the team. This has left Joyce, who was once a member of the team, feeling lost as she attempts to move on with her life. Meanwhile, the “Company” scientists who survived the last battle have been living in secret. One of these survivors, a scientist named Dr. Shaw, has been raising the kids who were taken by the “company” and training them to become soldiers. Dr. Shaw plans to re-open the portal to the other dimension and bring an army of “company” members to Earth to conquer the planet. However, as the kids begin to remember who they were before being raised by the “company,” they also begin to realize that Dr. Shaw's plan is not what they want for themselves.</p>
+
+            <h2 class="bold">Summing Up</h2>
+
+            <p>The first season of Stranger Things takes place in the fictional town of Hawkins, Indiana, where a young boy named Will Byers goes missing. This event kicks off a chain of events that leads to Will's friends finding a mysterious girl who calls herself Eleven. The group quickly realizes that Eleven has special abilities and would be better suited to staying with Chief Hopper, who takes her in as his daughter. Meanwhile, the town becomes increasingly aware that there's something strange happening with a nearby power plant and the experiments taking place there. All of this eventually leads to a climactic confrontation where it's revealed that the power plant is run by a group of scientists from another dimension attempting to open a portal so they can come to Earth. This show is one of the best out there and one that should be on every TV fan's watch list. The first season may be a little slow for some people, but it's important to watch it to understand the full story. So, whether you're re-watching the show or diving in for the first time, be sure to keep these facts in mind so you don't miss a thing!</p>
+
+            <h2 class="bold">The Verdict</h2>
+
+            <p>Retro 80's setting which is always fun. Scares, suspense, and mysteries in abundance. Great show overall, that's a lot of fun to watch. Highly recommend.</p>
+            
+            <p class="rating">Rating: 4.5 / 5</p>
+            <div><a href="/html/televisionmenu.html">Back to T.V. Show Reviews</a></div>
+          </article>
+          
+          <article class="television__container" id="archive">
+            <div class="image__banner--television">
+              <!-- <div class="overlay">
+                <div class="overlay__center">
+                  <p class="overlay__text">Featured Review</p>
+                </div>
+              </div>  -->
+  
+              <figure>
+                  <img
+                    src="/img/archive81-750w.jpg"
+                    alt="show banner"
+                  />
+                  <figcaption>Archive81 (2022)</figcaption>
+              </figure>
+           </div>
+  
+              <h1 class="television__container__title">Archive81</h1>
+              <div class="television__container__author">By Staff</div>
+    
+              <h2 class="bold">Archive81 Review: A Fascinating Netflix Original Series</h2>
+              
+              <p>When Netflix first announced its intention to produce original content, many viewers probably expected another batch of half-baked horror movies and forgettable teen comedies. But those assumptions couldn't have been more wrong. In the last couple of years, Netflix has proven itself as a leading producer of astonishingly high-quality TV shows with its series like “Stranger Things” or “Black Mirror.” On top of that, the company has now entered a new niche by releasing several exclusive documentaries and now also its first exclusive fictional series called “Archer81 Archives” (or simply “Archive81”). If you are not familiar with the world of espionage and secret agents, be prepared for some heavy information about cryptography, spy cameras, audio surveillance and all that stuff. If you are an aficionado, then let me welcome you to one of the most fascinating shows I have seen in quite some time! Let me introduce you to “Archive81”...</p>
+  
+              <h2 class="bold">Synopsis: What's It About?</h2>
+  
+              <p>The show follows the journey of two young researchers who work for an archival library. After being tasked with sorting an old box of documents, they stumble upon a treasure chest of classified material that appears to have been compiled by a secret agent. The documents include surveillance logs, photos, and audio recordings of conversations that have never been made public and have been declared highly classified by the British government. The investigators are shocked to discover that the agent was a woman named Evelyn Currie, who worked for the government during World War II. With each episode, we discover new revelations about the life of Currie and how the documents came into being. Currie was an Englishwoman who worked for British intelligence during World War II. Her role included monitoring the activities of German spies in London and sending reports back to her superiors at the MI5. The materials featured in the show are the actual documents that Currie used to write her reports. They have been archived at the British National Archives and have never been made available to the public.</p>
+              
+              <h2 class="bold">A Show for Nerds</h2>
+  
+              <p>This is a show for nerds, indeed! From the moment you start watching the series, you will be immersed in a world that most people know nothing about. The show is a love letter to archivists and all those who are fascinated by the world of espionage. Its producers have done a brilliant job of tackling a topic that is about as dry as it gets without making it boring or inaccessible. They have turned an archival document into an adventure story with unexpected twists, thrilling action scenes, and an intriguing plotline that will keep your attention from start to finish. It's a show for anyone who is up for a challenge and enjoys exploring the unknown. The creators have done a wonderful job of making the show accessible for both archivists and laymen alike. While it does feature heavy information about cryptography, spy cameras, audio surveillance and all that stuff, it doesn't feel like an acquired taste or a show for a limited group of people. On the contrary, it engages the audience from start to finish and takes them on a captivating journey through the life of Evelyn Currie and her remarkable work.</p>
+              
+              <h2 class="bold">An Adventure Through the World of Espionage</h2>
+  
+              <p>The show is not just another spy story. It's a treasure chest of information about the fascinating world of espionage. It is a rare opportunity to explore the topic in a very personal way. You feel as if Currie herself is talking to you and showing you all the things she has documented throughout her career. You are inside her head, seeing her thoughts and feelings as she goes about her work. It is as if you are actively participating in the various operations she is involved with. In a sense, you become an active participant in the story and get to feel Currie's passion for her work. It is an experience that is both informative and engaging, which is a rare combination. The combination of fascinating information about cryptography and the use of secret codes, the use of spy cameras and listening devices in daily life, and the fascinating story of Evelyn Currie make this show a truly unique experience.</p>
+              
+              <h2 class="bold">The Verdict</h2>
+  
+              <p>Netflix has once again shown that it is a pioneer in the world of TV and video production. It has demonstrated that it can produce content that is highly engaging and entertaining while also being informative. “Archive81” is a remarkable show that will hook you from start to finish. It is a rare combination of entertainment and information, which together make for a truly engaging experience. If you are looking for something new to watch, you can't go wrong with “Archive81.”</p>
+              
+              <p class="rating">Rating: 3.5 / 5</p>
+              <div><a href="/html/televisionmenu.html">Back to T.V. Show Reviews</a></div>
+            </article>
+
+            <article class="television__container" id="walkingdead">
+              <div class="image__banner--television">
+                <!-- <div class="overlay">
+                  <div class="overlay__center">
+                    <p class="overlay__text">Featured Review</p>
+                  </div>
+                </div>  -->
+    
+                <figure>
+                    <img
+                      src="/img/walkingdead-700w.jpg"
+                      alt="show banner"
+                    />
+                    <figcaption>The Walking Dead (2010 - 2022)</figcaption>
+                </figure>
+             </div>
+    
+                <h1 class="television__container__title">The Walking Dead</h1>
+
+                <div class="television__container__author">By Staff</div>
+      
+                <h2 class="bold">The Walking Dead: A synopsis of every season</h2>
+                
+                <p>The Walking Dead is an excellent show with a huge following. There have been nine seasons of the series so far, and it only continues to grow. Although the show can be slow at times, there are very few other shows that can capture the raw emotion in the way that The Walking Dead does. Each season has revealed new and interesting characters, keeping us interested in what may happen next. Every season has its ups and downs, which is why we talk about all the seasons thus far here in this article.</p>
+
+                <div class="image__banner--television">
+                  <figure>
+                      <img
+                        src="/img/rickgrimes-650w.jpg"
+                        alt="show banner"
+                      />
+                      <figcaption>Rick Grimes TWD season one photo by Gene Page / AMC</figcaption>
+                  </figure>
+               </div>
+        
+                <h2 class="bold">Season One</h2>
+    
+                <p>The first season of The Walking Dead is definitely one of the weaker seasons of the series. The plot was pretty slow throughout the majority of the season, and the villains were not particularly interesting. The characters were also a bit more “stiff”, and they didn't seem to be as fleshed out as they were later on. However, there were a few bright spots to the first season. The plot did pick up significantly at the end of the season, which did leave us with some interesting plot points to build on in later seasons. The very first “walkers” we saw were extremely memorable, and they're still some of the best walkers we've seen in the entire series. Rick's transformation from a normal, average cop to a hardened survivor was also extremely compelling.</p>
+
+                <div class="image__banner--television">
+                  <figure>
+                      <img
+                        src="/img/thegoverner-600w.jpg"
+                        alt="show banner"
+                      />
+                      <figcaption>The Governer TWD season two AMC</figcaption>
+                  </figure>
+               </div>
+                
+                <h2 class="bold">Season Two</h2>
+    
+                <p>The second season of The Walking Dead was a huge improvement from the first. It was much more interesting, and the plot progressed at a much better pace. The villains were also much more intriguing and had a much more interesting story behind them. The two standout characters of the season were definitely The Governor and Rick. The Governor was a complex and interesting villain, and Rick was extremely fleshed out this season. It was also the season where we first saw Rick and his group at their strongest, which was an extremely satisfying thing to watch.</p>
+
+                <div class="image__banner--television">
+                  <figure>
+                      <img
+                        src="/img/merle-650w.jpeg"
+                        alt="show banner"
+                      />
+                      <figcaption>Merle Dixon TWD season three photo by Gene Page / AMC</figcaption>
+                  </figure>
+               </div>
+                
+                <h2 class="bold">Season Three</h2>
+    
+                <p>Season three of The Walking Dead was a great season. It was a bit slower, but it had a more methodical pace that really built up suspense for the rest of the series. The villain of the season was a little bit confusing and hard to understand, but it was still interesting. The characters were much more fleshed out this season, especially Carl. His transition from a boy to a man was extremely compelling to watch, and also very important to this season. The introduction of more characters also made this season more interesting, with characters like Carol and Morgan being introduced.</p>
+
+                <div class="image__banner--television">
+                  <figure>
+                      <img
+                        src="/img/joetwd-600w.jpg"
+                        alt="show banner"
+                      />
+                      <figcaption>Joe leader of The Claimers gang TWD season four photo by Gene Page / AMC</figcaption>
+                  </figure>
+               </div>
+
+                <h2 class="bold">Season Four</h2>
+    
+                <p>The fourth season of The Walking Dead was another good season. It was a bit slower, but it definitely had a lot of good moments. The villain of the season was interesting, but he was underutilized, to a certain degree. The introduction of the “Wolves” was also an interesting plot point. The main characters of the season were more complex and developed, especially Daryl, who was undergoing a major transformation this season.</p>
+
+                <div class="image__banner--television">
+                  <figure>
+                      <img
+                        src="/img/gareth-488w.webp"
+                        alt="show banner"
+                      />
+                      <figcaption>Gareth TWD season five photo by Gene Page / AMC</figcaption>
+                  </figure>
+               </div>
+
+                <h2 class="bold">Season Five</h2>
+    
+                <p>Season five of The Walking Dead was another good season for the show. It was still a bit slower than the later seasons, but it was definitely moving at a faster pace than season four. This was the season where everything really started coming together, and we finally got a glimpse at what the “bad guys” were planning. The character development in this season was also very impressive. We saw characters change from this very broken place to a more hopeful and confident person. We also saw the rise of a new and stronger leader in Rick. The whole tone of the season was definitely more optimistic than previous seasons.</p>
+
+                <div class="image__banner--television">
+                  <figure>
+                      <img
+                        src="/img/negan-650w.webp"
+                        alt="show banner"
+                      />
+                      <figcaption>Negan TWD season six photo by Gene Page / AMC</figcaption>
+                  </figure>
+               </div>
+
+                <h2 class="bold">Season Six</h2>
+    
+                <p>The sixth season of The Walking Dead was probably the show's peak. It was extremely exciting, and had the best plot progression of any season so far. The villain of the season was compelling, and their plot was tied to another major villain from past seasons. The characters of the season were much more fleshed out than ever before. We saw new sides to characters that we had never seen before, making us understand them much more than we had previously. This season also introduced one of the most popular characters in the series, Negan.</p>
+
+                <div class="image__banner--television">
+                  <figure>
+                      <img
+                        src="/img/ezekiel-650w.jpg"
+                        alt="show banner"
+                      />
+                      <figcaption>Ezekiel and Shiva TWD Season seven photo by Gene Page / AMC</figcaption>
+                  </figure>
+               </div>
+
+                <h2 class="bold">Season Seven</h2>
+    
+                <p>Season seven of The Walking Dead was another good season. It was a bit slower than the previous season, but it was still exciting. The characters this season were colorful, especially with the introduction of “King” Ezekiel and his tiger Shiva. The main characters of the season also underwent some changes, with a few of them taking on a bit more of a leadership role. This was also the season when we saw the introduction of one of the most interesting characters in the series, “The Scavengers.”</p>
+
+                <div class="image__banner--television">
+                  <figure>
+                      <img
+                        src="/img/scavengers-650w.jpg"
+                        alt="show banner"
+                      />
+                      <figcaption>Rick Grimes and The Scavengers gang TWD season eight photo by Gene Page / AMC</figcaption>
+                  </figure>
+               </div>
+
+                <h2 class="bold">Season Eight</h2>
+    
+                <p>Season eight of The Walking Dead was a very lackluster season. It was definitely the weakest of all the seasons, and it did not have the same excitement that the other seasons had. The plot was very slow, and the villains did not have a strong presence. The characters were also lacking in charisma. They were much flatter than they had been in the past, and they did not undergo any real change or growth. This was definitely a disappointing season.</p>
+
+                <div class="image__banner--television">
+                  <figure>
+                      <img
+                        src="/img/alphabeta-450w.jpg"
+                        alt="show banner"
+                      />
+                      <figcaption>Alpha (left) and Beta (right) leaders of The Whisperers gang TWD season nine photo by Gene Page / AMC</figcaption>
+                  </figure>
+               </div>
+
+                <h2 class="bold">Season Nine</h2>
+    
+                <p>The ninth season of The Walking Dead was a huge improvement over season eight. The show was much more exciting, and the plot was progressing much better. The villains of the season were also much more interesting, and their plots were very devious and climactic. The characters of this season were also very interesting and left you wanting to dig deeper into their background history. They had undergone a lot of change since season eight, and this change was definitely for the better. This was definitely a much more enjoyable season than the previous.</p>
+
+                <h2 class="bold">The Verdict</h2>
+    
+                <p>Overall, AMC's The Walking Dead is a really great series. It has a great cast of characters,interesting character development, and a roller coaster of a ride plot. There are a few seasons that are weak, and half-assed, but overall, it's a great show. If you're a fan of flesh-hungry zombies and blood splatter gorefest shows, then you should definitely check out The Walking Dead.</p>
+
+                <p class="rating">Rating: 4.5 / 5</p>
+                <div><a href="/html/televisionmenu.html">Back to T.V. Show Reviews</a></div>
+              </article>
+
+            <article class="television__container" id="thohh">
+              <div class="image__banner--television">
+                <!-- <div class="overlay">
+                  <div class="overlay__center">
+                    <p class="overlay__text">Featured Review</p>
+                  </div>
+                </div>  -->
+    
+                <figure>
+                    <img
+                      src="/img/thohh-700w.jpg"
+                      alt="show banner"
+                    />
+                    <figcaption>The Haunting of Hill House (2018)</figcaption>
+                </figure>
+             </div>
+    
+                <h1 class="television__container__title">The Haunting of Hill House</h1>
+                <div class="television__container__author">By Staff</div>
+      
+                <h2 class="bold">A Review of The Haunting of Hill House Show on Netflix</h2>
+                
+                <p>The Netflix original horror series, The Haunting of Hill House by director Mike Flanagan, is loosely based on the literary classic of the same name. Both revolve around a spooky house with sinister secrets. However, The Haunting of Hill House is more a reimagining than an adaptation. Whereas the novel and previous film versions are Gothic ghost stories, this new series focuses on family trauma and creepy childhood memories. This psychological horror show is filled with cringe-worthy jump scares and unsettling imagery. It also deals with some heavy topics such as grief, alcoholism, mental illness, and loss of innocence. The downside to this series is that it's not appropriate for young viewers due to its graphic violence, gore, adult language and sexual content.
+                </p>
+    
+                <h2 class="bold">Season One Synopsis</h2>
+    
+                <p>The Haunting of Hill House explores the lives of a group of siblings who grew up in a haunted house. The story is told in the present day, but flashbacks reveal how the experiences the siblings had in the house have shaped their present-day lives. This show is a slow burn. It takes its time to reveal the details, but it is completely worth the ride. The series is based on the 1959 novel of the same name by Shirley Jackson. Audiences will also recognize this story from the 1963 film of the same name, as well as a 1999 remake of the film.
+                </p>
+                
+                <h2 class="bold">The Story So Far</h2>
+    
+                <p>The Haunting of Hill House follows the lives of the Crain family. The Crain's grew up in the spooky house of Hill House. When Eleanor was six years old, she was locked inside the house's nursery with her twin brother, Theo. They were trapped there for hours, and their older sister, Shirley, was blamed for the accident. The Crain's spent their childhood in and out of foster care. At some point, the state took custody of their parents. The Crain's left Hill House when they were young adults. The siblings went their separate ways, but they have been reunited 30 years later to deal with their childhood trauma.
+                </p>
+                
+                <h2 class="bold">Haunted Houses: Hill House and the Haunting</h2>
+    
+                <p>The Haunting of Hill House is a story about a haunted house. Hill House, however, doesn't seem to be haunted by ghosts, but rather by the memories of the family that lived there. This is an important distinction. The house itself is not haunted, only the people who lived there. This distinction is important to the story's narrative and to the show's theme of childhood trauma. The house was built by Hugh Crain, who hoped the house would be his legacy. Hugh Crain also hoped that his home would be visited by his dead mother. Hugh built Hill House with a special room called the “blue room”. The “blue room” was designed to trap Hugh's mother in the house forever.
+                </p>
+                
+                <h2 class="bold">Is The Haunting of Hill House Worth Watching?</h2>
+    
+                <p>The Haunting of Hill House is worth watching if you are interested in the psychology of horror. This show is all about the psychology of fear. It's less about ghosts and more about how traumatic experiences can shape a person's life. This show is a great example of how “less is more”. It doesn't rely on jump scares or over-the-top gore. Instead, it relies on the psychological effects of creepy imagery and sounds. The Haunting of Hill House is worth watching if you are interested in exploring the effects of childhood trauma. This show delves into what happens when children are exposed to trauma. The Crain experienced childhood trauma in a very literal way. They were trapped in a dark house with no way out. They were also left with feelings of guilt and shame due to the tragic accident that led to their captivity.
+                </p>
+
+                <h2 class="bold">Problems and Concerns with the show</h2>
+    
+                <p>The Haunting of Hill House is a slow burn. It's not the type of show that will spook you out in one sitting. There is also a lot of graphic content, so this show isn't appropriate for younger viewers. Some of the Crains' childhood experiences will be very triggering and upsetting to abuse survivors. Audiences should also be prepared for the fact that the Crains' childhood experiences will not conclude in a tidy way. The Haunting of Hill House is not a show that ends with happy endings for all the characters. It's a show that ends with the characters wrestling with their demons.
+                </p>
+
+                <h2 class="bold">Was The Haunting of Hill House Good?</h2>
+    
+                <p>The Haunting of Hill House is a great example of how a show can explore the psychological effects of trauma. It's also a good example of how a show can use creepy imagery and sound instead of jump scares to create a spooky atmosphere. The only problem is that it's not the type of show that you can binge-watch in one sitting. It's best to take the time to appreciate the imagery and symbolism in each episode. The Haunting of Hill House is a worthy successor to the original novel and the other film adaptations. It's a slow burn, but it's a show that is worth watching, bookmarking and re-watching.</p>
+
+                <p class="rating">Rating: 4 / 5</p>
+                <div><a href="/html/televisionmenu.html">Back to T.V. Show Reviews</a></div>
+              </article>
+
+              <article class="television__container" id="castlevania">
+                <div class="image__banner--television">
+                  <!-- <div class="overlay">
+                    <div class="overlay__center">
+                      <p class="overlay__text">Featured Review</p>
+                    </div>
+                  </div>  -->
+      
+                  <figure>
+                      <img
+                        src="/img/castlevaniashow-497w.jpg"
+                        alt="show banner"
+                      />
+                      <figcaption>Castlevania (2017)</figcaption>
+                  </figure>
+               </div>
+      
+                  <h1 class="television__container__title">Castlevania</h1>
+
+                  <div class="television__container__author">By Staff</div>
+        
+                  <h2 class="bold">My Thoughts On Netflix's Castlevania: A Mixed Bag But Still Watchable</h2>
+                  
+                  <p>If you're a fan of video games, chances are you're also a fan of at least one of the many excellent video game adaptations that have been released in recent years. From movies like Assassin's Creed to television shows like Uncharted and so much more in between, there has never been a better time to be a fan of video game adaptations. This is why it was such exciting news when Netflix announced that they would be producing their very own video game adaptation: Castlevania. Unfortunately, while Netflix's version of Castlevania has its ups and downs, it mostly lands in the “down” category when it comes to how well-made it is as an adaptation. Things start fairly strong with the pilot episode but begin to fall apart almost immediately thereafter. However, that doesn't mean that you shouldn't give it a shot if you are interested in watching something along the lines of what they did with this show. After all, any criticism we can levy against this show is ultimately nitpicking from someone who is clearly on board with what they set out to do in the first place. This article will explore my thoughts on Netflix's Castlevania.</p>
+          
+                  <h2 class="bold">What is Castlevania?</h2>
+      
+                  <p>Castlevania is a classic video game franchise that originated with the release of the first Castlevania game for the Nintendo Entertainment System back in 1986. The game was one of the first for the NES, and it is pretty impressive to look back at it today. The game is a classic side-scrolling action platformer in which players take on the role of Simon Belmont, a descendant of a family of vampire hunters. The enemies in the game are the classic vampires and other creatures of the night that are commonly associated with this franchise. Castlevania soon became a classic franchise, and it has been released on just about every major gaming platform since. The games themselves also vary widely in terms of story and other aspects. The franchise has even been adapted into a few different types of media over the years, including a few different anime series that are set in their unique continuity.</p>
+                  
+                  <h2 class="bold">Why is Netflix's Castlevania a mixed bag?</h2>
+      
+                  <p>
+                    There are a few different reasons why Netflix's Castlevania is a mixed bag. First, it is clear that this show was rushed into production, and it shows in the final product. The first few episodes are well-made, with great animation and a compelling story. However, almost immediately after the show's first season wraps up, it becomes clear that the people behind it have no plans to continue the story any further. The second season of this show is a complete mess. Not only does it not follow up on the cliffhanger at the end of the first season, but it also basically retcons large chunks of the first season to remove certain plot points that were established in it. Unfortunately, the second season is also much shorter. The first season clocked in at just over nine hours while the second season is just under three.</p>
+                  
+                  <h2 class="bold">Solid Voice Acting and Strong Characterization</h2>
+      
+                  <p>
+                    Another thing that Netflix's Castlevania gets right is its voice acting. While the show may not have the most stellar animation or best-written story, the fact that the majority of the actors here nail their roles is not something to ignore. It's clear throughout the whole show that all of these actors are having a great time playing their characters, and their enthusiasm shines through. Castlevania also does a great job of characterizing its main leads. Even though this is a show about a family of monster hunters, there is a lot of nuance to the relationships between the characters. All of the characters are also portrayed in a very appropriate way, with various nuances and arcs that feel authentic to them and not forced.</p>
+  
+                  <h2 class="bold">Weak Writing and a Terrible Adaptation of the Game's Story</h2>
+      
+                  <p>
+                    Unfortunately, Netflix's Castlevania also has a few weak spots. While the show's first season is pretty solid and has a lot of promise, the second season is a complete disaster. There are a few different reasons for this, but the biggest problem with the second season is that it fails to adapt the game's story into a compelling narrative. The game's story was incredibly intricate and interesting, with a ton of twists and turns. Unfortunately, the second season of Netflix's Castlevania just glosses over the majority of the game's story, and it barely touches on most of the twists that the game featured. The show squanders its potential by failing to adapt the game's story and instead opting for a much simpler narrative.</p>
+  
+                  <h2 class="bold">Progressive downgrading of animation quality and CGI choreography</h2>
+      
+                  <p>Another problem with Netflix's Castlevania is its progressive downgrading of quality in regards to animation and CGI choreography. The show tries to save money by animating the characters in a way that looks like they are made of paper. Moreover, many of the show's fights feature poor CGI choreography, making them look very awkward and tacky. Unfortunately, this is something that could have been fixed with a little more time and money, so it's a real shame that they opted to cut corners here.</p>
+
+                  <h2 class="bold">The Verdict</h2>
+      
+                  <p>All things considered, Netflix's Castlevania is a mixed bag. The show has a few problems, and it has been rushed into production. However, it is still a fun show that seems to be very aware of what it wants to be, and it does its best within the constraints of its medium. If you are someone who has never played the Castlevania games, you should still be able to enjoy this show. This is also a great show for Castlevania fans who might be a bit more critical of it. Overall, this show is not a masterpiece, but it is an enjoyable watch nonetheless. If you are a fan of Castlevania, then you will probably enjoy this show, but you should not expect it to be an accurate adaptation of the game.</p>
+  
+                  <p class="rating">Rating: 4 / 5</p>
+                  <div><a href="/html/televisionmenu.html">Back to T.V. Show Reviews</a></div>
+                </article>
+
+          <footer class="footer">
+            <div class="footer__container">
+            
+                <!-- <div class="footer__container__linkbox">
+                <a class="footer__container__linkbox__links" href="/html/about.html">About Us</a>
+                <a class="footer__container__linkbox__links" href="#"
+                  >Contact</a
+                >
+                <a class="footer__container__linkbox__links" href="#"
+                  >Advertise</a
+                >
+              </div> -->
+
+              <div class="copyright__container">
+                <p>
+                  <span class="disclaimer">DISCLAIMER: </span>All materials in
+                  this website are used for entertainment and informative purposes
+                  and fall within the guidelines of fair use law. No copyright
+                  infringement intended. If you are, or represent, the copyright
+                  owner of materials used in this website, and have an issue with
+                  the use of said material, please refer to the contact link in
+                  the "About Us" section, and you will get a prompt response.
+                </p>
+                <div class="copyright">
+                  Copyright &copy; 2022 MIDNIGHT HORROR. All rights reserved.
+                </div>
+              </div>
+              <a href="#top">
+                <div class="top__button">
+                  <p>R.I.P</p>
+                </div>
+              </a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

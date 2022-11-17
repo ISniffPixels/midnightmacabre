@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="tab icon"
+      href="/img/skull-icon-5249-Windows.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/midnightgaming.js"></script>
+
+    <style type="text/css">
+      body {
+        cursor: url("data:image/x-icon;base64,AAACAAEAICAAAAAAAACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAABgAAAAYAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAVAAAAFQAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAMAAAAHwAAAC8AAAAuAAAAHAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAADAAAAB8AAAA1AAAARQAAAEIAAAApAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAABgAAAAYAAAADAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAfAAAA/wAAAP8AAABOAAAARAAAACkAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAVAAAAFQAAAAwAAAADAAAAAQAAAAMAAAAMAAAAHwAAAP8eHh7/Hh4e/wAAAP8AAAA1AAAAHAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAMAAAAHwAAAC8AAAAvAAAAHwAAAAwAAAAGAAAADAAAAB8AAAD/Hh4e/6CgoP8eHh7/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAADAAAAB8AAAA1AAAARQAAAEUAAAA1AAAAHwAAABUAAAAfAAAA/x4eHv8eHh7/Hh4e/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAfAAAA/wAAAP8AAABRAAAAUQAAAEgAAAA1AAAALwAAAP8eHh7/Hh4e/x4eHv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAAHAAAAP8AM///29vb/wAAAP8AAABUAAAAUQAAAEgAAAD/Hh4e/x4eHv8eHh7/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAABYAAAD/ADP//9vb2//b29v/xsbG/wAAAP8AAABUAAAA/x4eHv8eHh7/Hh4e/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAMAAAA/wAz//8AM///29vb/8bGxv/Gxsb/xsbG/wAAAP8eHh7/Hh4e/x4eHv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAADAAAAP8AM///ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8eHh7/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAcAAAA/wAz///b29v/xsbG/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAFgAAAP8AM///ADP//8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAD/ADP//wAz///b29v/xsbG/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAA/wAz//8AM///29vb/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAABUAAAD/ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAA/wAz//8AM///29vb/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AM///ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAA/wAz///b29v/xsbG/8bGxv/Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AM///ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAz//8AM///xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/ADP//wAz///Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAz//8AM///ADP//8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/ADP//wAz///Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AM///ADP//8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAz///b29v/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/ADP//wAAAP8AAAAPAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAwAAAAMAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///////////////////////////////////8////+H////B////g///nwf//w4P//4EH//8AD//+AB///gA///wAf//4AP//8AH///AD///gB///wA///8Af//+AP///gH///4D///8B////A////wf///8P////H////7////8="),
+          auto;
+      }
+    </style>
+
+    <title>MIDNIGHT HORROR | Midnight Gaming</title>
+    
+  </head>
+  <body>
+    <div id="top" class="wrapper--midnightgaming">
+      <div class="container">
+        <header class="header">
+
+          <button class="menuMobile">
+            <div class="bar"></div>
+          </button>
+    
+          <div class="menuModal">
+            <nav class="menuModal__nav">
+              <ul class="ul">
+                <li class="ul__item">
+                  <a href="/html/index.html" class="ul__link">Home</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/moviesmenu.html" class="ul__link">Movies</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/televisionmenu.html" class="ul__link"
+                    >T.V. Shows</a
+                  >
+                </li>
+                <li class="ul__item">
+                  <a href="/html/gamingmenu.html" class="ul__link"
+                    >Midnight Gaming</a
+                  >
+                </li>
+                <li class="ul__item">
+                  <a href="/html/blogmenu.html" class="ul__link">Blog</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/gallerymenu.html" class="ul__link">Gallery</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/about.html" class="ul__link">About Us</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <nav class="header__nav">
+            <ul class="ul">
+              <li class="ul__item">
+                <a href="/html/index.html" class="ul__link">Home</a>
+              </li>
+              <li class="ul__item"><a href="/html/moviesmenu.html" class="ul__link">Movies</a></li>
+              <li class="ul__item">
+                <a href="/html/televisionmenu.html" class="ul__link">T.V. Shows</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/gamingmenu.html" class="ul__link">Midnight Gaming</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/blogmenu.html" class="ul__link">Blog</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/gallerymenu.html" class="ul__link">Gallery</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/about.html" class="ul__link">About Us</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="fixedlightSwitch">
+            <span class="switchLabel">DARK</span>
+            <button class="lightSwitch">
+              <div class="lightNip">💀</div>
+            </button>
+          </div>
+        </header>
+
+        <article class="midnightgaming__container" id="dl">
+          <div class="image__banner--midnightgaming">
+            <div class="overlay">
+              <div class="overlay__center">
+                <p class="overlay__text">Featured Review</p>
+              </div>
+            </div> 
+
+            <figure>
+                <img
+                  src="/img/dl-700w.jpg"
+                  alt="video game image poster"
+                />
+                <figcaption>Dying Light: Definitive Edition (2021)</figcaption>
+            </figure>
+         </div>
+
+            <h1 class="midnightgaming__container__title">Dying Light: Definitive Edition</h1>
+            <div class="midnightgaming__container__author">By Staff</div>
+
+            <h2 class="bold">Dying Light Definitive Edition: The Best Zombie Game Ever?</h2>
+
+            <p>In a genre oversaturated with zombie games, it's hard to stand out from the crowd. But that's exactly what Dying Light does. Dying Light is a first-person, action-survival game set in a vast open world. It's a game that's all about survival—you have to scavenge for supplies, craft weapons, and build shelters to protect yourself from the hordes of zombies that come out at night. But Dying Light is more than just another zombie game. It's a zombie game that's fun to play. In this article, we'll explore what makes Dying Light so special and why it's one of the best zombie games ever made.</p>
+
+            <h2 class="bold">The Day / Night Cycle</h2>
+
+            <p>One of the most interesting aspects of Dying Light is the day/night cycles. During the day, you can explore the open world and scavenge supplies. You can explore the city looking for loot, side quests, and other activities. You can also use the day to strengthen your character by visiting the safe houses and upgrading your skills. During the day, the city is full of life. You'll see people going about their daily business, working at shops, and driving cars. But as the day turns to night, things change. The city falls into chaos as hordes of ravenous zombies emerge from the shadows. When night falls, you'll have to find somewhere to hide out until morning comes again. The day/night cycle adds a layer of strategy to Dying Light. You can't just go running around the city at night. You need to find somewhere safe to hide until the sun rises again.</p>
+            
+            <h2 class="bold">The Combat</h2>
+
+            <p>One of the most common complaints about zombie games is that the combat is dull. And unfortunately, that's often true. Zombie games often have terrible combat mechanics and are frustrating to play. They're games that you wish you could love but can't because the combat is so bad. Dying Light has the opposite problem. Dying Light has great combat mechanics. It's a game you wish you could hate but can't because the combat is so good. The combat in Dying Light is fast-paced and exciting. It's a game that lets you feel like a badass. Each weapon is different, and you can use them in lots of different ways. For example, you can use a baseball bat to swing and smash zombies or you can throw it like a spear. You can use handguns or rifles to take out zombies from a distance. Or, you can get up close and lethal with a machete, ax, or katana. The combat isn't just fun to play, it's also very fluid. There's no lag between your movements and what you see on screen. You can easily switch between different combat styles and finish moves, and you can quickly respond to enemy attacks. Dying Light is a game that'll make you feel like a badass every time you play.</p>
+            
+            <h2 class="bold">The Parkour</h2>
+
+            <p> Dying Light has one of the most fluid and intuitive parkour systems ever seen in a video game. Parkour has always been a big part of Dying Light. You can use it to climb buildings, jump across rooftops, and leap between rooftops to get around the city. You can use parkour to quickly get away from zombies, climb up buildings and get to a safe height, and more. The parkour in Dying Light is fast and smooth. You can easily navigate around the city and scale tall buildings without any lags or delays. There's no need to spend time jumping around and clumsily climbing buildings. You can just run up and immediately jump up to the next rooftop, getting where you need to go quickly and efficiently. And best of all, the parkour is easy to use. It's a system anyone can pick up and use right away, even if they've never played a game with parkour before.</p>
+            
+            <h2 class="bold">The Co-Op</h2>
+
+            <p>One of the best things about Dying Light is that it allows for both single-player and co-op play. You can play the story mode or side quests by yourself or with a friend. Dying Light's co-op is seamless and completely integrated into the game. You can play with another person who's sitting right next to you or with someone who's playing the game on their computer. You can even share items and resources with your co-op partner by holding down a button. The co-op in Dying Light is a blast. You and another player can explore the open world and take on story quests together. You can team up to explore dangerous areas, take on hordes of zombies together, and work together to complete challenges. Dying Light's co-op is a great addition that lets you experience the game in a whole new way.</p>
+            
+            <h2 class="bold">The Graphics</h2>
+
+            <p>One of the first things you'll notice when you start playing Dying Light is how good it looks. Dying Light is one of the most visually stunning zombie games ever made. It has stunning real-time graphics that look great even on low settings. Dying Light's nighttime visuals are especially impressive. You can see the city change from day to night in real-time as the sun goes down and the moon comes out. The visuals aren't the only thing that makes Dying Light a beautiful game. Dying Light also has an excellent sound design. It has a soundtrack that's epic, exciting, and memorable. And it has a soundscape that lets you hear everything going on around you. You can hear zombies groaning and moaning, birds chirping, and civilians talking. You can also turn up the volume to hear if you've been spotted by a zombie. The visuals and sound design come together to make Dying Light a truly stunning game.</p>
+            
+            <h2 class="bold">The Verdict</h2>
+
+            <p>All in all, Dying Light is the best zombie game ever made. It has everything you could want in a zombie game and more. It has fun and fluid combat, a deep parkour system, a great co-op mode, and amazing visuals and sound design. Dying Light is a great game to play whether you're on your own or with a friend. It's a game that's good in both single-player and co-op modes. It's an open-world game that's easy to pick up and play. And it's a game that has something to offer everyone. If you're looking for a zombie game, you can't go wrong with Dying Light.</p>
+
+            <p class="rating">Rating: 5 / 5</p>
+            <div><a href="/html/gamingmenu.html">Back to Gaming Reviews</a></div>
+          </article>
+          
+          <article class="midnightgaming__container" id="evw">
+            <div class="image__banner--midnightgaming">
+              <figure>
+                  <img
+                    src="/img/evilwithin-700w.webp"
+                    alt="video game image poster"
+                  />
+                  <figcaption>The Evil Within (2014)</figcaption>
+              </figure>
+            </div>
+
+            <h1 class="midnightgaming__container__title">The Evil Within</h1>
+            <div class="midnightgaming__container__author">By Staff</div>
+  
+            <h2 class="bold">The Evil Within Review: A Few Flaws, But Overall Great Experience</h2>
+            
+            <p>The Evil Within is a single-player game that focuses on story, exploration, and stealth. It's not an action game like so many other horror games out there. This one wants to scare you with its grotesque ghouls, dark environments, creepy eeriness, and tense gameplay. Does it succeed? Read on to find out... It's not perfect. The Evil Within has a few flaws, some of which are quite annoying, but overall it's a great experience that we won't forget any time soon. It blends psychological horror with the fear of monsters lurking around every corner to keep you on edge at all times. You never know what's going to jump out at you next. The game also looks great thanks to its gothic setting and some grotesque enemies that will haunt your nightmares for weeks to come. We don't want to give too much away about this one; instead, here is our detailed review of The Evil Within…</p>
+
+            <h2 class="bold">Story: A Detective's Madness Becomes Real</h2>
+
+            <p>The game starts with Detective Sebastian Castellanos as he investigates a bizarre murder scene. He believes he's seen everything until he starts seeing images of demons and monsters. The game then flashes back 8 years earlier to tell the story of how this madness came to be. Sebastian is a detective on his first day at the crime scene of a gruesome mass murder. He soon finds himself drawn into a supernatural world of horror and demons. The game plays out like a good mystery story with you trying to solve the puzzles of this new world while trying to avoid the monsters lurking around every corner. The story definitely has some interesting plot twists and keeps you guessing. You are constantly wondering what will happen next.</p>
+            
+            <h2 class="bold">Gameplay: Stealth and Horror Don't Mix Well</h2>
+
+            <p>The game mixes stealth and horror together, but the stealth is a bit off. You can sneak up behind enemies and perform stealth kills, but it's not very intuitive. You don't know whether or not you're in the enemies' line of sight and can get caught. The game also doesn't have a stealth meter, so you can't see how much noise you're making and adjust your style of play accordingly. It's a bit like playing poker where you don't know what your opponent holds. The horror aspect is pretty good when you're up against the grotesque monsters. But when you're supposed to be stealthy, it doesn't work so well. It's like trying to sneak up on someone while wearing a bell around your neck. The game tries to resolve this by giving you a crossbow; however, it would have made more sense if you could sneak up behind enemies and perform stealth kills with whatever weapon you want. It's a bit more realistic that way.</p>
+            
+            <h2 class="bold">The Good Stuff: Tense Gameplay, Creepy Enemies, Great Artwork</h2>
+
+            <p>The game has some creepy enemies that are well designed and look grotesque. They also sound creepy as hell. They're definitely nightmares come to life. The bosses are really well designed as well. Gameplay is also very tense, especially if you play on the higher difficulty levels. It can be a bit overwhelming at times, especially when you're surrounded by enemies and trying to solve the puzzles of this new world. The artwork is also fantastic. The game has a unique gothic setting with creepy dungeons, eerie forests, and monstrous creatures. You're constantly on edge; you don't know what's around the next corner. It's a great combination of visuals and sound that creates a world you don't want to be in, but want to explore at the same time.</p>
+            
+            <h2 class="bold">The Bad Stuff: Repetitive Voice-Over, Repetitive Missions</h2>
+
+            <p>One thing we didn't like is the voice-over. It's very repetitive and can get annoying very quickly. It's like you can't talk to anyone without hearing them say the same thing over and over again. We also found some of the missions to be a bit repetitive. At times, you feel like you're just going through the same mission over and over again with no real variation. It's also annoying that you can only save your game when you find a safe house. It would have been nicer if you could save your progress at any time. This is especially true if you're playing in a long session.</p>
+            
+            <h2 class="bold">The Verdict</h2>
+
+            <p>The Evil Within is a great game that has been given a new life thanks to its re-release on current-gen consoles and PC. The game has been reworked to take advantage of the more powerful hardware, and the result is a very impressive and scary experience. The graphics are better, the soundtrack has received a boost, and the overall gameplay experience has been tweaked and improved in a number of ways. If you're a fan of scary games and want a great single-player experience, then we recommend picking up The Evil Within.</p>
+            
+            <p class="rating">Rating: 3.5 / 5</p>
+            <div><a href="/html/gamingmenu.html">Back to Gaming Reviews</a></div>
+          </article>
+          
+          <article class="midnightgaming__container" id="mortass">
+            <div class="image__banner--midnightgaming">
+              <figure>
+                  <img
+                    src="/img/themortass-750w.webp"
+                    alt="video game image poster"
+                  />
+                  <figcaption>The Mortuary Assistant (2022)</figcaption>
+              </figure>
+            </div>
+
+            <h1 class="midnightgaming__container__title">The Mortuary Assistant</h1>
+
+            <div class="midnightgaming__container__author">By Staff</div>
+  
+            <h2 class="bold">The Mortuary Assistant Review: Don't turn the lights on</h2>
+            
+            <p>If you've spent a significant amount of time browsing through video game recommendations on the app store, you'll know how hard it is to find something that stands out. Most games are variations of the same thing: a first-person shooter here, an action role-playing game there—it's all ultimately the same recycled ideas with different graphics. But once in a while, you come across something like The Mortuary Assistant. It's not just another new take on hidden objects or escape rooms; it's a game where you play as an employee at the local mortuary, assisting with the dead bodies and trying to figure out who killed your coworker.</p>
+
+            <h2 class="bold">A Unique Game That Will Have You on the Edge of Your Seat</h2>
+
+            <p>First things first, the game's storyline is truly incredible. This isn't just another hidden objects game where you have to find ten missing items or another escape game where you have to solve puzzles to get out of a room. The Mortuary Assistant is a full-length game with real characters, a gripping plot, and tons of unexpected twists and turns that will have you on the edge of your seat until the very end. And speaking of the end, this game doesn't end with a cliffhanger—it ends with a full conclusion that leaves you satisfied, but eager for more. The game is played through an omniscient narrator who guides you through the twists and turns of the story and the various tasks you have to complete at the mortuary. The Mortuary Assistant's storyline is intriguing and its puzzles are challenging but never frustrating.
+            </p>
+            
+            <h2 class="bold">Why You Should Download The Mortuary Assistant Right Now</h2>
+
+            <p>If you're looking for an immersive and engaging game with an intriguing storyline and a challenging but achievable puzzle system, then The Mortuary Assistant is exactly what you've been looking for. This game has it all: fully developed characters, a gripping storyline, and enough to keep you coming back for more. And the best part is that it's completely free to download—there's no reason not to give this game a try. The Mortuary Assistant is available on both iOS and Android, so you can play it anywhere and on any device. And with over 10 hours of gameplay, you'll get your money's worth. The Mortuary Assistant is the perfect game for the person who loves a good story and loves to be challenged by puzzles.</p>
+            
+            <h2 class="bold">What to Expect From This Game</h2>
+
+            <p>The Mortuary Assistant is a fully immersive and engaging game that features a storyline that will have you at the edge of your seat, as well as challenging puzzle systems that will keep you coming back for more. The game features a fully omniscient narrator who will guide you through the twists and turns of the story and the various tasks you have to complete at the mortuary. This game is played through a detective-like interface where you have to click on items and objects to gather clues, collect evidence, and solve puzzles. The Mortuary Assistant is the perfect game for anyone who loves a good story and loves to be challenged by challenging puzzles.</p>
+            
+            <h2 class="bold">Why You Shouldn't Install The Mortuary Assistant Right Now</h2>
+
+            <p>The Mortuary Assistant is a very immersive and engaging game that will have you at the edge of your seat thanks to its exciting storyline, as well as puzzle systems that will keep you coming back for more. However, we do recommend that you wait until you have some spare time to sit down and dive into this game. That's because, while it's a great game, The Mortuary Assistant is not a game you can play while you're doing something else. This game is best played when you have time to fully immerse yourself in the story and the puzzles. If you try to play it as if you're doing something else, you won't get the full experience out of this game that you would if you fully immerse yourself in it.</p>
+            
+            <h2 class="bold">The Verdict</h2>
+
+            <p>The Mortuary Assistant is an immersive and engaging game that features a storyline that will have you at the edge of your seat, as well as challenging puzzle systems that will keep you coming back for more. This game is played through a detective-like interface where you have to click on items and objects to gather clues, collect evidence, and solve puzzles. The Mortuary Assistant is the perfect game for anyone who loves a good story and loves to be challenged by challenging puzzles.</p>
+            
+            <p class="rating">Rating: 4.5 / 5</p>
+            <div><a href="/html/gamingmenu.html">Back to Gaming Reviews</a></div>
+          </article>
+          
+          <article class="midnightgaming__container" id="friday13">
+            <div class="image__banner--midnightgaming">
+              <figure>
+                  <img
+                    src="/img/friday13-600w.jpg"
+                    alt="video game image poster"
+                  />
+                  <figcaption>Friday The 13<sup>th</sup> The Game (2017)</figcaption>
+              </figure>
+            </div>
+
+            <h1 class="midnightgaming__container__title">Friday The 13<sup>th</sup> The Game</h1>
+
+            <div class="midnightgaming__container__author">By Staff</div>
+  
+            <h2 class="bold">Friday The 13<sup>th</sup> The Game Review: Hack n' Slash Bloody Delight</h2>
+            
+            <p>Friday the 13th is one of those films that has intrigued horror fans for years. There's something about a masked killer stalking cabin-dwelling teenagers that continues to draw us in, and the amount of sequels and copycats the franchise has spawned only serves to prove its staying power. As gamers, we've had a handful of Friday the 13th games over the years, ranging from side-scrolling adventures and hidden object games to arcade beat ‘em ups and first-person shooters; but none have ever managed to capture that magic combination of creepy atmosphere, cunning puzzles, and creative kills like this new asymmetrical multiplayer game from Gun Media and IllFonic does. Read on if you want to know why!</p>
+
+            <h2 class="bold">A Bloody Good Time</h2>
+
+            <p>When the next big multiplayer game launches, we're often promised a “bloody good time”; but, let's be honest, that's not always the case. We've all had bad experiences with multiplayer games at one time or another, whether it's being killed by a kid who's more interested in trolling than playing, finding yourself in a game full of players who are rude or disrespectful to each other and/or to you, struggling to get a game going because there's no one on the servers, or dealing with hacking or other cheating. Friday the 13th The Game offers a bloody good time with no strings attached. It's a game that's all about killing Jason, and there's no penalty for killing other players, so there's no fighting, no trolling, no rudeness, and no disrespect. There's just a decent variety of weapons and counters, a fantastic atmosphere, and a ton of fun to be had. What more could you ask for?</p>
+            
+            <h2 class="bold">Decent Variety of Weapons and Counters</h2>
+
+            <p>As far as weapons go, you can expect a decent variety in this game, with each having its strengths and weaknesses. The Baseball Bat, for example, can be used to deliver a one-hit kill against Jason, but only if you hit him in the head, while the Machete can only deal one-hit kills to other players. There are also a few items that are used for solving puzzles and/or escaping Jason, including a Flashlight, a Fireaxe, a Fire Extinguisher, a First Aid Kit, a Hockey Stick, and a Repair Kit. Counters are simple, with each weapon having a counter, though there are times when two weapons will cancel each other out if they hit at the same time.</p>
+            
+            <h2 class="bold">Fantastic Atmosphere</h2>
+
+            <p>Friday the 13th The Game is a multiplayer game where one player takes on the role of Jason, while between one and seven other players take on the roles of either a Counselor or a Jarvis. As a Counselor, you're trying to escape from Crystal Lake, while Jason is trying to track you down, kill you, and take your stuff. The game is set on the map of Camp Blood, the same map that we saw in the old NES game, and it's been faithfully recreated here, down to the cabin layout and the placement of trees and other landmarks. The best thing about the atmosphere on Friday the 13th is that it lets you create moments that are all your own. You'll find yourself doing things like trying to save your friends from Jason, helping them escape, and trying to get out yourself, all while taking time to explore the map, find collectibles, and discover Easter eggs; and the feeling of being in that world, surrounded by friends, is fantastic.</p>
+            
+            <h2 class="bold">Limitations That Don't Ruin the Fun</h2>
+
+            <p>There are a few limitations that you need to keep in mind while playing this game, and they don't all ruin the fun. The first is that you can't change your character while playing, which means that if you want to play as a Counselor, you're stuck as a Counselor until you finish the game, which can take roughly an hour and a half to two hours, depending on your skill level. The second is that Jason can't teleport, which means that he has to find a boat and travel across the water to get to the mainland where he can begin hunting down his prey. You also can't take any items from Jason's inventory, which means that you can't steal his machete and use it against him, nor can you take his machete and use it to defend yourself. You also can't heal your teammates or give them first aid, though you can heal yourself by using a first aid kit.</p>
+            
+            <h2 class="bold">Negatives</h2>
+
+            <p>The only real negative things that we can say about this game are that there's currently only one map and that it's not always easy to find people to play with; though the second complaint is slowly being addressed as more people start playing, and the first complaint is expected to be rectified when the promised maps are added. We can also say that the game currently doesn't have bots, though that's promised to be added soon. Other than that, there's not much bad to say about this game. It's a fantastic homage to the franchise, with a great atmosphere, fantastic multiplayer action, and no real negatives. What more could you ask for?
+            </p>
+
+            <h2 class="bold">The Verdict</h2>
+
+            <p>All in all, Friday the 13th The Game is a fantastic multiplayer game that lets you create moments that are all your own. You'll find yourself doing things like trying to save your friends from Jason, helping them escape, and trying to get out yourself, all while taking time to explore the map, find collectibles, and discover Easter eggs; and the feeling of being in that world, surrounded by friends, is fantastic. The only real negatives in this game are that there's currently only one map and that it's not always easy to find people to play with; though the second complaint is slowly being addressed as more people start playing, and the first complaint is expected to be rectified when the promised maps are added. Other than that, there's not much bad to say about this game. It's a fantastic homage to the franchise, with a great atmosphere, fantastic multiplayer action, and no real negatives.</p>
+            
+            <p class="rating">Rating: 4.5 / 5</p>
+            <div><a href="/html/gamingmenu.html">Back to Gaming Reviews</a></div>
+          </article>
+
+          <article class="midnightgaming__container" id="iratus">
+            <div class="image__banner--midnightgaming">
+              <figure>
+                  <img
+                    src="/img/iratus-506w.jpeg"
+                    alt="video game image poster"
+                  />
+                  <figcaption>Iratus: Lord of the Dead (2019)</figcaption>
+              </figure>
+            </div>
+
+            <h1 class="midnightgaming__container__title">Iratus: Lord of the Dead</h1>
+
+            <div class="midnightgaming__container__author">By Staff</div>
+  
+            <h2 class="bold">Iratus: Lord of the Dead - It's not easy being Lord of the Dead</h2>
+            
+            <p>When it comes to video game genres, there are tons of options out there. Whether you’re a casual gamer or an enthusiast, there is something for everyone. That said, one particular type of game that seems to be gaining popularity lately is the “endless runner” genre. Rather than having specific levels or points where the game ends, these types of games tend to just go on forever and ever until your character dies or you quit playing. However, from this seemingly simple setup come a whole host of different variations on the theme. Some games are fast-paced and stressful; others are more laid back and relaxed. Some have cute graphics and characters; others take a darker approach with ghoulish creatures and eerie visuals. This article takes an in-depth look at one such variation within the endless runner gaming genre Iratus: Lord Of The Dead.</p>
+
+            <h2 class="bold">What to Expect from Iratus: Lord of the Dead</h2>
+
+            <p>Iratus: Lord of the Dead is an endless runner-style game, meaning that the levels are endless and the game continues until you die. This can be great for gamers who love a challenge, but it can also be frustrating to new players who aren’t sure how to progress. This game can be played on iOS and Android devices, either your mobile device or tablet. The game features characters who are the descendants of a legendary hero and his magical bow, who must use their supernatural powers to save the world from being overtaken by the undead Lord of the Dead. Iratus: Lord of the Dead is great for gamers who love action, adventure and fantasy-style games. This game features tons of mystical creatures, a magical bow and a variety of weaponry to help you take them down.</p>
+            
+            <h2 class="bold">The Basics</h2>
+
+            <p>Iratus: Lord of the Dead is a mobile game that is available for both iOS and Android. This zombie-themed endless runner offers a range of different modes and challenging gameplay for players of all skill levels. It features beautiful graphics, a wide variety of challenges and equipment to earn and collect, and a storyline that progresses as you play. There are no specific goals or endpoints in the game, allowing players to keep going until they either die or simply decide to quit.</p>
+            
+            <h2 class="bold">Good Stuff</h2>
+
+            <p>Iratus: Lord of the Dead offers a wide variety of gameplay challenges and difficulty levels to suit players of all skill levels. The challenges range from shooting targets, mowing down hordes of zombies, hunting for treasure, and racing against the clock to complete objectives within a set time. The game also offers a wide variety of different weapons and items to collect, with each having its use and special properties. The graphics and visual design in the game are beautiful and dreamlike, featuring a wide variety of unique characters and creatures. The levels in the game are varied and interesting, with each one offering new challenges and experiences. The game can be played in both single-player and multiplayer modes, allowing multiple gamers to play together and compete against each other.</p>
+            
+            <h2 class="bold">Bad Stuff</h2>
+
+            <p>There is no way to progress through the game if you’re a new player. Iratus: Lord of the Dead is a challenging game that offers lots of different challenges and levels. However, it doesn’t offer any tips or instructions on how to progress through the game. This means that new players need to use outside resources to find out how to play the game. This can be frustrating, especially for those who want to get into the game as soon as possible. The game can be challenging even for experienced gamers. Gamers who like easy wins and easy challenges may not enjoy this game. The levels are difficult and require a lot of strategy and skill to complete. The game also contains ads that can be distracting and annoying, especially for those who are impatient and want to get started with the game as soon as possible.</p>
+            
+            <h2 class="bold">Ugly Stuff</h2>
+
+            <p>Iratus: Lord of the Dead is a challenging game that isn’t for everybody. This game can be frustrating for new players who don’t know how to progress through the game. It can also be frustrating for inexperienced players who don’t like difficult challenges and levels.</p>
+
+            <h2 class="bold">The Verdict</h2>
+
+            <p>Iratus: Lord of the Dead is a challenging endless runner-style game that offers beautiful hand drawn style graphics, a wide variety of challenges, and a wide selection of different types of gameplay. This game is best for gamers who like a challenge, and enjoy fantasy adventure games.</p>
+            
+            <p class="rating">Rating: 3.5 / 5</p>
+            <div><a href="/html/gamingmenu.html">Back to Gaming Reviews</a></div>
+          </article>
+
+          <article class="midnightgaming__container" id="deadisland">
+            <div class="image__banner--midnightgaming">
+              <figure>
+                  <img
+                    src="/img/deadisland-700w.jpg"
+                    alt="video game image poster"
+                  />
+                  <figcaption>Dead Island (2011)</figcaption>
+              </figure>
+            </div>
+
+            <h1 class="midnightgaming__container__title">Dead Island</h1>
+
+            <div class="midnightgaming__container__author">By Staff</div>
+  
+            <h2 class="bold">Dead Island Game Review: Royal Zombie Rumble</h2>
+            
+            <p>There have been a lot of zombie games released over the past few years, and while some of them are great and others not so much, almost all of them tend to follow the same formula: You play as one of several survivors, stuck in a specific location where the only way out is to find an exit or kill every single zombie in sight. Unfortunately, while that may be fun once or twice, it gets old fast. Thankfully there are also titles like Dead Island that do something different with the genre. Rather than focusing on stealth and trying to avoid being spotted by every single zombie, this game puts you right in the middle of their turf as you take control of one of four different characters and fight for your life against hoards of bloodthirsty undead. This article will go over some general tips for surviving longer in Dead Island, as well as discuss what to expect from each playable character.</p>
+
+            <h2 class="bold">What To Expect In Dead Island</h2>
+
+            <p>When you start playing Dead Island, you should expect a lot of blood, a ton of rotting corpses, a decent amount of gore, and a creepy atmosphere. This game is one of the most disturbing zombie titles out there, almost entirely thanks to its unique art style, which features a lot of really weird-looking zombies. These putrid creatures are the stuff of nightmares for sure, but the game does a great job of making each of them feel unique and terrifying. Because this game is part of the survival horror genre, you can expect a challenge, as each of the solo campaign missions can be described as a huge ambush. You have to be very careful with every single move you make, as even the slightest mistake can result in immediate death. While Dead Island is best played alone, it also contains a couple of co-op modes that should be a lot of fun with a friend or two. You can play the campaign together with a second player, or try to survive against endless hordes of the undead together with a full squad of four.</p>
+            
+            <h2 class="bold">Tips For Surviving The Game</h2>
+
+            <p>There are a couple of general tips for surviving Dead Island, but the most important one is to always be prepared. Make sure you always have enough space in your backpack for more weapons, items, and ammunition, as well as food and water. When it comes to weapons, you should acquire everything you can get your hands on, be it an axe, a baseball bat, a chainsaw, or a rifle. The game has a wide variety of melee and ranged weapons, and it's up to you to find out what works best for you. If you have to survive a particularly difficult section, it's a good idea to restock on health items, such as health kits and first aid sprays. You can do this either at a safe house or by pressing the pause button and going to the inventory menu. You should also make sure that your character has enough skill points to unlock new abilities, as well as a high enough level to use them efficiently.</p>
+            
+            <h2 class="bold">Power Up Your Character With Skills</h2>
+
+            <p>Each character in Dead Island has a unique set of skills and abilities, with some of them focusing on close combat, others on ranged combat, and a select few on using items to heal yourself or your teammates. As you play through the game, you can unlock new skills by spending skill points and upgrading your existing ones by spending money found in the game. As your level increases, so do your stats, making your character more powerful in general, and also more suited for certain roles. For example, a high level of strength is important for melee fighters and weapon specialists, while dexterity is more important for those who use ranged weapons. By the time you reach the end of the game, you'll have a very powerful character with a wide range of skills and abilities. This can be both good and bad, as depending on your playstyle, you might not need some of them.</p>
+            
+            <h2 class="bold">Guide To Getting Rich Fast</h2>
+
+            <p>While it's important to focus on survival in Dead Island, you also need to collect a lot of money if you want to upgrade your character and acquire new weapons. You can do this by completing side quests and exploring, but if you want to get rich fast, you can try the following trick: When you're playing as a character that can use throwing items, like a grenade or a Molotov cocktail, try to drop them close to a group of zombies. This will cause the items to explode, killing some of them. While the rest of the undead are still standing there, pick up your weapon, run toward the items, and start pressing the melee attack button. You can also use your character's skill if it has one that can be used on items. This will result in all the money falling into your character's inventory.</p>
+            
+            <h2 class="bold">Guide To Finding Weapons And Armor</h2>
+
+            <p>Weapons and armor are important aspects of Dead Island, as each one has its own set of stats and can greatly impact the outcome of a battle. Finding the best weapons and armor can be a challenge, and it's easy to miss them if you're not paying attention, so here are a few tips for finding the best weapons and armor in the game: When you're exploring a new area and come across a corpse, make sure to loot it, as it may contain a weapon or armor. If you're playing in co-op, make sure to keep your eyes open for your teammates' corpses, as they may contain loot as well. When you're exploring buildings that are filled with zombies, try to find the spots that usually have loot. These include kitchens, armories, and workbenches. When you find a new weapon or piece of armor, make sure to check its stats, as they may be better than what you're currently using.</p>
+
+            <h2 class="bold">Guide To Blocking, Slashing, And Stabbin'</h2>
+
+            <p>Dead Island is a game that requires a lot of close combat, so it's important to know how to use your weapons and move in general. Here are some general tips on how to approach combat in this game: When fighting against zombies, try blocking as often as possible, as it will reduce the damage you take by a huge amount. You can do this by pressing the left trigger button (on Xbox or PS) or the R key (on PC). Blocking is also useful when you're fighting living opponents, as it will greatly reduce the damage you take, but won't reduce their health as attacking would. You can slash your weapons to do more damage, but you don't have to do it manually, as the game will automatically engage the slash mode if you press the right trigger (R on PC and Xbox, or the X button on PS). However, slashing isn't always the best option, as it will drain your energy much faster than just pressing the attack button, so use it only when necessary. Similarly, it's a good idea to use the block button as often as possible when fighting zombies, as it will greatly reduce the damage you take. It's a good idea to keep one hand on the attack button and one on the block button, so you can respond to attacks quickly and efficiently.</p>
+
+            <h2 class="bold">The Verdict</h2>
+
+            <p>Dead Island is a unique take on the zombie genre, featuring an incredibly creepy atmosphere, hordes of deadly zombies that want to rip your guts out, and some of the most insane weapons ever put into a game. While this game does have a couple of flaws and issues, it also has a lot of great stuff, such as an interesting story, a couple of playable characters, a wide variety of weapons and items, and a ton of ways to play. It's a fun game that's best played with friends, and it's sure to consume a lot of your time. If you're looking for an awesome zombie game that's a bit different from the rest, then you can't go wrong with Dead Island.</p>
+            
+            <p class="rating">Rating: 4.5 / 5</p>
+            <div><a href="/html/gamingmenu.html">Back to Gaming Reviews</a></div>
+          </article>
+
+          <footer class="footer">
+            <div class="footer__container">
+           
+                <!-- <div class="footer__container__linkbox">
+                <a class="footer__container__linkbox__links" href="/html/about.html">About Us</a>
+                <a class="footer__container__linkbox__links" href="#"
+                  >Contact</a
+                >
+                <a class="footer__container__linkbox__links" href="#"
+                  >Advertise</a
+                >
+              </div> -->
+
+              <div class="copyright__container">
+                <p>
+                  <span class="disclaimer">DISCLAIMER: </span>All materials in
+                  this website are used for entertainment and informative purposes
+                  and fall within the guidelines of fair use law. No copyright
+                  infringement intended. If you are, or represent, the copyright
+                  owner of materials used in this website, and have an issue with
+                  the use of said material, please refer to the contact link in
+                  the "About Us" section, and you will get a prompt response.
+                </p>
+                <div class="copyright">
+                  Copyright &copy; 2022 MIDNIGHT HORROR. All rights reserved.
+                </div>
+              </div>
+              <a href="#top">
+                <div class="top__button">
+                  <p>R.I.P</p>
+                </div>
+              </a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

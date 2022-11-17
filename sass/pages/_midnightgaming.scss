@@ -1,0 +1,98 @@
+.image__banner--midnightgaming {
+  .overlay {
+    position: relative;
+
+    &__center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__text {
+      position: absolute;
+      top: -1rem;
+
+      font-family: var(--font-family-primary);
+      font-size: 3.5rem;
+      color: var(--color-primary);
+      text-shadow: 0.5rem 0.5rem 0.5rem var(--box-shadow-primary);
+    }
+  }
+
+  figure {
+    padding: 6.5rem 0;
+
+    img {
+      display: block;
+
+      max-width: 100%;
+      height: auto;
+
+      margin: 0 auto;
+      box-shadow: 0.1rem 0.1rem 1.2rem 0.1rem var(--box-shadow-secondary);
+    }
+  }
+}
+
+.midnightgaming__container {
+  background-image: url(/img/blood-png-7164.png),
+    url(/img/blood-png-7164-rotate-180.png),
+    url(/img/blood-splatter-png-44477.png);
+  background-repeat: no-repeat;
+  background-position: top left, bottom right, center left;
+  background-size: 20%, 15%, 20%;
+
+  margin: 2.5rem auto 100rem;
+  border-radius: 0.3rem;
+
+  transition: all 350ms ease-in;
+
+  &__title {
+    font-size: 3.5rem;
+  }
+
+  &__author {
+    color: var(--color-tertiary);
+    font-family: "Rubik", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+
+    margin-top: 2.5rem;
+  }
+
+  div {
+    text-align: center;
+    margin-top: 2.5rem;
+
+    a {
+      font-family: var(--font-family-primary);
+      color: var(--color-primary);
+      font-variant: small-caps;
+      font-size: 2rem;
+      text-decoration: none;
+    }
+  }
+
+  h2.bold {
+    font-size: 2.2rem;
+    margin: 2.5rem 0;
+  }
+
+  .rating {
+    font-family: "Rubik Wet Paint", sans-serif;
+    font-size: 5.5rem;
+    color: var(--color-primary);
+    text-align: center;
+
+    text-shadow: 0.3rem 0.3rem 0.3rem var(--box-shadow-primary);
+  }
+
+  p {
+    color: var(--color-tertiary);
+    font-size: 1.8rem;
+
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+}

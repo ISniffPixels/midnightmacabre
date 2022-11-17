@@ -1,0 +1,96 @@
+.slider__container {
+  position: relative;
+
+  max-width: 70%;
+  height: 50rem; // height necessary for proper positioning of images
+  margin: 0 auto;
+  overflow: hidden;
+
+  box-shadow: 0.01rem 0.01rem 1.2rem 0.1rem var(--box-shadow-secondary);
+
+  .slide {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 50rem; // height necessary for proper positioning of images
+    transition: transform 350ms;
+
+    // images inside slider container
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+
+  &--btn {
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    background-color: transparent;
+    font-size: 3rem;
+    cursor: pointer;
+    border: none;
+
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    &--left {
+      top: 50%;
+      left: 1.5%;
+    }
+
+    &--right {
+      top: 50%;
+      right: 1.5%;
+    }
+  }
+}
+
+.carousel-clickies {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  margin-top: 1.5rem;
+
+  .clicky {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+
+    padding: 0.85rem;
+
+    font-family: var(--font-family-primary);
+    font-size: 1.8rem;
+
+    transition: all 1000ms ease;
+
+    cursor: pointer;
+
+    &:active {
+      top: 1.5px;
+    }
+
+    &--active {
+      border: 1rem ridge var(--color-primary);
+    }
+  }
+
+  .clicky:not(:last-child) {
+    margin-right: 1.3rem;
+  }
+}

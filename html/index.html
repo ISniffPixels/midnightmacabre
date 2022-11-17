@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="tab icon"
+      href="/img/skull-icon-5249-Windows.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/index.js"></script>
+
+    <style type="text/css">
+      body {
+        cursor: url("data:image/x-icon;base64,AAACAAEAICAAAAAAAACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAABgAAAAYAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAVAAAAFQAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAMAAAAHwAAAC8AAAAuAAAAHAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAADAAAAB8AAAA1AAAARQAAAEIAAAApAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAABgAAAAYAAAADAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAfAAAA/wAAAP8AAABOAAAARAAAACkAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAVAAAAFQAAAAwAAAADAAAAAQAAAAMAAAAMAAAAHwAAAP8eHh7/Hh4e/wAAAP8AAAA1AAAAHAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAMAAAAHwAAAC8AAAAvAAAAHwAAAAwAAAAGAAAADAAAAB8AAAD/Hh4e/6CgoP8eHh7/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAADAAAAB8AAAA1AAAARQAAAEUAAAA1AAAAHwAAABUAAAAfAAAA/x4eHv8eHh7/Hh4e/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAAfAAAA/wAAAP8AAABRAAAAUQAAAEgAAAA1AAAALwAAAP8eHh7/Hh4e/x4eHv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAAHAAAAP8AM///29vb/wAAAP8AAABUAAAAUQAAAEgAAAD/Hh4e/x4eHv8eHh7/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAABYAAAD/ADP//9vb2//b29v/xsbG/wAAAP8AAABUAAAA/x4eHv8eHh7/Hh4e/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAMAAAA/wAz//8AM///29vb/8bGxv/Gxsb/xsbG/wAAAP8eHh7/Hh4e/x4eHv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAADAAAAP8AM///ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8eHh7/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAcAAAA/wAz///b29v/xsbG/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAFgAAAP8AM///ADP//8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAwAAAD/ADP//wAz///b29v/xsbG/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAA/wAz//8AM///29vb/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAABUAAAD/ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAA/wAz//8AM///29vb/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AM///ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAA/wAz///b29v/xsbG/8bGxv/Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AM///ADP//9vb2//Gxsb/xsbG/8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAz//8AM///xsbG/8bGxv/Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/ADP//wAz///Gxsb/xsbG/8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAz//8AM///ADP//8bGxv/Gxsb/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/ADP//wAz///Gxsb/xsbG/wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AM///ADP//8bGxv8AAAD/AAAAHwAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAz///b29v/AAAA/wAAAB8AAAAMAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/ADP//wAAAP8AAAAPAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAwAAAAMAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///////////////////////////////////8////+H////B////g///nwf//w4P//4EH//8AD//+AB///gA///wAf//4AP//8AH///AD///gB///wA///8Af//+AP///gH///4D///8B////A////wf///8P////H////7////8="),
+          auto;
+      }
+    </style>
+
+    <title>MIDNIGHT HORROR | Horrific entertainment!</title>
+  </head>
+  <body>
+    <div id="top" class="wrapper">
+
+      <div class="container">
+        <header class="header">
+          <button class="menuMobile">
+            <div class="bar"></div>
+          </button>
+    
+          <div class="menuModal">
+            <nav class="menuModal__nav">
+              <ul class="ul">
+                <li class="ul__item">
+                  <a href="/html/index.html" class="ul__link">Home</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/moviesmenu.html" class="ul__link">Movies</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/televisionmenu.html" class="ul__link"
+                    >T.V. Shows</a
+                  >
+                </li>
+                <li class="ul__item">
+                  <a href="/html/gamingmenu.html" class="ul__link"
+                    >Midnight Gaming</a
+                  >
+                </li>
+                <li class="ul__item">
+                  <a href="/html/blogmenu.html" class="ul__link">Blog</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/gallerymenu.html" class="ul__link">Gallery</a>
+                </li>
+                <li class="ul__item">
+                  <a href="/html/about.html" class="ul__link">About Us</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <nav class="header__nav">
+            <ul class="ul">
+              <li class="ul__item">
+                <a href="/html/index.html" class="ul__link">Home</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/moviesmenu.html" class="ul__link">Movies</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/televisionmenu.html" class="ul__link"
+                  >T.V. Shows</a
+                >
+              </li>
+              <li class="ul__item">
+                <a href="/html/gamingmenu.html" class="ul__link"
+                  >Midnight Gaming</a
+                >
+              </li>
+              <li class="ul__item">
+                <a href="/html/blogmenu.html" class="ul__link">Blog</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/gallerymenu.html" class="ul__link">Gallery</a>
+              </li>
+              <li class="ul__item">
+                <a href="/html/about.html" class="ul__link">About Us</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="fixedlightSwitch">
+            <span class="switchLabel">DARK</span>
+            <button class="lightSwitch">
+              <div class="lightNip">💀</div>
+            </button>
+          </div>
+        </header>
+
+        <div class="banner">
+          <div class="banner__relative">
+            <div class="banner__relative--overlay">
+              <div class="center">
+                <h1 class="banner__logo"><span>midnight</span> <span>horror</span></h1>
+              </div>
+            </div>
+
+            <!-- <video class="banner__video--1" autoplay loop muted>
+              <source src="/img/Handsfogcut.m4v" type="video/mp4" />
+              You're web browser does not support video formats used on this
+              website.
+            </video> -->
+
+            <figure class="banner__image">
+                <img
+                  src="/img/670454.jpg"
+                  alt="a spooky dark picture"
+                />
+            </figure>
+            
+          </div>
+        </div>
+
+        <div class="intro--container">
+          <p class="intro--1">
+            When I was a kid, I used to run to my bed as fast as I could, every
+            time I turned the light switch off in my bedroom. Middle of the
+            night trips to the restroom were even more terrifying. Balling up my
+            tiny, shaky, fists, I expected the boogeyman to sweep me away into
+            the darkness, never to be seen again. The first ever horror movie I
+            recall watching was Wes Craven's A Nightmare on Elm Street. I
+            can't begin to count the amount of wide-eyed sleepless nights I had
+            thanks to this iconic piece of film history. It baffled me how
+            something so terrifying to me, could also be so mesmerizing, I
+            couldn't stop watching. My life would eventually embark on a focused
+            fascination with horror movies, and horror culture in general.
+            Please, join me in celebrating horror by enjoying the content on
+            this website. I hope you enjoy and are entertained by the dark,
+            bloody, and creepy, just as much as I enjoy bringing it to you. Keep
+            your eyes open, tread carefully, and may the fates have mercy on
+            your soul....P.S. turn the lights on, if you're afraid of the dark....
+          </p>
+        </div>
+
+        <div class="fig-txt__container">
+          <figure class="fig-container">
+            <img src="/img/1922-400w.jpg" alt="cover art" class="img--1" />
+          </figure>
+
+          <div class="txt-container">
+            <div class="txt--1">
+              <h3>Featured Movie</h3>
+              <p>
+                1922 is based on a short story by Stephen King. It tells the
+                story of a farmer who decides to murder his wife with the help of their manipulated teenage son, Henry, in order to keep her from selling her farmland to a pig farm and slaughterhouse company to start a business, and begin a new life in the city. The farmer, Wilfred, and his son must deal with the guilt
+                of their actions as they try to cope day to day and try to resume their lives, while trying to deceive the law that is relentlessly investigating and looking into their horrific transgressions....<a
+                  href="/html/movies.html#twentytwo"
+                  >read more</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="fig-txt__container">
+          <figure class="fig-container">
+            
+              <img src="/img/sandman-400w.jpg" alt="cover art" class="img--2" />
+         
+          </figure>
+
+          <div class="txt-container">
+            <div class="txt--2">
+              <h3>Featured Show</h3>
+              <p>
+                The first episode, “The Hour of the Wolf,” opens with a
+                primitive human discovering that he can dream, and thereby
+                escaping from the limitations of his world. As the centuries
+                pass, humanity begins to lose its ability to dream, and all that
+                remains of the Dreaming is Morpheus, the King of Dreams, who has
+                been fighting a loosing battle against the forces of the
+                Endless's enemy: the Drifter, who has been thinning out the
+                Dreaming's borders. Following the death of Morpheus's human
+                caretakers, he is captured by the Drifter, who is preparing to
+                destroy him....<a
+                href="/html/television.html"
+                >read more</a
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="fig-txt__container">
+          <figure class="fig-container">
+
+              <img src="/img/dl-400w.jpg" alt="cover art" class="img--3" />
+
+          </figure>
+
+          <div class="txt-container">
+            <div class="txt--3">
+              <h3>Featured Video Game</h3>
+              <p>
+                One of the most interesting aspects of Dying Light is the
+                day/night cycles. During the day, you can explore the open world
+                and scavenge supplies. You can explore the city looking for
+                loot, side quests, and other activities. You can also use the
+                day to strengthen your character by visiting the safe houses and
+                upgrading your skills. During the day, the city is full of life.
+                You'll see people going about their daily business, working at
+                shops, and driving cars. But as the day turns to night, things
+                change. The city falls into chaos as hordes of ravenous zombies
+                emerge from the shadows....<a
+                href="/html/midnightgaming.html"
+                >read more</a
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--REVIEWS SLIDER-->
+        <div class="top__button--container">
+          <section class="reviews">
+            <div class="reviews--title"><h2>Recent Reviews</h2></div>
+            <div class="slider__container">
+              <figure class="slide slide--1">
+                <a href="/html/midnightgaming.html#evw">
+                  <img src="/img/evilwithinmod.webp" alt="poster" />
+                </a>
+              </figure>
+
+              <figure class="slide slide--2">
+                <a href="/html/movies.html#crimpeak">
+                  <img src="/img/cp-840w.jpg" alt="poster" />
+                </a>
+              </figure>
+
+              <figure class="slide slide--3">
+                <a href="/html/television.html#thesandman">
+                  <img src="/img/sandman-840w.jpg" alt="poster" />
+                </a>
+              </figure>
+
+              <figure class="slide slide--4">
+                <a href="/html/midnightgaming.html#dl">
+                  <img src="/img/dl-840w.jpg" alt="poster" />
+                </a>
+              </figure>
+
+              <figure class="slide slide--5">
+                <a href="/html/movies.html#themist">
+                  <img src="/img/TheMist-840w.jpg" alt="poster" />
+                </a>
+              </figure>
+
+              <figure class="slide slide--6">
+                <a href="/html/television.html#archive">
+                  <img src="/img/archive81-840w.jpg" alt="poster" />
+                </a>
+              </figure>
+
+              <figure class="slide slide--7">
+                <a href="/html/movies.html#elmstreet">
+                  <img src="/img/elmstreet-840w.jpg" alt="poster" />
+                </a>
+              </figure>
+
+              <figure class="slide slide--8">
+                <a href="/html/midnightgaming.html#mortass">
+                  <img src="/img/themortass-840w.webp" alt="poster" />
+                </a>
+              </figure>
+
+
+              <button
+                class="slider__container--btn slider__container--btn--left"
+              >
+                <img src="/img/bloodyhand-left.png" alt="bloody hand image" />
+              </button>
+              <button
+                class="slider__container--btn slider__container--btn--right"
+              >
+                <img src="/img/bloodyhand-right.png" alt="bloody hand image" />
+              </button>
+            </div>
+            <div class="carousel-clickies"></div>
+          </section>
+
+          <div class="intro--container">
+            <p class="intro--2">
+              Horror expressed through art can be extremely powerful, profound,
+              or just out right horrifying. Whether it be through filmmaking,
+              music, painting, or literature, for better or for worse, Dark
+              Art can leave you with an everlasting impression. The following
+              are examples of Dark Art expressed on canvas. Artistic horror from
+              legendary, iconic, and historic figures to more contempary painters
+              alike. It's all on full display for your enjoyment. Please, tread
+              carefully, some of the following artwork on display might be
+              unsettling to look at for some viewers....You have been warned.
+            </p>
+          </div>
+
+          <section class="featuredArt">
+            <div class="featuredArt--title">
+              <h2>Featured Artwork</h2>
+              <p>
+                <span class="boldwarn">Warning: </span>The following content is
+                graphic, and not suitable for children that are under the age of
+                18. Viewer discretion is strongly advised.</p>
+            </div>
+
+            <div class="featuredArt--container">
+              <figure class="featuredArt__image--container">
+                <a href="/html/gallerymenu.html">
+                  <div class="featuredArt__image--container--overlay">
+                    <div class="artist-info">
+                      <p>Henry Fuseli</p>
+                      <p>The Nightmare</p>
+                      <p>c. 1781</p>
+                    </div>
+                  </div>
+                </a>
+                <img src="/img/thenightmare.jpg" alt="artwork image" />
+              </figure>
+            </div>
+          </section>
+
+          <section class="featuredBlog">
+            <div class="featuredBlog--title">
+              <h2>Featured Blog</h2>
+            </div>
+
+            <figure class="featuredBlog__image--container">
+              <div class="featuredBlog__image--container--overlay">
+                <div class="author-info">
+                  <h2>Top 10 Scariest Horror Films of All Time</h2>
+                  <div>By Staff</div>
+                  <p>
+                    Everyone loves a good horror movie. From the '80s slasher
+                    craze to today's found-footage films, horror movies are
+                    endlessly popular with the general public....<span
+                      ><a href="/html/blogs.html">read more</a></span
+                    >
+                  </p>
+                </div>
+              </div>
+              <img src="/img/cq-c.jpg" alt="a scary picture" />
+            </figure>
+          </section>
+
+          <footer class="footer">
+            <div class="footer__container">
+
+              <!-- <div class="footer__container__linkbox">
+                <a class="footer__container__linkbox__links" href="/html/about.html">About Us</a>
+                <a class="footer__container__linkbox__links" href="#"
+                  >Contact</a
+                >
+                <a class="footer__container__linkbox__links" href="#"
+                  >Advertise</a
+                >
+              </div> -->
+
+              <div class="copyright__container">
+                <p>
+                  <span class="disclaimer">DISCLAIMER: </span>All materials in
+                  this website are used for entertainment and informative purposes
+                  and fall within the guidelines of fair use law. No copyright
+                  infringement intended. If you are, or represent, the copyright
+                  owner of materials used in this website, and have an issue with
+                  the use of said material, please refer to the contact link in
+                  the "About Us" section, and you will get a prompt response.
+                </p>
+
+                <div class="copyright">
+                  Copyright &copy; 2022 MIDNIGHT HORROR. All rights reserved.
+                </div>
+
+              </div>
+              <a href="#top">
+                <div class="top__button">
+                  <p>R.I.P</p>
+                </div>
+              </a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+// BACK TO TOP BUTTON
+.top__button {
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  right: 3.75%;
+  bottom: 0;
+
+  height: 12rem;
+  border-radius: 5rem 5rem 0 0;
+  margin-left: 30rem;
+  border: 0.3rem solid var(--color-primary);
+
+  background-color: var(--bg-color-primary);
+
+  opacity: 0;
+  transform: translateY(15rem);
+  z-index: 100;
+  transition: all 350ms ease-in;
+
+  &--slideUp {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    color: var(--color-primary);
+    font-family: var(--font-family-primary);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+}
+
+// MODAL CLOSE BUTTON
+.closeBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+
+  height: 5rem;
+  width: 5rem;
+
+  font-family: "Rubik Wet Paint", sans-serif;
+  font-size: 6rem;
+  color: rgb(245, 245, 245);
+  line-height: 100%;
+
+  background-color: transparent;
+  border: none;
+
+  padding: 3rem;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+
+  cursor: pointer;
+  transition: all 500ms ease;
+
+  &:hover,
+  &:active {
+    transform: rotate(360deg);
+    color: rgb(120, 0, 0);
+  }
+}
+
+// ON - OFF SWITCH BUTTON
+.fixedlightSwitch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 5%;
+  right: 5%;
+
+  z-index: 9997;
+}
+
+.lightSwitch {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background-color: rgb(25, 0, 0);
+
+  height: 4.5rem;
+  width: 2.5rem;
+
+  border: 3px groove var(--color-primary);
+
+  cursor: pointer;
+
+  .lightNip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.4rem;
+    transition: all 175ms ease-in;
+
+    &--turnOnOff {
+      transform: translateY(-2rem);
+    }
+  }
+}
+
+.switchLabel {
+  font-family: "Rubik", sans-serif;
+  font-weight: 900;
+  font-variant: small-caps;
+  font-size: 1.2rem;
+  color: var(--color-tertiary);
+
+  margin: 0 0.55rem;
+}

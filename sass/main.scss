@@ -1,0 +1,24 @@
+@import "base/reset";
+@import "base/typography";
+@import "base/variables";
+
+@import "components/container";
+@import "components/wrapper";
+@import "components/navbar";
+@import "components/buttons";
+@import "components/carousel";
+@import "components/modal";
+@import "components/footer";
+
+@import "pages/home";
+@import "pages/moviesmenu";
+@import "pages/movies";
+@import "pages/televisionmenu";
+@import "pages/television";
+@import "pages/midnightgaming";
+@import "pages/gamingmenu";
+@import "pages/gallerymenu";
+@import "pages/blogmenu";
+@import "pages/blogs";
+@import "pages/about";
+@import "pages/pageElementsAll";

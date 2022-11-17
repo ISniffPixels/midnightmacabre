@@ -1,0 +1,66 @@
+.blog__container {
+  background-image: url(/img/blood-png-7164.png),
+    url(/img/blood-png-7164-rotate-180.png),
+    url(/img/blood-splatter-png-44477.png);
+  background-repeat: no-repeat;
+  background-position: top left, bottom right, center left;
+  background-size: 20%, 15%, 20%;
+
+  margin: 2.5rem auto 100rem;
+  border-radius: 0.3rem;
+
+  transition: all 350ms ease-in;
+
+  .image__banner--blog {
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+
+      margin: 0 auto;
+      box-shadow: 0.01rem 0.01rem 1.2rem 0.1rem var(--box-shadow-secondary);
+    }
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2.bold {
+    font-size: 2rem;
+    margin: 2.5rem 0;
+  }
+
+  p {
+    color: var(--color-tertiary);
+    font-size: 1.8rem;
+
+    max-width: 60rem;
+    margin: auto;
+    margin-bottom: 5rem;
+  }
+
+  .author {
+    font-family: "Rubik", sans-serif;
+    color: var(--color-tertiary);
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    text-align: center;
+
+    margin-bottom: 2.5rem;
+  }
+
+  div {
+    text-align: center;
+    margin-top: 2.5rem;
+
+    a {
+      color: var(--color-primary);
+      font-family: var(--font-family-primary);
+      font-variant: small-caps;
+      font-size: 2rem;
+      text-decoration: none;
+    }
+  }
+}
