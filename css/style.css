@@ -123,6 +123,7 @@ figcaption {
   --bg-color-tertiary: rgb(248, 248, 255);
   --bg-color-quad: rgba(120, 0, 0, 1);
   --bg-color-buttons: rgb(255, 0, 0);
+  --bg-color-subNav: rgba(255, 255, 255, 0.048);
   --overlay-color-primary: rgb(0, 0, 0, 0.9);
   --overlay-color-secondary: rgba(50, 0, 0, 0.8);
   --box-shadow-primary: rgba(0, 0, 0, 0.4);
@@ -133,6 +134,14 @@ figcaption {
   position: relative;
   max-width: 120rem;
   margin: 0 auto; }
+  .container__subNav {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    padding: 1.5rem 1.5rem;
+    background-color: var(--bg-color-subNav);
+    z-index: 9999; }
 
 .wrapper {
   position: relative;
@@ -210,8 +219,6 @@ figcaption {
     transform: translateY(2px); }
   100% {
     transform: translateY(0); } }
-  .header .subNav {
-    background-color: white; }
 
 .menuModal__nav {
   margin-top: 12rem;
@@ -323,9 +330,6 @@ figcaption {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: 5%;
-  right: 5%;
   z-index: 9997; }
 
 .lightSwitch {
@@ -467,9 +471,6 @@ figcaption {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 5%;
-  left: 5%;
   height: 6rem;
   width: 6rem;
   background-color: var(--bg-color-primary-trans);
