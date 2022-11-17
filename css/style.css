@@ -210,6 +210,8 @@ figcaption {
     transform: translateY(2px); }
   100% {
     transform: translateY(0); } }
+  .header .subNav {
+    background-color: white; }
 
 .menuModal__nav {
   margin-top: 12rem;
@@ -321,7 +323,7 @@ figcaption {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: relative;
   top: 5%;
   right: 5%;
   z-index: 9997; }
