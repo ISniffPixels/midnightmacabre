@@ -72,6 +72,11 @@
     height: 4rem;
     width: 4rem;
 
+    @media screen and (max-width: 368px) {
+      height: 2rem;
+      width: 2rem;
+    }
+
     padding: 0.85rem;
 
     font-family: var(--font-family-primary);
