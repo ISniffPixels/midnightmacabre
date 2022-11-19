@@ -155,7 +155,7 @@ figcaption {
   position: relative;
   background-image: url(/img/blood-png-37992.png), url(/img/blood-png-7164.png), url(/img/blood-png-7146-flip-385w.png), url(/img/blood-png-7146-350w.png), url(/img/blood-png-7164.png), url(/img/blood-png-7146-flip-385w.png), url(/img/blood-png-7164.png);
   background-repeat: no-repeat;
-  background-position: top left, -25% 30%, top right, left, 125% 25%, 100% 75%, -25% 85%;
+  background-position: top left, -25% 30%, top right, left, 125% 25%, 100% 75%, -25% 85%;
   max-width: 240rem;
   padding: 0 14rem;
   margin: 0 auto; }
@@ -636,7 +636,7 @@ figcaption {
     letter-spacing: -5px;
     text-shadow: 0.2rem 0.2rem 0.2rem var(--text-shadow-primary);
     line-height: 100%;
-    color: var(--color-primary);
+    color: white;
     animation: phaseDown 2500ms ease-in-out; }
     @media screen and (max-width: 1024px) {
       .banner__logo {
