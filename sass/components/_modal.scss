@@ -179,11 +179,11 @@
 
   visibility: hidden;
 
-  background-color: var(--overlay-color-secondary);
-  background-image: url("/img/670454.jpg");
+  background-color: var(--bg-color-mobileNav);
+  background-image: url("/img/vintageskull-550w.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: center center;
   background-blend-mode: normal;
 
   backdrop-filter: blur(7px);

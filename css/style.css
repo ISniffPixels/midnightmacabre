@@ -1,7 +1,6 @@
 * {
   margin: 0;
-  padding: 0;
-  outline: 1px solid #ccc; }
+  padding: 0; }
 
 *,
 *::before,
@@ -124,6 +123,7 @@ figcaption {
   --bg-color-quad: rgba(120, 0, 0, 1);
   --bg-color-buttons: rgb(255, 0, 0);
   --bg-color-subNav: rgba(255, 255, 255, 0.048);
+  --bg-color-mobileNav: rgba(0, 0, 0, 0.95);
   --overlay-color-primary: rgb(0, 0, 0, 0.9);
   --overlay-color-secondary: rgba(50, 0, 0, 0.8);
   --box-shadow-primary: rgba(0, 0, 0, 0.4);
@@ -145,6 +145,10 @@ figcaption {
     background-color: var(--bg-color-subNav);
     box-shadow: 0.01rem 0.01rem 1.2rem 0.1rem var(--box-shadow-primary);
     z-index: 9999; }
+    @media screen and (max-width: 1024px) {
+      .container__subNav {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem; } }
 
 .wrapper {
   position: relative;
@@ -227,7 +231,7 @@ figcaption {
     transform: translateY(0); } }
 
 .menuModal__nav {
-  margin-top: 12rem;
+  margin-top: 7rem;
   margin-bottom: 12rem;
   visibility: hidden;
   opacity: 0;
@@ -254,8 +258,18 @@ figcaption {
       text-decoration: none;
       text-transform: uppercase;
       color: var(--color-primary);
+      margin-bottom: -0.5rem;
       transition: all 400ms ease; }
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 1080px) {
+        .menuModal__nav .ul__link:link, .menuModal__nav .ul__link:visited {
+          font-size: 5.2rem; } }
+      @media screen and (max-width: 926px), (max-width: 915px), (max-width: 896px), (max-width: 800px) {
+        .menuModal__nav .ul__link:link, .menuModal__nav .ul__link:visited {
+          font-size: 3rem; } }
+      @media screen and (max-width: 667px), (max-width: 568px) {
+        .menuModal__nav .ul__link:link, .menuModal__nav .ul__link:visited {
+          font-size: 2.5rem; } }
+      @media screen and (max-width: 320px) {
         .menuModal__nav .ul__link:link, .menuModal__nav .ul__link:visited {
           font-size: 2rem; } }
     .menuModal__nav .ul__link:hover, .menuModal__nav .ul__link:active {
@@ -545,11 +559,11 @@ figcaption {
   height: 0;
   width: 100%;
   visibility: hidden;
-  background-color: var(--overlay-color-secondary);
-  background-image: url("/img/670454.jpg");
+  background-color: var(--bg-color-mobileNav);
+  background-image: url("/img/vintageskull-550w.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: center center;
   background-blend-mode: normal;
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
@@ -625,7 +639,7 @@ figcaption {
     animation: phaseDown 2500ms ease-in-out; }
     @media screen and (max-width: 1024px) {
       .banner__logo {
-        font-size: 4rem;
+        font-size: 5.1rem;
         letter-spacing: -3px;
         animation: none; }
         .banner__logo span {
@@ -651,9 +665,6 @@ figcaption {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); }
-        @media screen and (max-width: 1024px) {
-          .banner__relative--overlay .center {
-            margin-top: 10rem; } }
   .banner__image img {
     display: block;
     max-width: 100%;
@@ -662,7 +673,8 @@ figcaption {
     margin: 0 auto; }
     @media screen and (max-width: 1024px) {
       .banner__image img {
-        display: none; } }
+        max-width: 50%;
+        margin-top: 25rem; } }
 
 .intro--container {
   display: flex;

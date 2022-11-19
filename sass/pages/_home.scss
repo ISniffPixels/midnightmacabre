@@ -12,7 +12,7 @@
     color: var(--color-primary);
 
     @media screen and (max-width: 1024px) {
-      font-size: 4rem;
+      font-size: 5.1rem;
       letter-spacing: -3px;
       animation: none;
 
@@ -52,10 +52,6 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
-        @media screen and (max-width: 1024px) {
-          margin-top: 10rem;
-        }
       }
     }
   }
@@ -82,7 +78,8 @@
       margin: 0 auto;
 
       @media screen and (max-width: 1024px) {
-        display: none;
+        max-width: 50%;
+        margin-top: 25rem;
       }
     }
   }

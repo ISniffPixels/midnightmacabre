@@ -11,6 +11,12 @@
     top: 0;
 
     padding: 1.5rem 1.5rem;
+
+    @media screen and (max-width: 1024px) {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
 
