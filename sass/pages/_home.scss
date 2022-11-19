@@ -9,7 +9,7 @@
     letter-spacing: -5px;
     text-shadow: 0.2rem 0.2rem 0.2rem var(--text-shadow-primary);
     line-height: 100%;
-    color: white;
+    color: var(--color-primary);
 
     @media screen and (max-width: 1024px) {
       font-size: 5.1rem;
