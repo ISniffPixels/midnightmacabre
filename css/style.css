@@ -137,8 +137,11 @@ figcaption {
   .container__subNav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
+    width: 75%;
+    margin: 0 auto;
     padding: 1.5rem 1.5rem;
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
