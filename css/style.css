@@ -123,7 +123,7 @@ figcaption {
   --bg-color-quad: rgba(120, 0, 0, 1);
   --bg-color-buttons: rgb(255, 0, 0);
   --bg-color-subNav: rgba(255, 255, 255, 0.048);
-  --bg-color-mobileNav: rgba(0, 0, 0, 0.95);
+  --bg-color-mobileNav: rgba(46, 0, 0, 0.95);
   --overlay-color-primary: rgb(0, 0, 0, 0.9);
   --overlay-color-secondary: rgba(50, 0, 0, 0.8);
   --box-shadow-primary: rgba(0, 0, 0, 0.4);
@@ -438,6 +438,10 @@ figcaption {
       .carousel-clickies .clicky {
         height: 2rem;
         width: 2rem; } }
+    @media screen and (max-width: 240px) {
+      .carousel-clickies .clicky {
+        height: 1.2rem;
+        width: 1.2rem; } }
     .carousel-clickies .clicky:active {
       top: 1.5px; }
     .carousel-clickies .clicky--active {
