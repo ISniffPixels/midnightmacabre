@@ -25,7 +25,7 @@ mobileMenu();
 const lightSwitch = function () {
   const lightSwitch = document.querySelector(".lightSwitch");
   const lightNip = document.querySelector(".lightNip");
-  const switchOnOff = document.querySelector(".switchLabel");
+
   const currentTheme = localStorage.getItem("theme");
 
   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
@@ -33,19 +33,13 @@ const lightSwitch = function () {
   if (currentTheme == "dark") {
     document.body.classList.toggle("dark-theme");
     lightNip.classList.remove("lightNip--turnOnOff");
-    switchOnOff.textContent = "DARK";
   } else if (currentTheme == "light") {
     document.body.classList.toggle("light-theme");
     lightNip.classList.add("lightNip--turnOnOff");
-    switchOnOff.textContent = "LIGHT";
   }
 
   const Switch = function () {
     lightNip.classList.toggle("lightNip--turnOnOff");
-
-    lightNip.classList.contains("lightNip--turnOnOff")
-      ? (switchOnOff.textContent = "LIGHT")
-      : (switchOnOff.textContent = "DARK");
 
     if (prefersDarkScheme.matches) {
       document.body.classList.toggle("light-theme");
