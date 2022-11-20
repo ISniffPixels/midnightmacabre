@@ -21,6 +21,20 @@
       }
     }
 
+    @media screen and (max-width: 1024px) {
+      font-size: 5.1rem;
+      letter-spacing: -3px;
+      animation: none;
+
+      span {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 240px) {
+      font-size: 4.1rem;
+    }
+
     animation: phaseDown 2500ms ease-in-out;
 
     @keyframes phaseDown {

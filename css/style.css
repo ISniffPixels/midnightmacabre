@@ -649,6 +649,16 @@ figcaption {
         animation: none; }
         .banner__logo span {
           display: block; } }
+    @media screen and (max-width: 1024px) {
+      .banner__logo {
+        font-size: 5.1rem;
+        letter-spacing: -3px;
+        animation: none; }
+        .banner__logo span {
+          display: block; } }
+    @media screen and (max-width: 240px) {
+      .banner__logo {
+        font-size: 4.1rem; } }
 
 @keyframes phaseDown {
   from {
