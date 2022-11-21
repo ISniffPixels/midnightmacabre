@@ -644,15 +644,7 @@ figcaption {
     @media screen and (max-width: 1024px) {
       .banner__logo {
         font-size: 5.1rem;
-        letter-spacing: -3px;
-        animation: none; }
-        .banner__logo span {
-          display: block; } }
-    @media screen and (max-width: 1024px) {
-      .banner__logo {
-        font-size: 5.1rem;
-        letter-spacing: -3px;
-        animation: none; }
+        letter-spacing: -3px; }
         .banner__logo span {
           display: block; } }
     @media screen and (max-width: 240px) {

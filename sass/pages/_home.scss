@@ -14,17 +14,6 @@
     @media screen and (max-width: 1024px) {
       font-size: 5.1rem;
       letter-spacing: -3px;
-      animation: none;
-
-      span {
-        display: block;
-      }
-    }
-
-    @media screen and (max-width: 1024px) {
-      font-size: 5.1rem;
-      letter-spacing: -3px;
-      animation: none;
 
       span {
         display: block;
@@ -135,11 +124,12 @@
 // IMAGE + TEXT INTRO
 .fig-txt__container {
   display: flex;
-  margin-bottom: 10rem;
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;
   }
+
+  margin-bottom: 10rem;
 
   .fig-container {
     display: flex;
