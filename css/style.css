@@ -41,8 +41,6 @@ body {
       color: var(--color-generic); }
     body.light-theme .switchLabel {
       color: var(--color-generic); }
-    body.light-theme .slider__container {
-      box-shadow: 0.1rem 0.1rem 2.6rem var(--box-shadow-primary); }
     body.light-theme .image__banner--movie figure img {
       box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary); }
     body.light-theme .television__container__author {
