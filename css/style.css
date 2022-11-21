@@ -157,14 +157,16 @@ figcaption {
   max-width: 240rem;
   padding: 0 14rem;
   margin: 0 auto; }
-  @media screen and (max-width: 1024px) {
-    .wrapper {
-      padding: 0; } }
   @media screen and (max-width: 1800px) {
     .wrapper {
-      background-image: url(/img/blood-png-37992.png), url(/img/blood-png-7146-flip-385w.png), url(/img/blood-png-7146-350w.png), url(/img/blood-png-7146-flip-385w.png), url(/img/blood-png-7164.png);
+      background-image: url(/img/blood-png-37992.png), url(/img/blood-png-7146-flip-385w.png), url(/img/blood-png-7146-200w.png), url(/img/blood-png-7146-flip-385w.png), url(/img/blood-png-7164.png);
       background-position: top left, top right, left, 100% 75%, -25% 85%; } }
-  .wrapper--blogs, .wrapper--midnightgaming, .wrapper--television, .wrapper--movies, .wrapper--about {
+  @media screen and (max-width: 1024px) {
+    .wrapper {
+      background-image: url(/img/blood-png-37992.png), url(/img/blood-png-7146-flip-385w.png), url(/img/blood-png-7146-100w.png), url(/img/blood-png-7146-flip-385w.png), url(/img/blood-png-7164.png);
+      background-position: top left, top right, left, 100% 75%, -25% 85%;
+      padding: 0; } }
+  .wrapper--blogs, .wrapper--midnightgaming, .wrapper--television, .wrapper--movies, .wrapper--about, .wrapper--moviemenu, .wrapper--telemenu, .wrapper--gamingmenu, .wrapper--blogmenu, .wrapper--gallerymenu {
     position: relative;
     background-image: url(/img/blood-png-37992.png), url(/img/blood-png-7146-flip-385w.png), url(/img/blood-png-7146-350w.png), url(/img/blood-png-7146-flip-385w.png);
     background-repeat: no-repeat;
@@ -172,17 +174,17 @@ figcaption {
     max-width: 240rem;
     padding: 0 14rem;
     margin: 0 auto; }
-    @media screen and (max-width: 1024px) {
-      .wrapper--blogs, .wrapper--midnightgaming, .wrapper--television, .wrapper--movies, .wrapper--about {
-        padding: 0; } }
     @media screen and (max-width: 1600px) {
-      .wrapper--blogs, .wrapper--midnightgaming, .wrapper--television, .wrapper--movies, .wrapper--about {
+      .wrapper--blogs, .wrapper--midnightgaming, .wrapper--television, .wrapper--movies, .wrapper--about, .wrapper--moviemenu, .wrapper--telemenu, .wrapper--gamingmenu, .wrapper--blogmenu, .wrapper--gallerymenu {
         background-image: url(/img/blood-png-37992.png), url(/img/blood-png-7146-flip-385w.png);
         background-repeat: no-repeat;
         background-position: top left, top right; } }
+    @media screen and (max-width: 1024px) {
+      .wrapper--blogs, .wrapper--midnightgaming, .wrapper--television, .wrapper--movies, .wrapper--about, .wrapper--moviemenu, .wrapper--telemenu, .wrapper--gamingmenu, .wrapper--blogmenu, .wrapper--gallerymenu {
+        padding: 0; } }
     @media screen and (max-width: 800px) {
-      .wrapper--blogs, .wrapper--midnightgaming, .wrapper--television, .wrapper--movies, .wrapper--about {
-        background-image: url(/img/blood-png-37992-100w.png), url(/img/blood-png-7146-flip-100w.png);
+      .wrapper--blogs, .wrapper--midnightgaming, .wrapper--television, .wrapper--movies, .wrapper--about, .wrapper--moviemenu, .wrapper--telemenu, .wrapper--gamingmenu, .wrapper--blogmenu, .wrapper--gallerymenu {
+        background-image: url(/img/blood-png-37992-100w.png), url(/img/blood-png-7146-flip-200w.png);
         background-repeat: no-repeat;
         background-position: top left, top right; } }
 
@@ -1096,6 +1098,9 @@ figcaption {
     padding: 2.5rem;
     margin: auto;
     background-color: var(--bg-color-secondary); }
+    @media screen and (max-width: 1024px) {
+      .moviesmenu--container {
+        background-color: transparent; } }
     .moviesmenu--container .figlink {
       display: flex; }
   .moviesmenu__image--container {
@@ -1236,6 +1241,9 @@ figcaption {
     padding: 2.5rem;
     margin: auto;
     background-color: var(--bg-color-secondary); }
+    @media screen and (max-width: 1024px) {
+      .televisionmenu--container {
+        background-color: transparent; } }
     .televisionmenu--container .figlink {
       display: flex; }
   .televisionmenu__image--container {
@@ -1441,6 +1449,9 @@ figcaption {
     padding: 2.5rem;
     margin: auto;
     background-color: var(--bg-color-secondary); }
+    @media screen and (max-width: 1024px) {
+      .gamingmenu--container {
+        background-color: transparent; } }
     .gamingmenu--container .figlink {
       display: flex; }
   .gamingmenu__image--container {
@@ -1520,6 +1531,9 @@ figcaption {
     margin: auto;
     background-color: var(--bg-color-secondary);
     cursor: pointer; }
+    @media screen and (max-width: 1024px) {
+      .gallerymenu--container {
+        background-color: transparent; } }
   .gallerymenu__image--container {
     position: relative; }
     .gallerymenu__image--container--overlay {
@@ -1585,6 +1599,9 @@ figcaption {
     padding: 2.5rem;
     margin: auto;
     background-color: var(--bg-color-secondary); }
+    @media screen and (max-width: 1024px) {
+      .blogmenu--container {
+        background-color: transparent; } }
     .blogmenu--container .figlink {
       display: flex; }
   .blogmenu__image--container {

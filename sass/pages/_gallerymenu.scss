@@ -28,6 +28,10 @@
     margin: auto;
     background-color: var(--bg-color-secondary);
 
+    @media screen and (max-width: 1024px) {
+      background-color: transparent;
+    }
+
     cursor: pointer;
   }
 
