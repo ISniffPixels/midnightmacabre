@@ -36,9 +36,9 @@ const lights = function () {
   };
 
   const disableLightToggle = function () {
+    lightNip.classList.remove("lightNip--turnOnOff");
     body.classList.remove("light-theme");
     localStorage.setItem("light-theme", "disabled");
-    lightNip.classList.remove("lightNip--turnOnOff");
   };
 
   if (lightMode === "enabled") {
