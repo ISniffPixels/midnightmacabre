@@ -24,53 +24,45 @@ body {
   min-height: 100vh;
   transition: all 350ms ease-in; }
 
-@media (prefers-color-scheme: dark) {
-  /* defaults to dark theme */
-  body {
-    background-color: var(--bg-color-primary);
-    color: var(--color-tertiary); }
-  body.dark-theme {
-    background-color: var(--bg-color-primary);
-    color: var(--color-tertiary); }
-  body.light-theme {
-    background-color: var(--bg-color-tertiary);
+.light-theme {
+  background-color: var(--bg-color-tertiary);
+  color: var(--color-generic); }
+  .light-theme p {
     color: var(--color-generic); }
-    body.light-theme p {
-      color: var(--color-generic); }
-    body.light-theme figcaption {
-      color: var(--color-generic); }
-    body.light-theme .switchLabel {
-      color: var(--color-generic); }
-    body.light-theme .image__banner--movie figure img {
-      box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary); }
-    body.light-theme .television__container__author {
-      color: var(--color-generic); }
-    body.light-theme .image__banner--television figure img {
-      box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary); }
-    body.light-theme .midnightgaming__container__author {
-      color: var(--color-generic); }
-    body.light-theme .image__banner--midnightgaming figure img {
-      box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary); }
-    body.light-theme .blog__container__author {
-      color: var(--color-generic); }
-    body.light-theme .image__banner--blog figure img {
-      box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary); }
-    body.light-theme .author {
-      color: var(--color-generic); }
-    body.light-theme .fig-container .img--1,
-    body.light-theme .fig-container .img--2,
-    body.light-theme .fig-container .img--3 {
-      box-shadow: 0.01rem 0.01rem 1.2rem 0.1rem var(--box-shadow-primary); }
-    body.light-theme .top__button {
-      background-color: var(--bg-color-tertiary); }
-      body.light-theme .top__button p {
-        color: var(--color-primary); }
-    body.light-theme .artist-info p {
-      color: var(--color-tertiary); }
-    body.light-theme .author-info p {
-      color: var(--color-tertiary); }
-    body.light-theme .about p {
-      color: var(--color-generic); } }
+  .light-theme figcaption {
+    color: var(--color-generic); }
+  .light-theme .switchLabel {
+    color: var(--color-generic); }
+  .light-theme .image__banner--movie figure img {
+    box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary); }
+  .light-theme .television__container__author {
+    color: var(--color-generic); }
+  .light-theme .image__banner--television figure img {
+    box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary); }
+  .light-theme .midnightgaming__container__author {
+    color: var(--color-generic); }
+  .light-theme .image__banner--midnightgaming figure img {
+    box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary); }
+  .light-theme .blog__container__author {
+    color: var(--color-generic); }
+  .light-theme .image__banner--blog figure img {
+    box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary); }
+  .light-theme .author {
+    color: var(--color-generic); }
+  .light-theme .fig-container .img--1,
+  .light-theme .fig-container .img--2,
+  .light-theme .fig-container .img--3 {
+    box-shadow: 0.01rem 0.01rem 1.2rem 0.1rem var(--box-shadow-primary); }
+  .light-theme .top__button {
+    background-color: var(--bg-color-tertiary); }
+    .light-theme .top__button p {
+      color: var(--color-primary); }
+  .light-theme .artist-info p {
+    color: var(--color-tertiary); }
+  .light-theme .author-info p {
+    color: var(--color-tertiary); }
+  .light-theme .about p {
+    color: var(--color-generic); }
 
 h1 {
   font-family: var(--font-family-primary);

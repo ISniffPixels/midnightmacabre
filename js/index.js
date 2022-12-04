@@ -21,45 +21,41 @@ const mobileMenu = function () {
 };
 mobileMenu();
 
-// LIGHT SWITCH
-const lightSwitch = function () {
+// ENABLE LIGHT TOGGLE
+const lights = function () {
+  const body = document.querySelector("body");
   const lightSwitch = document.querySelector(".lightSwitch");
   const lightNip = document.querySelector(".lightNip");
+  let lightMode = localStorage.getItem("light-theme");
 
-  const currentTheme = localStorage.getItem("theme");
-
-  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-  if (currentTheme == "dark") {
-    document.body.classList.toggle("dark-theme");
-    lightNip.classList.remove("lightNip--turnOnOff");
-  } else if (currentTheme == "light") {
-    document.body.classList.toggle("light-theme");
+  const enableLightToggle = function () {
+    body.classList.add("light-theme");
+    localStorage.setItem("light-theme", "enabled");
     lightNip.classList.add("lightNip--turnOnOff");
-  }
-
-  const Switch = function () {
-    lightNip.classList.toggle("lightNip--turnOnOff");
-
-    if (prefersDarkScheme.matches) {
-      document.body.classList.toggle("light-theme");
-      var theme = document.body.classList.contains("light-theme")
-        ? "light"
-        : "dark";
-    } else {
-      document.body.classList.toggle("dark-theme");
-      var theme = document.body.classList.contains("dark-theme")
-        ? "dark"
-        : "light";
-    }
-
-    localStorage.setItem("theme", theme);
   };
 
-  lightSwitch.addEventListener("click", Switch);
-};
+  const disableLightToggle = function () {
+    body.classList.remove("light-theme");
+    localStorage.setItem("light-theme", "disabled");
+    lightNip.classList.remove("lightNip--turnOnOff");
+  };
 
-lightSwitch();
+  if (lightMode === "enabled") {
+    enableLightToggle();
+  }
+
+  const checkLightMode = function (e) {
+    lightMode = localStorage.getItem("light-theme"); // UPDATE LIGHT-MODE WHEN CLICKED
+    if (lightMode === "disabled") {
+      enableLightToggle();
+    } else {
+      disableLightToggle();
+    }
+  };
+
+  lightSwitch.addEventListener("click", checkLightMode);
+};
+lights();
 
 const homePage = function () {
   // INTRO PARAGRAPH TRANSITION
