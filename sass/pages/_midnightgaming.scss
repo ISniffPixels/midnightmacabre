@@ -51,16 +51,6 @@
     font-size: 3.5rem;
   }
 
-  &__author {
-    color: var(--color-tertiary);
-    font-family: "Rubik", sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-
-    margin-top: 2.5rem;
-  }
-
   div {
     text-align: center;
     margin-top: 2.5rem;
@@ -89,9 +79,6 @@
   }
 
   p {
-    color: var(--color-tertiary);
-    font-size: 1.8rem;
-
     max-width: 60rem;
     margin: 0 auto;
   }

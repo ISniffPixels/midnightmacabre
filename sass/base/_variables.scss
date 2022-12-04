@@ -3,12 +3,14 @@
   --font-family-secondary: "Rubik", serif;
   --font-family-tertiary: "Rubik", sans-serif;
 
-  --color-generic: rgb(25, 25, 25);
+  //Font colors
+  --color-generic: rgb(10, 10, 10);
   --color-primary: rgb(170, 0, 0);
   --color-secondary: rgb(120, 0, 0);
-  --color-tertiary: rgb(190, 190, 190);
+  --color-tertiary: rgb(200, 200, 200);
   --nav-text-color: rgb(248, 248, 255);
 
+  //Background colors
   --bg-color-generic: rgb(10, 10, 10);
   --bg-color-primary: rgb(0, 0, 0);
   --bg-color-primary-trans: rgba(10, 0, 0, 0.9);
@@ -19,11 +21,14 @@
   --bg-color-subNav: rgba(255, 255, 255, 0.048);
   --bg-color-mobileNav: rgba(46, 0, 0, 0.95);
 
+  //Overlay background colors
   --overlay-color-primary: rgb(0, 0, 0, 0.9);
   --overlay-color-secondary: rgba(50, 0, 0, 0.8);
 
+  //Box shadows
   --box-shadow-primary: rgba(0, 0, 0, 0.4);
   --box-shadow-secondary: rgba(120, 0, 0, 0.4);
 
+  //Text shadows
   --text-shadow-primary: rgb(0, 0, 0);
 }

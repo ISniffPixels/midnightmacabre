@@ -23,15 +23,15 @@ mobileMenu();
 
 // ENABLE LIGHT TOGGLE
 const lights = function () {
-  const body = document.querySelector("body");
   const lightSwitch = document.querySelector(".lightSwitch");
   const lightNip = document.querySelector(".lightNip");
   let lightMode = localStorage.getItem("light-theme");
+  const body = document.querySelector("body");
 
   const enableLightToggle = function () {
+    lightNip.classList.add("lightNip--turnOnOff");
     body.classList.add("light-theme");
     localStorage.setItem("light-theme", "enabled");
-    lightNip.classList.add("lightNip--turnOnOff");
   };
 
   const disableLightToggle = function () {

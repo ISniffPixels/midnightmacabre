@@ -3,7 +3,6 @@ html {
   overflow-x: hidden;
   min-height: 100vh;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 
   @media screen and (max-width: 1200px) {
     font-size: 56.25%;
@@ -17,105 +16,6 @@ body {
   min-height: 100vh;
 
   transition: all 350ms ease-in;
-}
-
-.light-theme {
-  background-color: var(--bg-color-tertiary);
-  color: var(--color-generic);
-
-  p {
-    color: var(--color-generic);
-  }
-
-  figcaption {
-    color: var(--color-generic);
-  }
-
-  .switchLabel {
-    color: var(--color-generic);
-  }
-
-  .image__banner--movie {
-    figure {
-      img {
-        box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary);
-      }
-    }
-  }
-
-  .television__container__author {
-    color: var(--color-generic);
-  }
-
-  .image__banner--television {
-    figure {
-      img {
-        box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary);
-      }
-    }
-  }
-
-  .midnightgaming__container__author {
-    color: var(--color-generic);
-  }
-
-  .image__banner--midnightgaming {
-    figure {
-      img {
-        box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary);
-      }
-    }
-  }
-
-  .blog__container__author {
-    color: var(--color-generic);
-  }
-
-  .image__banner--blog {
-    figure {
-      img {
-        box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary);
-      }
-    }
-  }
-
-  .author {
-    color: var(--color-generic);
-  }
-
-  .fig-container {
-    .img--1,
-    .img--2,
-    .img--3 {
-      box-shadow: 0.01rem 0.01rem 1.2rem 0.1rem var(--box-shadow-primary);
-    }
-  }
-
-  .top__button {
-    background-color: var(--bg-color-tertiary);
-
-    p {
-      color: var(--color-primary);
-    }
-  }
-
-  .artist-info {
-    p {
-      color: var(--color-tertiary);
-    }
-  }
-
-  .author-info {
-    p {
-      color: var(--color-tertiary);
-    }
-  }
-
-  .about {
-    p {
-      color: var(--color-generic);
-    }
-  }
 }
 
 h1 {
@@ -142,7 +42,7 @@ h3 {
 }
 
 p {
-  font-family: var(--font-family-secondary);
+  font-size: 1.8rem;
   color: var(--color-tertiary);
   padding: 1rem;
 }
@@ -153,4 +53,73 @@ figcaption {
   font-size: 1.2rem;
   text-align: center;
   padding: 1.5rem;
+}
+
+.author {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.light-theme {
+  background-color: var(--bg-color-tertiary);
+
+  p,
+  figcaption {
+    color: var(--color-generic);
+  }
+
+  .image__banner--movie,
+  .image__banner--television,
+  .image__banner--midnightgaming,
+  .image__banner--blog {
+    .overlay__text {
+      color: var(--color-primary);
+    }
+
+    figure {
+      img {
+        box-shadow: 0.04rem 0.04rem 1.2rem 0.4rem var(--box-shadow-primary);
+      }
+    }
+  }
+
+  .fig-container {
+    .img--1,
+    .img--2,
+    .img--3 {
+      box-shadow: 0.01rem 0.01rem 1.2rem 0.1rem var(--box-shadow-primary);
+    }
+  }
+
+  .top__button {
+    background-color: var(--bg-color-tertiary);
+
+    p {
+      color: var(--color-primary);
+    }
+  }
+
+  .author-info {
+    p {
+      color: var(--color-tertiary);
+    }
+  }
+
+  .artist-info {
+    p {
+      color: var(--color-tertiary);
+    }
+  }
+
+  .about {
+    p {
+      color: var(--color-generic);
+    }
+  }
+
+  .carousel-clickies {
+    .clicky {
+      color: var(--color-generic);
+    }
+  }
 }
