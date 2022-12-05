@@ -121,4 +121,24 @@ figcaption {
       color: var(--color-generic);
     }
   }
+
+  .aboutListTopics {
+    .aboutListItems {
+      color: var(--color-generic);
+
+      span {
+        .skullIconAbout {
+          fill: var(--color-generic);
+        }
+      }
+    }
+  }
+
+  .carousel-clickies {
+    .clicky {
+      &--active {
+        color: var(--color-primary);
+      }
+    }
+  }
 }

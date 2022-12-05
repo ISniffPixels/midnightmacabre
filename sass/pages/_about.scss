@@ -11,6 +11,10 @@
 
     h2 {
       font-size: 4.5rem;
+
+      @media screen and (max-width: 700px) {
+        font-size: 3rem;
+      }
     }
 
     p {
@@ -21,6 +25,10 @@
     .contact {
       h2 {
         font-size: 4.5rem;
+
+        @media screen and (max-width: 700px) {
+          font-size: 3rem;
+        }
       }
 
       div {
@@ -57,7 +65,6 @@
 
 .aboutListTopics {
   list-style: none;
-  max-width: 90rem;
   margin: 13rem auto;
 
   .aboutListItems {
@@ -71,51 +78,21 @@
 
     margin-bottom: 1.2rem;
 
-    .liImg {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    span {
+      display: grid;
+      place-content: center;
 
-      margin-right: 1.2rem;
-
-      img {
-        width: 30px;
-        height: 30px;
+      .skullIconAbout {
+        fill: var(--color-primary);
+        width: 7rem;
+        height: 7rem;
+        margin-right: 1.5rem;
       }
-    }
 
-    @media screen and (max-width: 625px) {
-      .liImg {
-        margin-right: 1.2rem;
-
-        img {
-          display: block;
-          width: 25px;
-          height: 25px;
-        }
-      }
-    }
-
-    @media screen and (max-width: 425px) {
-      .liImg {
-        margin-right: 1.2rem;
-
-        img {
-          display: block;
-          width: 20px;
-          height: 20px;
-        }
-      }
-    }
-
-    @media screen and (max-width: 240px) {
-      .liImg {
-        margin-right: 1.2rem;
-
-        img {
-          display: block;
-          width: 15px;
-          height: 15px;
+      @media screen and (max-width: 625px) {
+        .skullIconAbout {
+          width: 4rem;
+          height: 4rem;
         }
       }
     }

@@ -90,12 +90,18 @@ figcaption {
     color: var(--color-generic); }
   .light-theme .carousel-clickies .clicky {
     color: var(--color-generic); }
+  .light-theme .aboutListTopics .aboutListItems {
+    color: var(--color-generic); }
+    .light-theme .aboutListTopics .aboutListItems span .skullIconAbout {
+      fill: var(--color-generic); }
+  .light-theme .carousel-clickies .clicky--active {
+    color: var(--color-primary); }
 
 :root {
   --font-family-primary: "Rubik Wet Paint", cursive;
   --font-family-secondary: "Rubik", serif;
   --font-family-tertiary: "Rubik", sans-serif;
-  --color-generic: rgb(10, 10, 10);
+  --color-generic: rgb(4, 4, 4);
   --color-primary: rgb(170, 0, 0);
   --color-secondary: rgb(120, 0, 0);
   --color-tertiary: rgb(200, 200, 200);
@@ -108,7 +114,7 @@ figcaption {
   --bg-color-quad: rgba(120, 0, 0, 1);
   --bg-color-buttons: rgb(255, 0, 0);
   --bg-color-subNav: rgba(255, 255, 255, 0.048);
-  --bg-color-mobileNav: rgba(46, 0, 0, 0.95);
+  --bg-color-mobileNav: rgba(0, 0, 0, 0.95);
   --overlay-color-primary: rgb(0, 0, 0, 0.9);
   --overlay-color-secondary: rgba(50, 0, 0, 0.8);
   --box-shadow-primary: rgba(0, 0, 0, 0.4);
@@ -673,7 +679,6 @@ figcaption {
       padding: 12rem 2rem; } }
   .intro--container .intro--1,
   .intro--container .intro--2 {
-    font-size: 1.8rem;
     max-width: 70rem;
     opacity: 0;
     transition: opacity 5000ms; }
@@ -803,7 +808,6 @@ figcaption {
   .fig-txt__container .txt--1,
   .fig-txt__container .txt--2,
   .fig-txt__container .txt--3 {
-    font-size: 1.8rem;
     max-width: 40rem;
     height: auto;
     transform: translateX(100%);
@@ -1058,6 +1062,9 @@ figcaption {
     text-align: center;
     color: var(--color-primary);
     margin-bottom: 4.5rem; }
+    @media screen and (max-width: 700px) {
+      .moviesmenu--title {
+        font-size: 2.5rem; } }
   .moviesmenu--container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -1201,6 +1208,9 @@ figcaption {
     text-align: center;
     color: var(--color-primary);
     margin-bottom: 4.5rem; }
+    @media screen and (max-width: 700px) {
+      .televisionmenu--title {
+        font-size: 2.5rem; } }
   .televisionmenu--container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -1391,6 +1401,9 @@ figcaption {
     text-align: center;
     color: var(--color-primary);
     margin-bottom: 4.5rem; }
+    @media screen and (max-width: 700px) {
+      .gamingmenu--title {
+        font-size: 2.5rem; } }
   .gamingmenu--container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -1472,6 +1485,9 @@ figcaption {
     text-align: center;
     color: var(--color-primary);
     margin-bottom: 4.5rem; }
+    @media screen and (max-width: 700px) {
+      .gallerymenu--title {
+        font-size: 2.5rem; } }
   .gallerymenu--container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -1541,6 +1557,9 @@ figcaption {
     text-align: center;
     color: var(--color-primary);
     margin-bottom: 4.5rem; }
+    @media screen and (max-width: 700px) {
+      .blogmenu--title {
+        font-size: 2.5rem; } }
   .blogmenu--container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -1650,6 +1669,9 @@ figcaption {
     margin-right: 1.2rem; }
     .flexContainer .about h2 {
       font-size: 4.5rem; }
+      @media screen and (max-width: 700px) {
+        .flexContainer .about h2 {
+          font-size: 3rem; } }
     .flexContainer .about p {
       max-width: 50rem;
       margin: 0 auto; }
@@ -1657,6 +1679,9 @@ figcaption {
       margin-top: 5rem; }
       .flexContainer .about .contact h2 {
         font-size: 4.5rem; }
+        @media screen and (max-width: 700px) {
+          .flexContainer .about .contact h2 {
+            font-size: 3rem; } }
       .flexContainer .about .contact div {
         text-align: center; }
         .flexContainer .about .contact div .email {
@@ -1675,7 +1700,6 @@ figcaption {
 
 .aboutListTopics {
   list-style: none;
-  max-width: 90rem;
   margin: 13rem auto; }
   .aboutListTopics .aboutListItems {
     display: flex;
@@ -1685,35 +1709,18 @@ figcaption {
     font-size: 1.6rem;
     font-weight: 900;
     margin-bottom: 1.2rem; }
-    .aboutListTopics .aboutListItems .liImg {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 1.2rem; }
-      .aboutListTopics .aboutListItems .liImg img {
-        width: 30px;
-        height: 30px; }
-    @media screen and (max-width: 625px) {
-      .aboutListTopics .aboutListItems .liImg {
-        margin-right: 1.2rem; }
-        .aboutListTopics .aboutListItems .liImg img {
-          display: block;
-          width: 25px;
-          height: 25px; } }
-    @media screen and (max-width: 425px) {
-      .aboutListTopics .aboutListItems .liImg {
-        margin-right: 1.2rem; }
-        .aboutListTopics .aboutListItems .liImg img {
-          display: block;
-          width: 20px;
-          height: 20px; } }
-    @media screen and (max-width: 240px) {
-      .aboutListTopics .aboutListItems .liImg {
-        margin-right: 1.2rem; }
-        .aboutListTopics .aboutListItems .liImg img {
-          display: block;
-          width: 15px;
-          height: 15px; } }
+    .aboutListTopics .aboutListItems span {
+      display: grid;
+      place-content: center; }
+      .aboutListTopics .aboutListItems span .skullIconAbout {
+        fill: var(--color-primary);
+        width: 7rem;
+        height: 7rem;
+        margin-right: 1.5rem; }
+      @media screen and (max-width: 625px) {
+        .aboutListTopics .aboutListItems span .skullIconAbout {
+          width: 4rem;
+          height: 4rem; } }
 
 .scaleout {
   -moz-backface-visibility: hidden;
