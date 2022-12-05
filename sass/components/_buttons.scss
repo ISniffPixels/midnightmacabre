@@ -16,13 +16,12 @@
   border-radius: 5rem 5rem 0 0;
   margin-left: 30rem;
   border: 0.3rem solid var(--color-primary);
-
   background-color: var(--bg-color-primary);
 
   opacity: 0;
   transform: translateY(15rem);
-  z-index: 100;
   transition: all 350ms ease-in;
+  z-index: 100;
 
   &--slideUp {
     opacity: 1;
@@ -110,14 +109,4 @@
       transform: translateY(-2rem);
     }
   }
-}
-
-.switchLabel {
-  font-family: "Rubik", sans-serif;
-  font-weight: 900;
-  font-variant: small-caps;
-  font-size: 1.2rem;
-  color: var(--color-tertiary);
-
-  margin: 0 0.55rem;
 }

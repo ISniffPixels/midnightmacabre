@@ -9,19 +9,19 @@
 
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
   min-height: 100vh;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden; }
   @media screen and (max-width: 1200px) {
     html {
       font-size: 56.25%; } }
 
 body {
-  background-color: var(--bg-color-primary);
   font-weight: 500;
   line-height: 1.6;
   min-height: 100vh;
-  transition: all 350ms ease-in; }
+  background-color: var(--bg-color-primary);
+  transition: background-color 350ms ease-in; }
 
 h1 {
   font-family: var(--font-family-primary);
@@ -291,8 +291,8 @@ figcaption {
   background-color: var(--bg-color-primary);
   opacity: 0;
   transform: translateY(15rem);
-  z-index: 100;
-  transition: all 350ms ease-in; }
+  transition: all 350ms ease-in;
+  z-index: 100; }
   @media screen and (max-width: 1024px) {
     .top__button {
       display: none; } }
@@ -353,14 +353,6 @@ figcaption {
     transition: all 175ms ease-in; }
     .lightSwitch .lightNip--turnOnOff {
       transform: translateY(-2rem); }
-
-.switchLabel {
-  font-family: "Rubik", sans-serif;
-  font-weight: 900;
-  font-variant: small-caps;
-  font-size: 1.2rem;
-  color: var(--color-tertiary);
-  margin: 0 0.55rem; }
 
 .slider__container {
   position: relative;
@@ -432,7 +424,7 @@ figcaption {
     .carousel-clickies .clicky:active {
       top: 1.5px; }
     .carousel-clickies .clicky--active {
-      border: 1rem ridge var(--color-primary); }
+      color: var(--color-primary); }
   .carousel-clickies .clicky:not(:last-child) {
     margin-right: 1.3rem; }
 
@@ -827,7 +819,7 @@ figcaption {
     .fig-txt__container .txt--3 a {
       color: var(--color-primary);
       font-weight: 900;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       text-transform: uppercase;
       text-decoration: none; }
     .fig-txt__container .txt--1--appear,

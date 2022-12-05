@@ -1,8 +1,8 @@
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
   min-height: 100vh;
   box-sizing: border-box;
+  overflow-x: hidden;
 
   @media screen and (max-width: 1200px) {
     font-size: 56.25%;
@@ -10,12 +10,11 @@ html {
 }
 
 body {
-  background-color: var(--bg-color-primary);
   font-weight: 500;
   line-height: 1.6;
   min-height: 100vh;
-
-  transition: all 350ms ease-in;
+  background-color: var(--bg-color-primary);
+  transition: background-color 350ms ease-in;
 }
 
 h1 {
