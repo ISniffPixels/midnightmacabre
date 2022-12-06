@@ -17,48 +17,7 @@ body {
   transition: background-color 350ms ease-in;
 }
 
-h1 {
-  font-family: var(--font-family-primary);
-  font-variant: small-caps;
-  color: var(--color-primary);
-  text-align: center;
-}
-
-h2 {
-  font-family: var(--font-family-primary);
-  font-variant: small-caps;
-  color: var(--color-primary);
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-h3 {
-  font-family: var(--font-family-primary);
-  font-variant: small-caps;
-  color: var(--color-primary);
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-p {
-  font-size: 1.8rem;
-  color: var(--color-tertiary);
-  padding: 1rem;
-}
-
-figcaption {
-  color: var(--color-tertiary);
-  font-variant: small-caps;
-  font-size: 1.2rem;
-  text-align: center;
-  padding: 1.5rem;
-}
-
-.author {
-  font-size: 1.8rem;
-  text-align: center;
-}
-
+// LIGHT-THEME APPLIES TO BODY
 .light-theme {
   background-color: var(--bg-color-tertiary);
 
@@ -141,4 +100,46 @@ figcaption {
       }
     }
   }
+}
+
+figcaption {
+  color: var(--color-tertiary);
+  font-variant: small-caps;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.author {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+h1 {
+  font-family: var(--font-family-primary);
+  font-variant: small-caps;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--font-family-primary);
+  font-variant: small-caps;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-family: var(--font-family-primary);
+  font-variant: small-caps;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1.8rem;
+  color: var(--color-tertiary);
+  padding: 1rem;
 }
