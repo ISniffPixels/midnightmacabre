@@ -101,6 +101,18 @@ body {
     }
   }
 
+  .cubeBoxCenter {
+    .cube {
+      .cube__face {
+        box-shadow: none;
+      }
+    }
+
+    .hellCaption {
+      color: var(--color-generic);
+    }
+  }
+
   .aboutPicture {
     .cube {
       .cube__face {
