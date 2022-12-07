@@ -60,6 +60,8 @@ body {
       fill: var(--color-generic); }
   .light-theme .carousel-clickies .clicky--active {
     color: var(--color-primary); }
+  .light-theme .aboutPicture .cube .cube__face {
+    box-shadow: none; }
 
 figcaption {
   color: var(--color-tertiary);
@@ -1693,10 +1695,52 @@ p {
     justify-content: center;
     align-items: center;
     flex: 1 0 50%; }
-    .flexContainer .aboutPicture img {
-      display: block;
-      max-width: 100%;
-      height: auto; }
+    .flexContainer .aboutPicture .scene {
+      perspective: 600px;
+      width: 200px;
+      height: 200px; }
+    .flexContainer .aboutPicture .cube {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+      -moz-backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      animation: spinCube 24000ms infinite ease-in-out; }
+
+@keyframes spinCube {
+  0% {
+    transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg); }
+  50% {
+    transform: translate3d(0, 0, 0) rotateX(720deg) rotateY(720deg); }
+  100% {
+    transform: translate3d(0, 0, 0) rotateX(-720deg) rotateY(-720deg); } }
+    .flexContainer .aboutPicture .cube__face {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      box-shadow: 0.03rem 0.03rem 2.5rem var(--color-primary);
+      transition: 1000ms ease-in; }
+      .flexContainer .aboutPicture .cube__face--front {
+        background-image: url(/img/hellcubeSide1b.png);
+        transform: rotateY(0deg) translateZ(100px); }
+      .flexContainer .aboutPicture .cube__face--right {
+        background-image: url(/img/hellcubeSide2b.png);
+        transform: rotateY(90deg) translateZ(100px); }
+      .flexContainer .aboutPicture .cube__face--back {
+        background-image: url(/img/hellcubeSide1a.png);
+        transform: rotateY(180deg) translateZ(100px); }
+      .flexContainer .aboutPicture .cube__face--left {
+        background-image: url(/img/hellcubeSide2a.png);
+        transform: rotateY(-90deg) translateZ(100px); }
+      .flexContainer .aboutPicture .cube__face--top {
+        background-image: url(/img/hellcubeSide3b.png);
+        transform: rotateX(90deg) translateZ(100px); }
+      .flexContainer .aboutPicture .cube__face--bottom {
+        background-image: url(/img/hellcubeSide3a.png);
+        transform: rotateX(-90deg) translateZ(100px); }
 
 .aboutListTopics {
   list-style: none;

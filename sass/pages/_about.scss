@@ -53,13 +53,81 @@
 
     flex: 1 0 50%;
 
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-
-      // box-shadow: 0.01rem 0.01rem 1.2rem 0.1rem var(--box-shadow-secondary);
+    // CUBE FACE SETUP
+    .scene {
+      perspective: 600px;
+      width: 200px;
+      height: 200px;
     }
+
+    .cube {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+      -moz-backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      animation: spinCube 24000ms infinite ease-in-out;
+    }
+
+    // CUBE ROTATION
+    @keyframes spinCube {
+      0% {
+        transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg);
+      }
+
+      50% {
+        transform: translate3d(0, 0, 0) rotateX(720deg) rotateY(720deg);
+      }
+
+      100% {
+        transform: translate3d(0, 0, 0) rotateX(-720deg) rotateY(-720deg);
+      }
+    }
+
+    .cube__face {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      box-shadow: 0.03rem 0.03rem 2.5rem var(--color-primary);
+      transition: 1000ms ease-in;
+
+      // CUBE FACE POSITION
+      &--front {
+        background-image: url(/img/hellcubeSide1b.png);
+        transform: rotateY(0deg) translateZ(100px);
+      }
+      &--right {
+        background-image: url(/img/hellcubeSide2b.png);
+        transform: rotateY(90deg) translateZ(100px);
+      }
+      &--back {
+        background-image: url(/img/hellcubeSide1a.png);
+        transform: rotateY(180deg) translateZ(100px);
+      }
+      &--left {
+        background-image: url(/img/hellcubeSide2a.png);
+        transform: rotateY(-90deg) translateZ(100px);
+      }
+      &--top {
+        background-image: url(/img/hellcubeSide3b.png);
+        transform: rotateX(90deg) translateZ(100px);
+      }
+      &--bottom {
+        background-image: url(/img/hellcubeSide3a.png);
+        transform: rotateX(-90deg) translateZ(100px);
+      }
+    }
+
+    // img {
+    //   display: block;
+    //   max-width: 100%;
+    //   height: auto;
+
+    //   // box-shadow: 0.01rem 0.01rem 1.2rem 0.1rem var(--box-shadow-secondary);
+    // }
   }
 }
 
