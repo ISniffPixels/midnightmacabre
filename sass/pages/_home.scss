@@ -254,10 +254,6 @@
     opacity: 0;
     transition: all 500ms ease-in;
 
-    h3 {
-      font-size: 2.5rem;
-    }
-
     a {
       color: var(--color-primary);
       font-weight: 900;
@@ -337,14 +333,6 @@
     font-variant: small-caps;
     text-align: center;
     color: var(--color-primary);
-
-    h2 {
-      font-size: 5.5rem;
-
-      @media screen and (max-width: 368px) {
-        font-size: 2.5rem;
-      }
-    }
   }
 }
 
@@ -447,15 +435,6 @@
 
     margin-bottom: 4.5rem;
 
-    h2 {
-      font-size: 5.5rem;
-      margin: 6.5rem 0;
-
-      @media screen and (max-width: 368px) {
-        font-size: 2.5rem;
-      }
-    }
-
     p {
       font-family: var(--font-family-tertiary);
       font-size: 1.3rem;
@@ -552,14 +531,6 @@
 
     width: 100%;
     margin-bottom: 4.5rem;
-
-    h2 {
-      font-size: 5.5rem;
-
-      @media screen and (max-width: 368px) {
-        font-size: 2.5rem;
-      }
-    }
   }
 
   &__image {
@@ -585,15 +556,10 @@
           max-width: 50rem;
 
           h2 {
-            font-size: 1.95rem;
-            color: var(--color-primary);
+            font-size: 1.9rem;
 
-            @media screen and (max-width: 347px) {
-              font-size: 1.5rem;
-            }
-
-            @media screen and (max-width: 268px) {
-              font-size: 1.2rem;
+            @media screen and (max-width: 368px) {
+              font-size: 1.3rem;
             }
           }
 
