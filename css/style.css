@@ -62,17 +62,18 @@ body {
     color: var(--color-primary); }
   .light-theme .cubeBoxCenter .cube .cube__face {
     box-shadow: none; }
-  .light-theme .cubeBoxCenter .hellCaption {
-    color: var(--color-generic); }
   .light-theme .aboutPicture .cube .cube__face {
     box-shadow: none; }
 
 figcaption {
-  color: var(--color-tertiary);
+  color: var(--color-primary);
+  font-size: 2.5rem;
   font-variant: small-caps;
-  font-size: 1.2rem;
   text-align: center;
   padding: 1.5rem; }
+  @media screen and (max-width: 505px) {
+    figcaption {
+      font-size: 1.4rem; } }
 
 .author {
   font-size: 1.8rem;
@@ -91,13 +92,20 @@ h2 {
   color: var(--color-primary);
   text-align: center;
   margin-bottom: 1.5rem; }
+  @media screen and (max-width: 368px) {
+    h2 {
+      font-size: 1.9rem; } }
 
 h3 {
   font-family: var(--font-family-primary);
+  font-size: 4rem;
   font-variant: small-caps;
   color: var(--color-primary);
   text-align: center;
   margin-bottom: 1.5rem; }
+  @media screen and (max-width: 368px) {
+    h3 {
+      font-size: 2.5rem; } }
 
 p {
   font-size: 1.8rem;
@@ -821,10 +829,6 @@ p {
     visibility: hidden;
     opacity: 0;
     transition: all 500ms ease-in; }
-    .fig-txt__container .txt--1 h3,
-    .fig-txt__container .txt--2 h3,
-    .fig-txt__container .txt--3 h3 {
-      font-size: 2.5rem; }
     .fig-txt__container .txt--1 a,
     .fig-txt__container .txt--2 a,
     .fig-txt__container .txt--3 a {
@@ -905,11 +909,6 @@ p {
     font-variant: small-caps;
     text-align: center;
     color: var(--color-primary); }
-    .reviews--title h2 {
-      font-size: 5.5rem; }
-      @media screen and (max-width: 368px) {
-        .reviews--title h2 {
-          font-size: 2.5rem; } }
 
 .cubeBoxCenter {
   display: flex;
@@ -980,12 +979,6 @@ p {
     text-align: center;
     color: var(--color-primary);
     margin-bottom: 4.5rem; }
-    .featuredArt--title h2 {
-      font-size: 5.5rem;
-      margin: 6.5rem 0; }
-      @media screen and (max-width: 368px) {
-        .featuredArt--title h2 {
-          font-size: 2.5rem; } }
     .featuredArt--title p {
       font-family: var(--font-family-tertiary);
       font-size: 1.3rem;
@@ -1054,11 +1047,6 @@ p {
     color: var(--color-primary);
     width: 100%;
     margin-bottom: 4.5rem; }
-    .featuredBlog--title h2 {
-      font-size: 5.5rem; }
-      @media screen and (max-width: 368px) {
-        .featuredBlog--title h2 {
-          font-size: 2.5rem; } }
   .featuredBlog__image--container {
     position: relative;
     max-width: 70%;
@@ -1083,14 +1071,10 @@ p {
         -ms-transform: translate(-50%, -50%);
         overflow: hidden; }
         .featuredBlog__image--container--overlay .author-info h2 {
-          font-size: 1.95rem;
-          color: var(--color-primary); }
-          @media screen and (max-width: 347px) {
+          font-size: 1.9rem; }
+          @media screen and (max-width: 368px) {
             .featuredBlog__image--container--overlay .author-info h2 {
-              font-size: 1.5rem; } }
-          @media screen and (max-width: 268px) {
-            .featuredBlog__image--container--overlay .author-info h2 {
-              font-size: 1.2rem; } }
+              font-size: 1.3rem; } }
         .featuredBlog__image--container--overlay .author-info p {
           font-size: 1.8rem; }
           @media screen and (max-width: 683px) {
