@@ -81,8 +81,7 @@
       margin: 0 auto;
 
       @media screen and (max-width: 1024px) {
-        max-width: 50%;
-        margin-top: 25rem;
+        margin-top: 15rem;
       }
     }
   }
@@ -95,15 +94,14 @@
   padding: 10rem;
   margin: 20rem 0;
 
-  @media screen and (max-width: 1024px) {
-    padding: 12rem 2rem;
+  @media screen and (max-width: 700px) {
+    padding: 0;
   }
 
   // PARAGRAPH INTRO
   .intro--1,
   .intro--2 {
     max-width: 70rem;
-
     opacity: 0;
     transition: opacity 5000ms;
 
@@ -137,6 +135,10 @@
     flex: 50%;
 
     padding: 3rem;
+
+    @media screen and (max-width: 700px) {
+      padding: 3rem 0;
+    }
 
     .img--1,
     .img--2,
@@ -241,6 +243,10 @@
     flex: 50%;
 
     padding: 3rem;
+
+    @media screen and (max-width: 700px) {
+      padding: 3rem 0;
+    }
   }
 
   .txt--1,
@@ -324,8 +330,13 @@
 }
 
 .reviews {
-  margin: 30rem 0;
   padding: 4.5rem 0;
+  margin: 30rem 0;
+
+  @media screen and (max-width: 700px) {
+    padding: 0;
+    margin: 0;
+  }
 
   &--title {
     font-family: var(--font-family-primary);
@@ -341,7 +352,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 15rem;
+  row-gap: 12rem;
+
+  @media screen and (max-width: 505px) {
+    row-gap: 6rem;
+  }
 
   margin: 20rem 0;
 
@@ -351,8 +366,9 @@
     width: 200px;
     height: 200px;
 
-    @media screen and (max-width: 600px) {
-      perspective: 6000px;
+    @media screen and (max-width: 700px) {
+      transform: scale(0.65);
+      transform-origin: center bottom;
     }
   }
 
@@ -423,8 +439,12 @@
 }
 
 .featuredArt {
-  margin-bottom: 30rem;
   padding: 4.5rem 0;
+  margin-bottom: 30rem;
+
+  @media screen and (max-width: 700px) {
+    margin-bottom: 10rem;
+  }
 
   &--title {
     font-family: var(--font-family-primary);
@@ -450,6 +470,11 @@
 
   &--container {
     max-width: 60%;
+
+    @media screen and (max-width: 700px) {
+      max-width: 100%;
+    }
+
     height: auto;
     margin: auto;
     background-color: var(--bg-color-secondary);
@@ -520,6 +545,11 @@
   align-items: center;
 
   margin-bottom: 30rem;
+
+  @media screen and (max-width: 700px) {
+    margin-bottom: 10rem;
+  }
+
   padding: 4.5rem 0;
 
   &--title {
@@ -537,6 +567,11 @@
     &--container {
       position: relative;
       max-width: 70%;
+
+      @media screen and (max-width: 700px) {
+        max-width: 100%;
+      }
+
       box-shadow: 0.01rem 0.01rem 1.2rem 0.1rem var(--box-shadow-secondary);
 
       margin: 0 auto;
@@ -557,10 +592,6 @@
 
           h2 {
             font-size: 1.9rem;
-
-            @media screen and (max-width: 368px) {
-              font-size: 1.3rem;
-            }
           }
 
           p {
