@@ -1,7 +1,6 @@
 * {
   margin: 0;
-  padding: 0;
-  outline: 1px solid #ccc; }
+  padding: 0; }
 
 *,
 *::before,
@@ -65,6 +64,8 @@ body {
     box-shadow: none; }
   .light-theme .aboutPicture .cube .cube__face {
     box-shadow: none; }
+  .light-theme figcaption {
+    color: var(--color-generic); }
 
 figcaption {
   color: var(--color-primary);
@@ -956,9 +957,6 @@ p {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     animation: spinCube 24000ms infinite ease-in-out; }
-  .cubeBoxCenter .hellCaption {
-    font-size: 2.5rem;
-    color: var(--color-primary); }
   .cubeBoxCenter .cube__face {
     position: absolute;
     width: 100%;
