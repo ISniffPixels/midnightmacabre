@@ -348,40 +348,6 @@
   }
 }
 
-// CUBE FACE SETUP
-.scene {
-  perspective: 600px;
-  width: 200px;
-  height: 200px;
-}
-
-.cube {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 1s;
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  animation: spinCube 24000ms infinite ease-in-out;
-}
-
-// CUBE ROTATION
-@keyframes spinCube {
-  0% {
-    transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg);
-  }
-
-  50% {
-    transform: translate3d(0, 0, 0) rotateX(720deg) rotateY(720deg);
-  }
-
-  100% {
-    transform: translate3d(0, 0, 0) rotateX(-720deg) rotateY(-720deg);
-  }
-}
-
 .cubeBoxCenter {
   display: flex;
   flex-direction: column;
@@ -391,12 +357,7 @@
 
   margin: 20rem 0;
 
-  .hellCaption {
-    font-size: 2.5rem;
-    color: var(--color-primary);
-  }
-
-  // CUBE FACE SETUP
+  // CUBE 3D SPACE SETUP
   .scene {
     perspective: 600px;
     width: 200px;
@@ -418,19 +379,9 @@
     animation: spinCube 24000ms infinite ease-in-out;
   }
 
-  // CUBE ROTATION
-  @keyframes spinCube {
-    0% {
-      transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg);
-    }
-
-    50% {
-      transform: translate3d(0, 0, 0) rotateX(720deg) rotateY(720deg);
-    }
-
-    100% {
-      transform: translate3d(0, 0, 0) rotateX(-720deg) rotateY(-720deg);
-    }
+  .hellCaption {
+    font-size: 2.5rem;
+    color: var(--color-primary);
   }
 
   .cube__face {
@@ -464,6 +415,21 @@
     &--bottom {
       background-image: url(/img/hellcubeSide3a.png);
       transform: rotateX(-90deg) translateZ(100px);
+    }
+  }
+
+  // CUBE ROTATION
+  @keyframes spinCube {
+    0% {
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg);
+    }
+
+    50% {
+      transform: translate3d(0, 0, 0) rotateX(720deg) rotateY(720deg);
+    }
+
+    100% {
+      transform: translate3d(0, 0, 0) rotateX(-720deg) rotateY(-720deg);
     }
   }
 }
