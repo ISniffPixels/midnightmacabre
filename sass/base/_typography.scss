@@ -115,6 +115,10 @@ body {
     }
   }
 
+  figcaption.pinheadQuote {
+    color: var(--color-generic);
+  }
+
   .carousel-clickies {
     .clicky {
       &--active {
