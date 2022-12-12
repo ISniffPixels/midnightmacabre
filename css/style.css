@@ -66,6 +66,8 @@ body {
     color: var(--color-generic); }
     .light-theme .aboutListTopics .aboutListItems span .skullIconAbout {
       fill: var(--color-generic); }
+  .light-theme figcaption.pinheadQuote {
+    color: var(--color-generic); }
   .light-theme .carousel-clickies .clicky--active {
     color: var(--color-primary); }
   .light-theme .cubeBoxCenter .cube .cube__face {
