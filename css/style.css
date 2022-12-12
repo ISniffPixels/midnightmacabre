@@ -132,7 +132,7 @@ p {
   --bg-color-buttons: rgb(255, 0, 0);
   --bg-color-subNav: rgba(255, 255, 255, 0.048);
   --bg-color-mobileNav: rgba(0, 0, 0, 0.95);
-  --overlay-color-primary: rgb(0, 0, 0, 0.9);
+  --overlay-color-primary: rgb(0, 0, 0, 0.8);
   --overlay-color-secondary: rgba(50, 0, 0, 0.8);
   --box-shadow-primary: rgba(0, 0, 0, 0.4);
   --box-shadow-secondary: rgba(120, 0, 0, 0.4);
@@ -194,7 +194,7 @@ p {
         padding: 0; } }
     @media screen and (max-width: 800px) {
       .wrapper--blogs, .wrapper--midnightgaming, .wrapper--television, .wrapper--movies, .wrapper--about, .wrapper--moviemenu, .wrapper--telemenu, .wrapper--gamingmenu, .wrapper--blogmenu, .wrapper--gallerymenu {
-        background-image: url(/img/blood-png-37992-100w.png), url(/img/blood-png-7146-flip-200w.png);
+        background-image: url(/img/blood-png-37992-100w.png), url(/img/blood-png-7146-flip-100w.png);
         background-repeat: no-repeat;
         background-position: top left, top right; } }
 
@@ -1138,14 +1138,14 @@ p {
   padding: 4.5rem 0; }
   .moviesmenu--title {
     font-family: var(--font-family-primary);
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-variant: small-caps;
     text-align: center;
     color: var(--color-primary);
     margin-bottom: 4.5rem; }
     @media screen and (max-width: 700px) {
       .moviesmenu--title {
-        font-size: 2.5rem; } }
+        font-size: 2rem; } }
   .moviesmenu--container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -1187,7 +1187,7 @@ p {
         -ms-transform: translate(-50%, -50%);
         overflow: hidden; }
         .moviesmenu__image--container--overlay .movie-info h2 {
-          font-size: 1.9rem;
+          font-size: 2.5rem;
           color: var(--color-primary); }
         .moviesmenu__image--container--overlay .movie-info div {
           font-family: var(--font-family-secondary);
@@ -1200,6 +1200,9 @@ p {
           font-size: 3.2rem;
           color: var(--color-primary);
           text-align: center; }
+          @media screen and (max-width: 700px) {
+            .moviesmenu__image--container--overlay .movie-info .rating {
+              font-size: 2.5rem; } }
     .moviesmenu__image--container:hover .moviesmenu__image--container--overlay,
     .moviesmenu__image--container:active .moviesmenu__image--container--overlay {
       bottom: 0;
@@ -1284,14 +1287,14 @@ p {
   padding: 4.5rem 0; }
   .televisionmenu--title {
     font-family: var(--font-family-primary);
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-variant: small-caps;
     text-align: center;
     color: var(--color-primary);
     margin-bottom: 4.5rem; }
     @media screen and (max-width: 700px) {
       .televisionmenu--title {
-        font-size: 2.5rem; } }
+        font-size: 1.8rem; } }
   .televisionmenu--container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -1333,7 +1336,7 @@ p {
         -ms-transform: translate(-50%, -50%);
         overflow: hidden; }
         .televisionmenu__image--container--overlay .tele-info h2 {
-          font-size: 1.9rem;
+          font-size: 2.5rem;
           color: var(--color-primary); }
         .televisionmenu__image--container--overlay .tele-info div {
           font-family: var(--font-family-secondary);
@@ -1346,6 +1349,9 @@ p {
           font-size: 3.2rem;
           color: var(--color-primary);
           text-align: center; }
+          @media screen and (max-width: 700px) {
+            .televisionmenu__image--container--overlay .tele-info .rating {
+              font-size: 1.9rem; } }
     .televisionmenu__image--container:hover .televisionmenu__image--container--overlay,
     .televisionmenu__image--container:active .televisionmenu__image--container--overlay {
       bottom: 0;
@@ -1477,14 +1483,14 @@ p {
   padding: 4.5rem 0; }
   .gamingmenu--title {
     font-family: var(--font-family-primary);
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-variant: small-caps;
     text-align: center;
     color: var(--color-primary);
     margin-bottom: 4.5rem; }
     @media screen and (max-width: 700px) {
       .gamingmenu--title {
-        font-size: 2.5rem; } }
+        font-size: 2rem; } }
   .gamingmenu--container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -1526,7 +1532,7 @@ p {
         -ms-transform: translate(-50%, -50%);
         overflow: hidden; }
         .gamingmenu__image--container--overlay .game-info h2 {
-          font-size: 1.9rem;
+          font-size: 2.5rem;
           color: var(--color-primary); }
         .gamingmenu__image--container--overlay .game-info div {
           font-family: var(--font-family-secondary);
@@ -1539,6 +1545,9 @@ p {
           font-size: 3.2rem;
           color: var(--color-primary);
           text-align: center; }
+          @media screen and (max-width: 700px) {
+            .gamingmenu__image--container--overlay .game-info .rating {
+              font-size: 1.8rem; } }
     .gamingmenu__image--container:hover .gamingmenu__image--container--overlay,
     .gamingmenu__image--container:active .gamingmenu__image--container--overlay {
       bottom: 0;
@@ -1561,14 +1570,14 @@ p {
   padding: 4.5rem 0; }
   .gallerymenu--title {
     font-family: var(--font-family-primary);
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-variant: small-caps;
     text-align: center;
     color: var(--color-primary);
     margin-bottom: 4.5rem; }
     @media screen and (max-width: 700px) {
       .gallerymenu--title {
-        font-size: 2.5rem; } }
+        font-size: 2rem; } }
   .gallerymenu--container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -1633,14 +1642,14 @@ p {
   padding: 4.5rem 0; }
   .blogmenu--title {
     font-family: var(--font-family-primary);
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-variant: small-caps;
     text-align: center;
     color: var(--color-primary);
     margin-bottom: 4.5rem; }
     @media screen and (max-width: 700px) {
       .blogmenu--title {
-        font-size: 2.5rem; } }
+        font-size: 2rem; } }
   .blogmenu--container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -1682,7 +1691,7 @@ p {
         -ms-transform: translate(-50%, -50%);
         overflow: hidden; }
         .blogmenu__image--container--overlay .author-info h2 {
-          font-size: 1.9rem;
+          font-size: 2rem;
           color: var(--color-primary); }
         .blogmenu__image--container--overlay .author-info div {
           font-family: var(--font-family-secondary);
