@@ -124,20 +124,31 @@ body {
 
 figcaption {
   color: var(--color-primary);
-  font-size: 2.5rem;
-
-  @media screen and (max-width: 505px) {
-    font-size: 1.4rem;
-  }
-
+  font-size: 1.4rem;
   font-variant: small-caps;
   text-align: center;
   padding: 1.5rem;
 }
 
-.author {
-  font-size: 1.8rem;
+figcaption.pinheadQuote {
+  color: var(--color-primary);
+  font-size: 2.4rem;
+  font-variant: small-caps;
   text-align: center;
+  padding: 1.5rem;
+
+  @media screen and (max-width: 700px) {
+    font-size: 1.8rem;
+  }
+}
+
+.author {
+  font-family: "Rubik", serif;
+  font-variant: small-caps;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 2.5rem;
 }
 
 h1 {
