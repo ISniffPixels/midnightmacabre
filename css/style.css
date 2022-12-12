@@ -69,17 +69,28 @@ body {
 
 figcaption {
   color: var(--color-primary);
-  font-size: 2.5rem;
+  font-size: 1.4rem;
   font-variant: small-caps;
   text-align: center;
   padding: 1.5rem; }
-  @media screen and (max-width: 505px) {
-    figcaption {
-      font-size: 1.4rem; } }
+
+figcaption.pinheadQuote {
+  color: var(--color-primary);
+  font-size: 2.4rem;
+  font-variant: small-caps;
+  text-align: center;
+  padding: 1.5rem; }
+  @media screen and (max-width: 700px) {
+    figcaption.pinheadQuote {
+      font-size: 1.8rem; } }
 
 .author {
-  font-size: 1.8rem;
-  text-align: center; }
+  font-family: "Rubik", serif;
+  font-variant: small-caps;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 2.5rem; }
 
 h1 {
   font-family: var(--font-family-primary);
@@ -1233,6 +1244,9 @@ p {
     font-size: 3.5rem;
     color: var(--color-primary);
     text-shadow: 0.5rem 0.5rem 0.5rem var(--box-shadow-primary); }
+    @media screen and (max-width: 700px) {
+      .image__banner--movie .overlay__text {
+        font-size: 2.5rem; } }
 
 .image__banner--movie figure {
   padding: 6.5rem 0; }
@@ -1253,12 +1267,9 @@ p {
   transition: all 350ms ease-in; }
   .movie__container__title {
     font-size: 3.5rem; }
-  .movie__container__author {
-    font-family: "Rubik", sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 2.5rem; }
+    @media screen and (max-width: 700px) {
+      .movie__container__title {
+        font-size: 2.5rem; } }
   .movie__container div {
     text-align: center;
     margin-top: 2.5rem; }
@@ -1271,12 +1282,18 @@ p {
   .movie__container h2.bold {
     font-size: 2.2rem;
     margin: 2.5rem 0; }
+    @media screen and (max-width: 700px) {
+      .movie__container h2.bold {
+        font-size: 1.8rem; } }
   .movie__container .rating {
     font-family: "Rubik Wet Paint", sans-serif;
     font-size: 5.5rem;
     color: var(--color-primary);
     text-align: center;
     text-shadow: 0.3rem 0.3rem 0.3rem var(--box-shadow-primary); }
+    @media screen and (max-width: 700px) {
+      .movie__container .rating {
+        font-size: 2.5rem; } }
   .movie__container p {
     font-size: 1.8rem;
     max-width: 60rem;
@@ -1294,7 +1311,7 @@ p {
     margin-bottom: 4.5rem; }
     @media screen and (max-width: 700px) {
       .televisionmenu--title {
-        font-size: 1.8rem; } }
+        font-size: 2rem; } }
   .televisionmenu--container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -1382,6 +1399,9 @@ p {
     font-size: 3.5rem;
     color: var(--color-primary);
     text-shadow: 0.5rem 0.5rem 0.5rem var(--box-shadow-primary); }
+    @media screen and (max-width: 700px) {
+      .image__banner--television .overlay__text {
+        font-size: 2.5rem; } }
 
 .image__banner--television figure {
   padding: 6.5rem 0; }
@@ -1401,6 +1421,9 @@ p {
   border-radius: 0.3rem; }
   .television__container__title {
     font-size: 3.5rem; }
+    @media screen and (max-width: 700px) {
+      .television__container__title {
+        font-size: 2.5rem; } }
   .television__container div {
     text-align: center;
     margin-top: 2.5rem; }
@@ -1413,12 +1436,18 @@ p {
   .television__container h2.bold {
     font-size: 2.2rem;
     margin: 2.5rem 0; }
+    @media screen and (max-width: 700px) {
+      .television__container h2.bold {
+        font-size: 1.8rem; } }
   .television__container .rating {
     font-family: "Rubik Wet Paint", sans-serif;
     font-size: 5.5rem;
     color: var(--color-primary);
     text-align: center;
     text-shadow: 0.3rem 0.3rem 0.3rem var(--box-shadow-primary); }
+    @media screen and (max-width: 700px) {
+      .television__container .rating {
+        font-size: 2.5rem; } }
   .television__container p {
     max-width: 60rem;
     margin: 0 auto; }
@@ -1436,6 +1465,9 @@ p {
     font-size: 3.5rem;
     color: var(--color-primary);
     text-shadow: 0.5rem 0.5rem 0.5rem var(--box-shadow-primary); }
+    @media screen and (max-width: 700px) {
+      .image__banner--midnightgaming .overlay__text {
+        font-size: 2.5rem; } }
 
 .image__banner--midnightgaming figure {
   padding: 6.5rem 0; }
@@ -1456,6 +1488,9 @@ p {
   transition: all 350ms ease-in; }
   .midnightgaming__container__title {
     font-size: 3.5rem; }
+    @media screen and (max-width: 700px) {
+      .midnightgaming__container__title {
+        font-size: 2.5rem; } }
   .midnightgaming__container div {
     text-align: center;
     margin-top: 2.5rem; }
@@ -1468,12 +1503,18 @@ p {
   .midnightgaming__container h2.bold {
     font-size: 2.2rem;
     margin: 2.5rem 0; }
+    @media screen and (max-width: 700px) {
+      .midnightgaming__container h2.bold {
+        font-size: 1.8rem; } }
   .midnightgaming__container .rating {
     font-family: "Rubik Wet Paint", sans-serif;
     font-size: 5.5rem;
     color: var(--color-primary);
     text-align: center;
     text-shadow: 0.3rem 0.3rem 0.3rem var(--box-shadow-primary); }
+    @media screen and (max-width: 700px) {
+      .midnightgaming__container .rating {
+        font-size: 2.5rem; } }
   .midnightgaming__container p {
     max-width: 60rem;
     margin: 0 auto; }
@@ -1542,12 +1583,12 @@ p {
           white-space: nowrap; }
         .gamingmenu__image--container--overlay .game-info .rating {
           font-family: "Rubik Wet Paint", sans-serif;
-          font-size: 3.2rem;
+          font-size: 3.5rem;
           color: var(--color-primary);
           text-align: center; }
           @media screen and (max-width: 700px) {
             .gamingmenu__image--container--overlay .game-info .rating {
-              font-size: 1.8rem; } }
+              font-size: 2rem; } }
     .gamingmenu__image--container:hover .gamingmenu__image--container--overlay,
     .gamingmenu__image--container:active .gamingmenu__image--container--overlay {
       bottom: 0;
@@ -1735,6 +1776,9 @@ p {
   .blog__container h2.bold {
     font-size: 2rem;
     margin: 2.5rem 0; }
+    @media screen and (max-width: 700px) {
+      .blog__container h2.bold {
+        font-size: 1.8rem; } }
   .blog__container p {
     max-width: 60rem;
     margin: auto;
@@ -1758,20 +1802,20 @@ p {
     flex: 50%;
     margin-right: 1.2rem; }
     .flexContainer .about h2 {
-      font-size: 4.5rem; }
+      font-size: 3.5rem; }
       @media screen and (max-width: 700px) {
         .flexContainer .about h2 {
-          font-size: 3rem; } }
+          font-size: 2.5rem; } }
     .flexContainer .about p {
       max-width: 50rem;
       margin: 0 auto; }
     .flexContainer .about .contact {
       margin-top: 5rem; }
       .flexContainer .about .contact h2 {
-        font-size: 4.5rem; }
+        font-size: 3.5rem; }
         @media screen and (max-width: 700px) {
           .flexContainer .about .contact h2 {
-            font-size: 3rem; } }
+            font-size: 2.5rem; } }
       .flexContainer .about .contact div {
         text-align: center; }
         .flexContainer .about .contact div .email {

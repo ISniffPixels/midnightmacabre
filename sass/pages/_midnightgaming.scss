@@ -14,6 +14,11 @@
 
       font-family: var(--font-family-primary);
       font-size: 3.5rem;
+
+      @media screen and (max-width: 700px) {
+        font-size: 2.5rem;
+      }
+
       color: var(--color-primary);
       text-shadow: 0.5rem 0.5rem 0.5rem var(--box-shadow-primary);
     }
@@ -49,6 +54,10 @@
 
   &__title {
     font-size: 3.5rem;
+
+    @media screen and (max-width: 700px) {
+      font-size: 2.5rem;
+    }
   }
 
   div {
@@ -66,12 +75,22 @@
 
   h2.bold {
     font-size: 2.2rem;
+
+    @media screen and (max-width: 700px) {
+      font-size: 1.8rem;
+    }
+
     margin: 2.5rem 0;
   }
 
   .rating {
     font-family: "Rubik Wet Paint", sans-serif;
     font-size: 5.5rem;
+
+    @media screen and (max-width: 700px) {
+      font-size: 2.5rem;
+    }
+
     color: var(--color-primary);
     text-align: center;
 
