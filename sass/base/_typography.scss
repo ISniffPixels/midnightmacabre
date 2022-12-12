@@ -49,6 +49,28 @@ body {
     }
   }
 
+  .moviesmenu,
+  .televisionmenu,
+  .gamingmenu,
+  .blogmenu,
+  .gallerymenu {
+    &__image {
+      &--container {
+        img {
+          box-shadow: 0.5rem 0.5rem 0.5rem var(--box-shadow-primary);
+        }
+      }
+    }
+  }
+
+  .modal {
+    &__image {
+      img {
+        box-shadow: 0.5rem 0.5rem 0.5rem var(--box-shadow-primary);
+      }
+    }
+  }
+
   .top__button {
     background-color: var(--bg-color-tertiary);
 
