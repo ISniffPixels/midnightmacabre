@@ -76,6 +76,8 @@ body {
     box-shadow: none; }
   .light-theme figcaption {
     color: var(--color-generic); }
+  .light-theme .flexContainer .about .contact div .email {
+    color: var(--color-generic); }
 
 figcaption {
   color: var(--color-primary);
@@ -1378,7 +1380,7 @@ p {
           text-align: center; }
           @media screen and (max-width: 700px) {
             .televisionmenu__image--container--overlay .tele-info .rating {
-              font-size: 1.9rem; } }
+              font-size: 2.5rem; } }
     .televisionmenu__image--container:hover .televisionmenu__image--container--overlay,
     .televisionmenu__image--container:active .televisionmenu__image--container--overlay {
       bottom: 0;
@@ -1598,7 +1600,7 @@ p {
           text-align: center; }
           @media screen and (max-width: 700px) {
             .gamingmenu__image--container--overlay .game-info .rating {
-              font-size: 2rem; } }
+              font-size: 2.5rem; } }
     .gamingmenu__image--container:hover .gamingmenu__image--container--overlay,
     .gamingmenu__image--container:active .gamingmenu__image--container--overlay {
       bottom: 0;
