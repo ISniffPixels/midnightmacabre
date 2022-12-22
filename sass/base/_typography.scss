@@ -146,6 +146,18 @@ body {
   figcaption {
     color: var(--color-generic);
   }
+
+  .flexContainer {
+    .about {
+      .contact {
+        div {
+          .email {
+            color: var(--color-generic);
+          }
+        }
+      }
+    }
+  }
 }
 
 figcaption {
