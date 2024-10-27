@@ -96,7 +96,8 @@ figcaption.pinheadQuote {
     figcaption.pinheadQuote {
       font-size: 1.8rem; } }
 
-.author {
+.author,
+.dateStyle {
   font-family: "Rubik", serif;
   font-variant: small-caps;
   font-size: 1.5rem;
