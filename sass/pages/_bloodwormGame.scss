@@ -19,6 +19,37 @@
   align-items: center;
   height: 100vh;
   margin: 0;
+
+  background-image: url(/img/blood-png-37992.png), url(/img/blood-png-7164.png),
+    url(/img/blood-png-7146-flip-385w.png), url(/img/blood-png-7146-350w.png),
+    url(/img/blood-png-7164.png), url(/img/blood-png-7146-flip-385w.png),
+    url(/img/blood-png-7164.png);
+
+  background-repeat: no-repeat;
+  background-position: top left, -25% 30%, top right, left, 125% 25%, 100% 75%,
+    -25% 85%;
+
+  max-width: 240rem;
+  padding: 0 14rem;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1800px) {
+    background-image: url(/img/blood-png-37992.png),
+      url(/img/blood-png-7146-flip-385w.png), url(/img/blood-png-7146-200w.png),
+      url(/img/blood-png-7146-flip-385w.png), url(/img/blood-png-7164.png);
+
+    background-position: top left, top right, left, 100% 75%, -25% 85%;
+  }
+
+  @media screen and (max-width: 1024px) {
+    background-image: url(/img/blood-png-37992.png),
+      url(/img/blood-png-7146-flip-385w.png), url(/img/blood-png-7146-100w.png),
+      url(/img/blood-png-7146-flip-100w.png), url(/img/blood-png-7164-200w.png);
+
+    background-position: top left, top right, left, 100% 75%, -25% 85%;
+
+    padding: 0;
+  }
 }
 
 .BWTitle {
