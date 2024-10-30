@@ -205,3 +205,39 @@ function hightScoreUpdate() {
   }
   highScoreEle.style.display = "block";
 }
+
+// ENABLE LIGHT TOGGLE
+const lights = function () {
+  const lightSwitch = document.querySelector(".lightSwitch");
+  const lightNip = document.querySelector(".lightNip");
+  let lightMode = localStorage.getItem("light-theme");
+  const body = document.querySelector("body");
+
+  const enableLightToggle = function () {
+    lightNip.classList.add("lightNip--turnOnOff");
+    body.classList.add("light-theme");
+    localStorage.setItem("light-theme", "enabled");
+  };
+
+  const disableLightToggle = function () {
+    lightNip.classList.remove("lightNip--turnOnOff");
+    body.classList.remove("light-theme");
+    localStorage.setItem("light-theme", "disabled");
+  };
+
+  if (lightMode === "enabled") {
+    enableLightToggle();
+  }
+
+  const checkLightMode = function (e) {
+    lightMode = localStorage.getItem("light-theme"); // UPDATE LIGHT-MODE WHEN CLICKED
+    if (lightMode === "disabled") {
+      enableLightToggle();
+    } else {
+      disableLightToggle();
+    }
+  };
+
+  lightSwitch.addEventListener("click", checkLightMode);
+};
+lights();
