@@ -19,6 +19,12 @@ class BloodWormGame {
     this.gameInterval = null;
     this.gameSpeedDelay = 200;
     this.gameStart = false;
+    this.bgMusic = new Audio("/sounds/8-bit-moonlight-sonata.mp3");
+    this.eatFX = new Audio("/sounds/nomnom.mp3");
+
+    // LOOPS MUSIC AND CONTROLS VOLUME
+    this.bgMusic.loop = true;
+    this.bgMusic.volume = 0.3;
 
     // SAVES HIGHSCORE TO LOCAL STORAGE UPON REFRESH OF BROWSER
     this.highScore = parseInt(localStorage.getItem("highScore"), 10) || 0;
@@ -86,6 +92,10 @@ class BloodWormGame {
     this.bloodWorm.unshift(bloodWormHead);
 
     if (bloodWormHead.x === this.prey.x && bloodWormHead.y === this.prey.y) {
+      // WHEN BLOODWORM COORDS MEET PREYS, SOUNDS FX PLAY
+      this.eatFX.play();
+      this.eatFX.currentTime = 0; // Restart sound
+
       this.prey = this.generatePrey();
       this.increaseSpeed();
       clearInterval(this.gameInterval);
@@ -107,6 +117,10 @@ class BloodWormGame {
     this.board.style.backgroundImage = "url('/img/BWBG.png')";
     this.board.style.backgroundPosition = "center";
     this.board.style.backgroundSize = "contain";
+
+    // STARTS MUSIC
+    this.bgMusic.play();
+
     this.gameInterval = setInterval(() => {
       this.move();
       this.collisionDetect();
@@ -192,6 +206,10 @@ class BloodWormGame {
     this.gameStart = false;
     this.instructions.style.display = "block";
     this.BWlogo.style.display = "block";
+
+    // STOPS MUSIC WHEN GAME RESETS
+    this.bgMusic.pause();
+    this.bgMusic.currentTime = 0;
   }
 
   // UPDATE HIGHSCORE AND SETS TO LOCAL STORAGE API
@@ -207,7 +225,7 @@ class BloodWormGame {
   }
 }
 
-// ACTIVE GAME
+// INITIATES GAME
 const play = new BloodWormGame();
 
 // ENABLE LIGHT TOGGLE

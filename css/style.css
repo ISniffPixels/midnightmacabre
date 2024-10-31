@@ -1908,9 +1908,9 @@ p {
   -webkit-text-stroke: 1px black; }
 
 .prey {
-  background-image: url(/img/BWPrey.png);
+  background-image: url(/img/cs50duck.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: 30px;
   height: 30px; }
 
