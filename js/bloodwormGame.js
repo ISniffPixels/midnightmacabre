@@ -20,7 +20,7 @@ class BloodWormGame {
     this.gameSpeedDelay = 200;
     this.gameStart = false;
     this.bgMusic = new Audio("/sounds/8-bit-moonlight-sonata.mp3");
-    this.eatFX = new Audio("/sounds/nomnom.mp3");
+    this.eatFX = new Audio("/sounds/eatingsound.mp3");
 
     // LOOPS MUSIC AND CONTROLS VOLUME
     this.bgMusic.loop = true;

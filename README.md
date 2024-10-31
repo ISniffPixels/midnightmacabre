@@ -22,4 +22,20 @@ I debated using Bootstrap to add a caroussel to the homepage, but I ultimately d
 
 I utilized CSS properties like transform: translateY(), and overflow: hidden to manipulate and hide image overflow, and create a "slide" effect triggered by clicking bloody hand images on the left and right side of the caroussel container. My intention in going for this approach was to learn more about JavaScript instead of taking the more convienient route by using Bootstrap at this point of my learning journey.
 
-I used CSS to style the layout of "Bloodworm", the "Snake" inspired clone with a goofy, horror, style twist. I used borders and inset feature in box-shadow property to style the game screen border frames. I gave the outer borders a groove style, and the inner border a dashed style that produced a "Beetjuice" style effect, which I liked very much. I used A.I. to generate a copyright free logo for the game screen, and CS50 duck image pulled from a google search to implement into the game.
+I used CSS to style the layout of "Bloodworm", the "Snake" inspired clone with a goofy, horror, style twist. I used borders and inset feature in box-shadow property to style the game screen border frames. I gave the outer borders a groove style, and the inner border a dashed style that produced a "Beetjuice" style effect, which I liked very much. I used Microsoft A.I. to generate a copyright free logo for the game screen, and CS50 duck image pulled from a google search to implement into the game. I also used Canva and took a pixel art background, and a retro pixel skull element from their catalog.
+
+#### SASS folder:
+
+This folder is simply comprised of SCSS pages that compile into native CSS via your instructions. In my package.json file, I had to instruct SASS in "script" to compile from a "pages/main.scss" file to a "css/style.css" file. Like I mention earlier, I only used SASS for the nesting feature, and didn't use @mixins or functions.
+
+#### IMG folder:
+
+This folder contains too many images to count, but were necessary to accomplish my stylistic vision of Midnight Macabre.
+
+#### SOUNDS folder:
+
+I only have two audio files I got from PIXABAY. An 8-bit rendition of Moonlight Sonata by Beethoven, and a "munching" sound effect that I used when the Bloodworm eats the CS50 duck.
+
+#### .gitignore file:
+
+The .gitignore file is simply a file created to add files and folders you want Git ignore before you commit your project changes, and optionally push into a remote repository like GitHub.
