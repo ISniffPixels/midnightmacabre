@@ -28,6 +28,80 @@ I used CSS to style the layout of "Bloodworm", the "Snake" inspired clone with a
 
 This folder is simply comprised of SCSS pages that compile into native CSS via your instructions. In my package.json file, I had to instruct SASS in "script" to compile from a "pages/main.scss" file to a "css/style.css" file. Like I mention earlier, I only used SASS for the nesting feature, and didn't use @mixins or functions.
 
+One of my favorite films is Hellraiser, the classic 1987 British horror film. I wanted to create something in CSS that resembled a puzzle box in the film called The Lament Configuration Box that summoned demonic biengs (Cenobites) from another dimension. I wanted to make a cube that rotated in different directions in a 3D rendered fashion using the transform property and the rotateX(), rotateY(), rotateZ(), translate3d() functions. rotateXYZ() functions allow for an element to be rotated in 3d enabled space thanks to the `transform-style: preserve-3d;` property value.
+
+I had to first establish a div element that housed the cube associated with the `perspective` property via class selector. The idea was to give the cube a perspective that made certain areas of the cubes dimensions upon rotation (or the whole cube) look further away relative to the parent element that contains it, and on the unit number value that its given.
+
+In order to achieve the likeness of The Lament Configuration Box on the cube, I had to search the web for illustrations of each of the box sides. I managed to find something, as you will see when in the video when I showcase the finished design. I had to create a parent element and assign it a class, in its class selector, I had to set a `position: relative` property and value so that I could rotate and translate children element images in a way that formed a 3D cube.
+
+### Examples:
+
+```
+.cube {
+position: relative;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+backface-visibility: hidden;
+animation: spinCube 24000ms infinite ease-in-out;
+}
+
+.cube__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0.03rem 0.03rem 2.5rem var(--color-primary);
+    transition: box-shadow 1000ms ease-in;
+
+    // CUBE FACE POSITION
+    &--front {
+      background-image: url(/img/hellcubeSide1b.png);
+      transform: rotateY(0deg) translateZ(100px);
+    }
+    &--right {
+      background-image: url(/img/hellcubeSide2b.png);
+      transform: rotateY(90deg) translateZ(100px);
+    }
+    &--back {
+      background-image: url(/img/hellcubeSide1a.png);
+      transform: rotateY(180deg) translateZ(100px);
+    }
+    &--left {
+      background-image: url(/img/hellcubeSide2a.png);
+      transform: rotateY(-90deg) translateZ(100px);
+    }
+    &--top {
+      background-image: url(/img/hellcubeSide3b.png);
+      transform: rotateX(90deg) translateZ(100px);
+    }
+    &--bottom {
+      background-image: url(/img/hellcubeSide3a.png);
+      transform: rotateX(-90deg) translateZ(100px);
+    }
+  }
+
+```
+
+Then came the use of @keyframes animations that allowed me to bring the rotating Hell cube alive as you will see in the video demo.
+
+```
+// CUBE ROTATION
+  @keyframes spinCube {
+    0% {
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg);
+    }
+
+    50% {
+      transform: translate3d(0, 0, 0) rotateX(720deg) rotateY(720deg);
+    }
+
+    100% {
+      transform: translate3d(0, 0, 0) rotateX(-720deg) rotateY(-720deg);
+    }
+  }
+
+```
+
 #### IMG folder:
 
 This folder contains too many images to count, but were necessary to accomplish my stylistic vision of Midnight Macabre.
@@ -36,6 +110,41 @@ This folder contains too many images to count, but were necessary to accomplish 
 
 I only have two audio files I got from PIXABAY. An 8-bit rendition of Moonlight Sonata by Beethoven, and a "munching" sound effect that I used when the Bloodworm eats the CS50 duck.
 
-#### .gitignore file:
+#### .gitignore & package.json files:
 
-The .gitignore file is simply a file created to add files and folders you want Git ignore before you commit your project changes, and optionally push into a remote repository like GitHub.
+The .gitignore file is simply a file created to add files and folders you want Git ignore before you commit your project changes, and optionally push into a remote repository like GitHub. The package.json file contains metadata relating to this project. It's also a file responsible for managing dependencies, and scripts that streamline your workflow.
+
+#### JS file:
+
+This folder holds 12 scripts. Each script holds JavaScript that's relevent to every single HTML page. I chose to have seperate JS scripts, instead of one huge wall of code in a single script, because I felt seperating them would make them easier to manage.
+
+One of the biggest things I incorporated JavaScript into was the Bloodworm game. I learned the logic necessary to make certain objectives possible, and then I went from there, breaking the problem into smaller pieces and thinking of ways to make things possible.
+
+I learned about Object Oriented Programming in JavaScript, and I applied those concepts to this mini project. I realized that OOP approach not only looked cleaner than a Constructor Function, Prototype property approach, but it was easier to address issues, navigate, and keep track of the code.
+
+#### Examples:
+
+```
+class BloodWormGame {
+  constructor() {
+    // DEFINING HTML ELEMENTS (LOGO & INSTRUCTIONS) ON GAME SCREEN
+    this.screen = document.querySelector(".game_screen");
+    this.instructions = document.querySelector("#instruction_text");
+    this.BWlogo = document.querySelector(".bloodworm-logo");
+    ....
+  }
+
+```
+
+compared too....
+
+```
+class BloodWormGame {
+  constructor() {
+    // DEFINING HTML ELEMENTS (LOGO & INSTRUCTIONS) ON GAME SCREEN
+    this.screen = document.querySelector(".game_screen");
+    this.instructions = document.querySelector("#instruction_text");
+    this.BWlogo = document.querySelector(".bloodworm-logo");
+    ....
+
+```
