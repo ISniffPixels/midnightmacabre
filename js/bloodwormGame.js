@@ -3,8 +3,8 @@
 // I USED OOP STRUCTURE FOR THE GAME, BECAUSE ITS A BIT CLEANER THAN THE STANDARD FUNCTION OR CONSTRUCTOR FUNCTION-PROTOYPE APPROACH
 class BloodWormGame {
   constructor() {
-    // DEFINING HTML ELEMENTS (LOGO & INSTRUCTIONS) ON BOARD
-    this.board = document.querySelector(".game_board");
+    // DEFINING HTML ELEMENTS (LOGO & INSTRUCTIONS) ON GAME SCREEN
+    this.screen = document.querySelector(".game_screen");
     this.instructions = document.querySelector("#instruction_text");
     this.BWlogo = document.querySelector(".bloodworm-logo");
 
@@ -12,7 +12,7 @@ class BloodWormGame {
     this.scoreEle = document.querySelector("#score");
     this.highScoreEle = document.querySelector("#highScore");
     this.highScore = 0;
-    this.gridArea = 20;
+    this.gridCells = 20;
     this.bloodWorm = [{ x: 10, y: 10 }];
     this.prey = this.generatePrey();
     this.direction = "right";
@@ -34,9 +34,9 @@ class BloodWormGame {
     document.addEventListener("keydown", (e) => this.initSession(e));
   }
 
-  // DRAWS ELEMENTS TO THE GRID ("GAME BOARD")
+  // DRAWS ELEMENTS TO THE GRID ("GAME screen")
   draw() {
-    this.board.innerHTML = "";
+    this.screen.innerHTML = "";
     this.drawBloodWorm();
     this.drawPrey();
     this.updateScore();
@@ -47,7 +47,7 @@ class BloodWormGame {
     this.bloodWorm.forEach((segPos) => {
       const wormElement = this.createGameElem("div", "bloodWorm");
       this.setPos(wormElement, segPos);
-      this.board.appendChild(wormElement);
+      this.screen.appendChild(wormElement);
     });
   }
 
@@ -69,14 +69,14 @@ class BloodWormGame {
     if (this.gameStart) {
       const preyElem = this.createGameElem("div", "prey");
       this.setPos(preyElem, this.prey);
-      this.board.appendChild(preyElem);
+      this.screen.appendChild(preyElem);
     }
   }
 
   // Generate Prey at Random Location
   generatePrey() {
-    const x = Math.floor(Math.random() * this.gridArea) + 1;
-    const y = Math.floor(Math.random() * this.gridArea) + 1;
+    const x = Math.floor(Math.random() * this.gridCells) + 1;
+    const y = Math.floor(Math.random() * this.gridCells) + 1;
     return { x, y };
   }
 
@@ -114,9 +114,9 @@ class BloodWormGame {
     this.gameStart = true;
     this.instructions.style.display = "none";
     this.BWlogo.style.display = "none";
-    this.board.style.backgroundImage = "url('/img/BWBG.png')";
-    this.board.style.backgroundPosition = "center";
-    this.board.style.backgroundSize = "contain";
+    this.screen.style.backgroundImage = "url('/img/BWBG.png')";
+    this.screen.style.backgroundPosition = "center";
+    this.screen.style.backgroundSize = "contain";
 
     // STARTS MUSIC
     this.bgMusic.play();
@@ -157,12 +157,12 @@ class BloodWormGame {
 
     if (
       bloodWormHead.x < 1 ||
-      bloodWormHead.x > this.gridArea ||
+      bloodWormHead.x > this.gridCells ||
       bloodWormHead.y < 1 ||
-      bloodWormHead.y > this.gridArea
+      bloodWormHead.y > this.gridCells
     ) {
       this.resetGame();
-      this.resetBoardStyle();
+      this.resetScreenStyle();
     }
 
     for (let s = 1; s < this.bloodWorm.length; s++) {
@@ -171,16 +171,16 @@ class BloodWormGame {
         bloodWormHead.y === this.bloodWorm[s].y
       ) {
         this.resetGame();
-        this.resetBoardStyle();
+        this.resetScreenStyle();
       }
     }
   }
 
-  // RESETS BOARD
-  resetBoardStyle() {
-    this.board.style.backgroundImage = "none";
-    this.board.style.backgroundPosition = "none";
-    this.board.style.backgroundSize = "none";
+  // RESETS screen
+  resetScreenStyle() {
+    this.screen.style.backgroundImage = "none";
+    this.screen.style.backgroundPosition = "none";
+    this.screen.style.backgroundSize = "none";
   }
 
   // RESETS BLOODWORM GAME

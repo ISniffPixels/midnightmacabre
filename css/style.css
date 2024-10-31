@@ -1934,7 +1934,7 @@ p {
   padding: 30px;
   margin: 0; }
 
-.game_board {
+.game_screen {
   display: grid;
   grid-template-columns: repeat(20, 20px);
   grid-template-rows: repeat(20, 20px);
