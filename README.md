@@ -400,4 +400,4 @@ lights();
 
 ```
 
-`classList` is used to apply classes that change the state of elements and create changes in color schemes, and light switch "slide" animations. localStorage window object sets "light-theme" into memory upon click event action, and when you leave and return to the website, localStorage window object gets the stored state you last left the website in.
+`classList` is used to apply classes that change the state of elements and create changes in color schemes, and light switch "slide" animations. localStorage window object sets "light-theme" into memory upon click event action, and when you leave and return to the website, localStorage window object gets the stored state you last left the website in. Conditionals if statements are used to detect the the "enabled", and "disabled" state of the stored information into local storage, and checks to if there's a match to the "light-theme" CSS property values before properly initiating the `enableLightToggle` and `disableLightToggle` functions to make the color scheme changes.
