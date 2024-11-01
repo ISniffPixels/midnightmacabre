@@ -26,7 +26,7 @@ I used CSS to style the layout of "Bloodworm", the "Snake" inspired clone with a
 
 #### SASS folder:
 
-This folder is simply comprised of SCSS pages that compile into native CSS via your instructions. In my package.json file, I had to instruct SASS in "script" to compile from a "pages/main.scss" file to a "css/style.css" file. Like I mention earlier, I only used SASS for the nesting feature, and didn't use @mixins or functions.
+This folder is comprised of SCSS pages that compile into native CSS files inside thier own created CSS file via your "script" instructions. In my package.json file, I had to instruct SASS in "script" to compile from a "pages/main.scss" file to a "css/style.css" file. Like I mention earlier, I only used SASS for the nesting feature, and didn't use @mixins or functions.
 
 One of my favorite films is Hellraiser, the classic 1987 British horror film. I wanted to create something in CSS that resembled a puzzle box in the film called The Lament Configuration Box that summoned demonic biengs (Cenobites) from another dimension. I wanted to make a cube that rotated in different directions in a 3D rendered fashion using the transform property and the rotateX(), rotateY(), rotateZ(), translate3d() functions. rotateXYZ() functions allow for an element to be rotated in 3d enabled space thanks to the `transform-style: preserve-3d;` property value.
 
@@ -102,9 +102,11 @@ Then came the use of @keyframes animations that allowed me to bring the rotating
 
 ```
 
+I ended up adding a box-shadow glow effect on the key by adding a blur and a red color, which you can see going into "dark mode" when you click on the skull icon light switch on the top-right of the homepage. I created that switch using `display: flex`, `flex-flow: column` and `transform: translateY()` to create a slide switch effect that slides up and down using `toggle`. I used a skull emoji as a child element inside a container.
+
 #### IMG folder:
 
-This folder contains too many images to count, but were necessary to accomplish my stylistic vision of Midnight Macabre.
+This folder contains too many images to count, but were necessary to accomplish my stylistic vision of Midnight Macabre. The "BLOODWORM" logo image in the Bloodworm game splash screen was A.I. generated using Microsoft Copilot, and CS50 duck image was plucked from the internet.
 
 #### SOUNDS folder:
 
@@ -114,37 +116,288 @@ I only have two audio files I got from PIXABAY. An 8-bit rendition of Moonlight 
 
 The .gitignore file is simply a file created to add files and folders you want Git ignore before you commit your project changes, and optionally push into a remote repository like GitHub. The package.json file contains metadata relating to this project. It's also a file responsible for managing dependencies, and scripts that streamline your workflow.
 
-#### JS file:
+#### JS files:
 
 This folder holds 12 scripts. Each script holds JavaScript that's relevent to every single HTML page. I chose to have seperate JS scripts, instead of one huge wall of code in a single script, because I felt seperating them would make them easier to manage.
 
 One of the biggest things I incorporated JavaScript into was the Bloodworm game. I learned the logic necessary to make certain objectives possible, and then I went from there, breaking the problem into smaller pieces and thinking of ways to make things possible.
 
-I learned about Object Oriented Programming in JavaScript, and I applied those concepts to this mini project. I realized that OOP approach not only looked cleaner than a Constructor Function, Prototype property approach, but it was easier to address issues, navigate, and keep track of the code.
+I learned about Object Oriented Programming in JavaScript, and I applied those concepts to this mini project. I realized that OOP approach not only looked a bit cleaner than a standard function or Prototype property approach, but it was easier to navigate and address issues in the code. Overall, keeping track of the code base felt a little smoother because of encapsulation.
 
 #### Examples:
 
 ```
+"use strict";
+
 class BloodWormGame {
   constructor() {
     // DEFINING HTML ELEMENTS (LOGO & INSTRUCTIONS) ON GAME SCREEN
     this.screen = document.querySelector(".game_screen");
     this.instructions = document.querySelector("#instruction_text");
     this.BWlogo = document.querySelector(".bloodworm-logo");
-    ....
+
+    // DEFINING GAME VARIABLE
+    this.scoreEle = document.querySelector("#score");
+    this.highScoreEle = document.querySelector("#highScore");
+    this.highScore = 0;
+    this.gridCells = 20;
+    this.bloodWorm = [{ x: 10, y: 10 }];
+    this.prey = this.generatePrey();
+    this.direction = "right";
+    this.gameInterval = null;
+    this.gameSpeedDelay = 200;
+    this.gameStart = false;
+    this.bgMusic = new Audio("/sounds/8-bit-moonlight-sonata.mp3");
+    this.eatFX = new Audio("/sounds/eatingsound.mp3");
+
+    // EVENTLISTENER FOR KEYDOWN EVENT
+    document.addEventListener("keydown", (e) => this.initSession(e));
+
+    *ALL DEFINED ELEMENTS GO INSIDE THE CONSTRUCTOR FUNCTION INSIDE CLASS*
   }
 
+   // DRAWS ELEMENTS TO THE GRID ("GAME SCREEN")
+  draw() {
+    this.screen.innerHTML = "";
+    this.drawBloodWorm();
+    this.drawPrey();
+    this.updateScore();
+  }
+
+  // DRAWS BLOODWORM
+  drawBloodWorm() {
+    this.bloodWorm.forEach((segPos) => {
+      const wormElement = this.createGameElem("div", "bloodWorm");
+      this.setPos(wormElement, segPos);
+      this.screen.appendChild(wormElement);
+    });
+  }
+
+  ....MORE CODE
+}
+
+  *this KEYWORD REFERS TO THE OWNER OF THE METHOD (FUNCTION) IN THIS CASE BloodWormGame, THE NAME OF THE CLASS*
+
 ```
 
-compared too....
+Compared to the standard declared function approach....
 
 ```
-class BloodWormGame {
-  constructor() {
-    // DEFINING HTML ELEMENTS (LOGO & INSTRUCTIONS) ON GAME SCREEN
-    this.screen = document.querySelector(".game_screen");
-    this.instructions = document.querySelector("#instruction_text");
-    this.BWlogo = document.querySelector(".bloodworm-logo");
-    ....
+"use strict";
+
+// DEFINING HTML ELEMENTS (LOGO & INSTRUCTIONS) ON GAME SCREEN
+const screen = document.querySelector(".game_screen");
+const instructions = document.querySelector("#instruction_text");
+const BWlogo = document.querySelector(".bloodworm-logo");
+
+// DEFINING GAME VARIABLES
+const scoreEle = document.querySelector("#score");
+const highScoreEle = document.querySelector("#highScore");
+let highScore = 0;
+let gridCells = 20;
+let bloodWorm = [{ x: 10, y: 10 }];
+let prey = generatePrey();
+let direction = "right";
+let gameInterval;
+let gameSpeedDelay = 200;
+let gameStart = false;
+let bgMusic = new Audio("/sounds/8-bit-moonlight-sonata.mp3");
+let eatFX = new Audio("/sounds/eatingsound.mp3");
+
+// DRAWS ELEMENTS TO THE GRID ("GAME SCREEN")
+function draw() {
+  screen.innerHTML = "";
+  drawBloodWorm();
+  drawPrey();
+  scoreUpate();
+}
+
+// DRAWS BLOODWORM
+function drawBloodWorm() {
+  bloodWorm.forEach((segPos) => {
+    const wormElement = createGameElem("div", "bloodWorm");
+    setPos(wormElement, segPos);
+    board.appendChild(wormElement);
+  });
+}
+
+...MORE CODE
 
 ```
+
+The intro to the homepage (index.html) has three images translated and hidden on the -x and x axis of the viewport. When you scroll down the page, the Intersection Observer API intersects with a targeted element or elements that house the images at an established percentage set by the `threshold` property, and then in this case, the `classList` property is used to add a class that makes the images appear and translate to the center of the screen. The images go back to designated spots and then disappear again as you scroll past each one as you will see in the video demo. Below is a sample of the code I put together.
+
+#### Example:
+
+```
+const homePage = function () {
+  // INTRO PARAGRAPH TRANSITION
+  const pIntro = document.querySelector(".intro--1");
+
+  const para = (entries) => {
+    const [x] = entries;
+    if (x.isIntersecting) x.target.classList.add("intro--1--appear");
+    else x.target.classList.remove("intro--1--appear");
+  };
+
+  const pg = {
+    root: null,
+    rootMargin: "90px",
+    threshold: 0.1,
+  };
+
+  const observerp1 = new IntersectionObserver(para, pg);
+  observerp1.observe(pIntro);
+
+  ...MORE CODE
+}
+
+```
+
+The `root` property of the object can an element you want to intersect with another element or it can be the whole viewport relative to the particular element you want to target with the Intersection Observer API. `rootMargin` property adds a margin to the element you want to intersect with that can be used for example as a means to get an event to occur a bit earlier upon intersection.
+
+I finally decided to forego the urge to use Boostrap or Tailwind CSS frameworks for a carouselle slider, and decided to create it using JavaScript. It was harder than I thought, but once I put it together, it made sense. The intention was to learn more about JavaScript by not taking the easy route by using Bootstrap, and learning about the logic necessary to make the a functioning carouselle slider using vanilla JavaScript. Below is the JavaScript I put together to make this happen, and a brief explanation of how it works.
+
+#### Example:
+
+```
+ // SLIDER ANIMATION
+  const slider = function () {
+    const slides = document.querySelectorAll(".slide");
+    const btnRight = document.querySelector(".slider__container--btn--right");
+    const btnLeft = document.querySelector(".slider__container--btn--left");
+    const dotContainer = document.querySelector(".carousel-clickies");
+
+    let curSlide = 0;
+    const maxSlide = slides.length;
+
+    // FUNCTIONS
+    const goToSlide = function (slide) {
+      slides.forEach(
+        (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+      );
+    };
+    goToSlide(0);
+
+    const createClickies = function () {
+      slides.forEach((_, i) => {
+        dotContainer.insertAdjacentHTML(
+          "beforeend",
+          `<div class="clicky" data-slide="${i}">${i + 1}</div>`
+        );
+      });
+    };
+    createClickies();
+
+    const activeClicky = function (slide) {
+      document
+        .querySelectorAll(".clicky")
+        .forEach((clicky) => clicky.classList.remove("clicky--active"));
+
+      document
+        .querySelector(`.clicky[data-slide="${slide}"]`)
+        .classList.add("clicky--active");
+    };
+    activeClicky(0);
+
+    const clickies = function (e) {
+      if (e.target.classList.contains("clicky")) {
+        const { slide } = e.target.dataset;
+        goToSlide(slide);
+        activeClicky(slide);
+      }
+    };
+
+    const nextSlide = function () {
+      if (curSlide === maxSlide - 1) {
+        curSlide = 0;
+      } else {
+        curSlide++;
+      }
+
+      goToSlide(curSlide);
+      activeClicky(curSlide);
+    };
+
+    const prevSlide = function () {
+      if (curSlide === 0) {
+        curSlide = maxSlide - 1;
+      } else {
+        curSlide--;
+      }
+
+      goToSlide(curSlide);
+      activeClicky(curSlide);
+    };
+
+    // EVENT HANDLERS
+    btnRight.addEventListener("click", nextSlide);
+    btnLeft.addEventListener("click", prevSlide);
+    dotContainer.addEventListener("click", clickies);
+
+    // CHANGING SLIDES USING ARROWKEYS
+    document.addEventListener("keydown", function (e) {
+      e.key === "ArrowLeft" && prevSlide();
+      e.key === "ArrowRight" && nextSlide();
+    });
+  };
+
+  slider();
+
+```
+
+I used a functions expression with all HTML elements defined inside the function scope. `let curSlide = 0;` refers to the center of the slider. `const maxSlide = slides.length;` refers to the last image to the right of an arrangement, in this example, where the images are aligned on an x-axis side by side. The images overflow on the x-axis, and are hidden using `overflow-x: hidden` property value statement on the `html` (root) class selector in a SCSS file.
+
+The `goToSlide` function takes elements selected by querySelectorAll() `const slides = document.querySelectorAll(".slide");` and uses a `forEach()` function to loop through the slides and for each slide it uses `style.transform` to translate the images on a x-axis to the left and into the center of a parent container. Using the iterator variable index position from the callback arrow function, and a string literal template, I combined 100 with the % symbol to address the percentage in the x-axis translation process.
+
+```
+slides.forEach((s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`));
+
+```
+
+`keydown` event handlers detect the click event of bloody hand image buttons on each side of the slider container, which initiates the sliding of the elements housing the images as you will see in the video demo.
+
+I don't like bright colors, so I initially decided to create Midnight Macabre using a dark color scheme. After thinking about it, and having seconds thoughts, I decided that I also wanted to add a light color scheme as an alternative so I decided to look into the local storage API `localStorage.getItem()`, and `localStorage.getItem()` to not only add two different color schemes, but also save the state you leave the website in before you call it a day.
+
+#### Example:
+
+```
+// ENABLE LIGHT TOGGLE
+const lights = function () {
+  const lightSwitch = document.querySelector(".lightSwitch");
+  const lightNip = document.querySelector(".lightNip");
+  let lightMode = localStorage.getItem("light-theme");
+  const body = document.querySelector("body");
+
+  const enableLightToggle = function () {
+    lightNip.classList.add("lightNip--turnOnOff");
+    body.classList.add("light-theme");
+    localStorage.setItem("light-theme", "enabled");
+  };
+
+  const disableLightToggle = function () {
+    lightNip.classList.remove("lightNip--turnOnOff");
+    body.classList.remove("light-theme");
+    localStorage.setItem("light-theme", "disabled");
+  };
+
+  if (lightMode === "enabled") {
+    enableLightToggle();
+  }
+
+  const checkLightMode = function (e) {
+    lightMode = localStorage.getItem("light-theme"); // UPDATE LIGHT-MODE WHEN CLICKED
+    if (lightMode === "disabled") {
+      enableLightToggle();
+    } else {
+      disableLightToggle();
+    }
+  };
+
+  lightSwitch.addEventListener("click", checkLightMode);
+};
+lights();
+
+```
+
+`classList` is used to apply classes that change the state of elements and create changes in color schemes, and light switch "slide" animations. localStorage window object sets "light-theme" into memory upon click event action, and when you leave and return to the website, localStorage window object gets the stored state you last left the website in.
